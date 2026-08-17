@@ -1,0 +1,37 @@
+MIT License
+
+Copyright (c) 2026 Lamyzm
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+NOTE ON CONTENT / 문서 내용에 대한 고지
+
+This license covers the SOURCE CODE in this repository only.
+
+The documentation content under `site_src/docs/` is derived from posts written
+by users of the arca.live AI art channel. Copyright in those posts remains with
+their respective authors. This project quotes them briefly and links back to
+every source post. It is published as commentary and reference, not as a
+substitute for the originals. Authors who want their material removed may open
+an issue.
+
+`site_src/docs/` 의 문서 내용은 아카라이브 이용자들이 쓴 글에서 나온 것이고,
+저작권은 각 작성자에게 있다. 이 라이선스는 코드에만 적용된다.

@@ -1,0 +1,93 @@
+# 로컬에서 돌리고 Cloudflare Tunnel 로 친구에게 공개한다.
+# 포트포워딩도, 공인 IP도, VPS도 필요 없다.
+#
+#   docker compose up -d db wiki     # DB + 위키
+#   python export.py                 # DB -> site_src/ (내용 갱신)
+#   docker compose --profile tunnel up -d
+#
+# 터널 토큰은 .env 에 둔다 (git 에 안 올라감).
+
+services:
+  db:
+    image: postgres:17-alpine
+    container_name: arcawiki-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: arcawiki
+      POSTGRES_USER: arcawiki
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-arcawiki}
+      LANG: ko_KR.utf8
+    ports:
+      # 로컬에서만 접근. 0.0.0.0 으로 열지 않는다.
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      # 최초 기동 시 한 번 실행된다
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U arcawiki -d arcawiki"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # 판단이 필요 없는 일만 자동으로 돈다 (ADR-0006):
+  # 수집 → 적재 → 변경감지 → 작업 큐 적재. LLM 은 호출하지 않는다.
+  # LLM 이 필요한 지점은 work_queue 에 쌓이고, Claude Code 세션이 스킬로 꺼내 처리한다.
+  pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile.pipeline
+    container_name: arcawiki-pipeline
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgres://arcawiki:${POSTGRES_PASSWORD:-arcawiki}@db:5432/arcawiki
+      PIPELINE_INTERVAL_HOURS: ${PIPELINE_INTERVAL_HOURS:-6}
+      CRAWL_PAGES: ${CRAWL_PAGES:-5}
+      CRAWL_CATEGORIES: ${CRAWL_CATEGORIES:-일반정보,실험정보,AiVid,NAI}
+    volumes:
+      - ./posts:/app/posts
+      - ./cookie.txt:/app/cookie.txt:ro
+
+  # 위키. DB 가 원본이고 site_src/ 는 export.py 가 만드는 빌드 산출물이다 (ADR-0001).
+  # 마크다운 파일을 고치지 말 것 — export 하면 덮어써진다.
+  wiki:
+    image: squidfunk/mkdocs-material:latest
+    container_name: arcawiki-wiki
+    restart: unless-stopped
+    command: serve --dev-addr=0.0.0.0:8000
+    working_dir: /docs
+    volumes:
+      - ./site_src:/docs
+    ports:
+      - "127.0.0.1:8000:8000"
+
+  # 즉석 터널. 계정도 토큰도 필요 없고, 띄우면 랜덤 trycloudflare.com 주소가 나온다.
+  # 주소를 아는 사람은 누구나 볼 수 있고, 컨테이너를 내리면 주소가 사라진다.
+  #   docker compose --profile quick up -d
+  #   docker compose logs quicktunnel | grep trycloudflare
+  quicktunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: arcawiki-quicktunnel
+    restart: unless-stopped
+    command: tunnel --no-autoupdate --url http://wiki:8000
+    depends_on:
+      - wiki
+    profiles: ["quick"]
+
+  # 고정 주소용. Cloudflare Zero Trust 에서 터널을 만들고 토큰을 .env 에 넣는다.
+  # Access 정책을 걸면 지정한 사람만 들어올 수 있다.
+  #   docker compose --profile tunnel up -d
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: arcawiki-tunnel
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run --token ${CF_TUNNEL_TOKEN}
+    depends_on:
+      - wiki
+    profiles: ["tunnel"]
+
+volumes:
+  pgdata:

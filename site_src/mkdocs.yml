@@ -1,0 +1,21 @@
+site_name: AI그림채널 위키
+theme:
+  name: material
+  language: ko
+  palette:
+    - scheme: default
+      toggle: {icon: material/weather-night, name: 다크 모드}
+    - scheme: slate
+      toggle: {icon: material/weather-sunny, name: 라이트 모드}
+  features: [navigation.instant, navigation.top, search.suggest, content.code.copy]
+markdown_extensions:
+  - tables
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  # 항목별 근거가 많을 때 접어 두는 데 쓴다. 없으면 `???` 가 글자 그대로 나온다.
+  - pymdownx.details
+plugins:
+  - search:
+      lang: ko
