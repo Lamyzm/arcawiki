@@ -2464,6 +2464,15 @@ oldt5 로 변환하지 않고 concat 하면 거의 앞의 것만 인식된다.
 4. 흑백 작가를 섞었는데 그림이 흑백으로 가면 `cover image` 나 `cover page` 를 먼저 시험한다.
 5. 작품풍을 강하게 살리고 싶은데 배경이 액자·포스터처럼 오염되면 작가 태그를 먼저 줄인다.
 
+**DB 에서 바로 뽑은 시작값**
+
+| 목표 | 실제 카드에서 확인된 시작점 |
+|---|---|
+| **초 가구야 공주** | 캐릭터 LoRA 사용 시 **`anime screencap` 보조**를 함께 쓰는 쪽이 권장됐다. 카구야·이로하는 현실/가상 세계 버전을 분리해 태그를 잡는다 |
+| **프리렌** | 캐릭터 이름이 너무 강하면 `boy, old man, lying on back, covered by blanket, closed eyes, bald` 처럼 **일반 태그만 남기고** 레퍼런스로 보정한다 |
+| **원작 애니풍 전반** | `0.5::작품명::` + `3::anime coloring::` + `-5::monochrome::` 가 현재 문서의 가장 재사용 가능한 기본형이다 |
+| **블루 아카이브** | 작품 태그는 `blue archive` / `blue archive the animation` 두 갈래가 실제 카드에 잡혀 있다. 캐릭터 스킨명이 강하면 `alternate costume` 와 의상 태그를 더 세게 준다 |
+
 
 <small>근거 — [단부루 기반 AI 이미지 작가 태그 생성기.HTML 26.05](https://arca.live/b/aiart/169546100) · [NAI 스타일 로라 v5 공유 26.03](https://arca.live/b/aiart/164149050) · [100% 뇌피셜 그림체 깎는 법 노하우 26.03](https://arca.live/b/aiart/166129544) · [애니그림체에 최대한 비슷하게 뽑는 야짤 프롬 공유 26.07](https://arca.live/b/aiart/178436809)</small>
 

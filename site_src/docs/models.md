@@ -677,6 +677,23 @@ very awa, masterpiece, best quality, amazing quality, absurd res, hi res, highre
 - `2dac` 계열은 고정 네거티브와 샘플러 조합이 이미 공개돼 있어 **입문 재현성**이 높다.
 - `Uncanny` 계열은 `persona` 같은 **작품/스타일 단어 하나**로도 방향이 크게 꺾이므로, 체크포인트 성향을 먼저 읽어야 한다.
 
+**실제 카드에서 바로 꺼낸 시작값**
+
+| 계열 | 바로 쓰는 값 |
+|---|---|
+| **RoseMIX_XL_V1.1** | `steps 28` · `CFG 5~7` · `dpmpp_2m` + `sgm_uniform` |
+| **2dac 개선판** | `Euler` + `SGM Uniform` · `steps 28` · `CFG 4.5` · `CFG Rescale 0.6` |
+| **Uncanny Valley DMD** | `Euler a` · `SGM Uniform` · `steps 10~20` · `CFG 1.5~3` |
+| **communitymodel n007c** | `Euler A DY CFG++` · `KL Optimal` · `CFG 1.35~2` |
+
+`2dac` 계열의 실카드 네거티브 핵심은 이쪽이다.
+
+```text
+worst quality, blurry, old, early, low quality, lowres, signature,
+username, logo, bad hands, mutated hands, ambiguous form, male focus,
+male face, (realistic, 3d), black rectangles, detailed background
+```
+
 **즉 "애니 기본 루트" 와 "인스타 감성 반실사 루트" 는 시작 모델이 다르다.**
 체크포인트를 잘못 고른 상태에서 프롬프트만 만지면 AI 티를 줄이기 어렵다.
 
