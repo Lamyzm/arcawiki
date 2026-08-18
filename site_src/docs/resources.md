@@ -3170,45 +3170,45 @@ https://drive.google.com/drive/folders/1YxP3Xmw--eganjjGHed_13Gsg8Ww4igf?usp=sha
 | 주장 | 찬성 | 반대 | 시점 |
 |---|---:|---:|---|
 | 이 시리즈의 예시 이미지는 ComfyUI 로 뽑았으므로 이미지를 ComfyUI 캔버스에 끌어다 놓으면 노드(워크플로우)가 그대로 불러와진다 | 44 | 0 | 2025-04~2026-07 |
+| 배포글에 적힌 'LoRA Base Model' 은 그 로라를 만들 때 쓴 학습용 베이스 모델일 뿐이고, 그림을 실제로 뽑는 것은 별도의 'Checkpoint Model' 이다 — 제작자가 뉴비 혼동을 막으려고 본문에 못 박아 둔 문구다 | 31 | 0 | 2025-02~2026-07 |
 | 같은 제작자의 웹툰·애니 캐릭터 LoRA 배포 목록 (전부 LoRA Base illustriousXL_v1.1 / 체크포인트 WaiNSFWillustrious V140) — 퀘스트지상주의 6종 `baek chaerin, elisa, kim dahyeon, lee jihyeon, yang soha, yeon seohui` · 초인의 게임 6종 `higpr(대사제), baek hayeon, lee nayeon, qun1(여왕), saniya ahmetova, shuran` · 일진담당일진 5종 · 수요웹툰의 나강림 13종 · 사시미 한 자루로 아카데미를 씹어먹음 6종 · 전지적 독자 시점 14종 · 현실퀘스트 7종 `choi minhye` 외 · 이세계 밀프 헌터 10종 · 광마회귀 공손월 · 동아리 11종. 짝 글 관계 — 전독시 https://arca.live/b/aiart/139326347 ↔ https://arca.live/b/aiart/139333927 , 밀프헌터 https://arca.live/b/aiart/140473932 ↔ https://arca.live/b/aiart/140480040 | 26 | 0 | 2025-05~2025-12 |
 | 채널의 웹툰·애니 캐릭터 LoRA 배포 시리즈는 동봉된 Metadata(json) 파일의 파일명을 LoRA(.safetensors) 파일명과 똑같이 맞춰 같은 폴더에 넣으면 WebUI 에서 트리거워드·프롬프트가 자동으로 뜬다. 이 json 은 ComfyUI 전용이 아니라 WebUI(Stable Diffusion) 사용자도 로라 폴더에 같이 넣으면 된다 | 25 | 0 | 2025-04~2025-08 |
 | 채널의 모델·로라 배포글은 한 달 기한 링크나 만료된 클라우드 주소가 많아, 오래된 배포글은 링크가 죽어 있을 것을 전제하고 댓글의 대체 링크를 먼저 확인해야 한다 | 24 | 0 | 2022-12~2026-06 |
-| 배포글에 적힌 'LoRA Base Model' 은 그 로라를 만들 때 쓴 학습용 베이스 모델일 뿐이고, 그림을 실제로 뽑는 것은 별도의 'Checkpoint Model' 이다 — 제작자가 뉴비 혼동을 막으려고 본문에 못 박아 둔 문구다 | 24 | 0 | 2025-05~2026-07 |
 | 이 시리즈의 트리거 워드는 없어도 대체로 잘 나오지만 넣는 편이 타율이 높다. 다만 의상·장식·특이한 눈동자·문신은 재현이 잘 안 될 수 있어 배포글이 의상 태그를 따로 나열해 두었다 | 15 | 0 | 2025-04~2025-06 |
 | 이 시리즈의 공통 부정 프롬프트는 `bad quality, worst quality, worst detail, sketch, (censor:1.1), (shaded face:1.1), (dark:1.1)` 이다(초기 글은 `(shaded face:1.1), (dark:1.1)` 없이 `shaded face` 만 쓴다) | 13 | 0 | 2025-04~2025-06 |
 | 채널에는 배포 링크를 base64 로 인코딩해 올리는 관행이 있어, 뜻 없는 영문+숫자 덩어리가 보이면 base64 디코더에 넣으면 실제 주소(kio.ac · mega.nz 가 많다)가 나온다 | 12 | 0 | 2023-03~2026-06 |
 | 워크플로우는 EXIF 가 든 이미지·영상 파일을 다운로드해 ComfyUI 창에 드래그앤드롭해 불러온다 | 11 | 0 | 2024-06~2026-08 |
-| 학습 데이터셋 장수 권장치는 자료마다 다르다 — 캐릭터 10~50장(스타일 100~4000장), 한 의상당 20~40장, 50~150장에 100장이 적당, 최소 30장·50장 이상 안정권·200장 초과는 의미 없음 | 8 | 0 | 2023-03~2026-06 |
-| ComfyUI 포터블 통합팩 배포 링크는 본문에 base64 로 올라오고 압축 비밀번호는 `ai`, 기한은 한 달이라 지난 판은 대개 만료돼 있다 | 8 | 0 | 2026-02~2026-08 |
 | 통합팩에서 sage attention을 쓰려면 run_nvidia_gpu.bat 대신 run_nvidia_gpu_fast_fp16_accumulation.bat 으로 실행한다 | 8 | 0 | 2026-02~2026-08 |
+| ComfyUI 포터블 통합팩 배포 링크는 본문에 base64 로 올라오고 압축 비밀번호는 `ai`, 기한은 한 달이라 지난 판은 대개 만료돼 있다 | 8 | 0 | 2026-02~2026-08 |
+| 학습 데이터셋 장수 권장치는 자료마다 다르다 — 캐릭터 10~50장(스타일 100~4000장), 한 의상당 20~40장, 50~150장에 100장이 적당, 최소 30장·50장 이상 안정권·200장 초과는 의미 없음 | 8 | 0 | 2023-03~2026-06 |
 | sage attention은 ComfyUI 작업 속도를 10~15% 높인다 | 8 | 1 | 2026-02~2026-08 |
 | 캐릭터 LoRA 는 트리거워드 하나로 끝나지 않고 외형·의상 태그를 함께 적어야 한다 — 리루루 LoRA 는 전투복/사복1/사복2 세 벌의 태그 묶음을, 신월의 루나 LoRA(트리거 `new_moon_luna`)는 트리거 뒤에 외형 태그를 길게 붙이는 예시를 제공한다 | 7 | 0 | 2025-01~2025-08 |
 | 캐릭터·작가·매체 태그 안의 괄호는 역슬래시로 이스케이프해 nagisa \(blue archive\), star \(sky\), graphite \(medium\) 처럼 적는다 | 7 | 0 | 2025-08~2026-07 |
-| 2026년 Illustrious·SDXL·ANIMA 계열의 퀄리티 태그 관례는 masterpiece, best quality, highres, absurdres 를 프롬프트 앞머리에 두는 것이다 | 6 | 0 | 2026-02~2026-07 |
+| NAI Diffusion V4 Full 로 작가 태그를 비교할 때 채널이 쓰는 표준 조건은 Steps 28 / Prompt Guidance 6 / Sampler Euler Ancestral / Prompt Guidance Rescale 0.7 / Noise Schedule karras / Add Quality Tags on / Undesired Content Preset Heavy 이고, 공통 프롬프트는 `nsfw, [작가 태그], year 2024, cowboy shot, solo, straight-on, standing, arm at side` 다 | 6 | 0 | 2025-03~2025-04 |
 | ComfyUI 통합팩의 지원 GPU는 지포스 3000~5000번대이며 라데온은 미확인이다 | 6 | 0 | 2026-02~2026-08 |
+| 이 웹툰 캐릭터 LoRA 시리즈의 다운로드처는 '키오스크(kio.ac)' 서버 장애로 civitai 로 옮겨졌고, 이후 일부 제작자는 civitai 서버·정책에 회의를 느껴 아카라이브로 다시 옮겼다 — 링크가 죽었으면 civitai 에서 작품명으로 검색하는 편이 빠르다(https://civitai.com/search/models?query=작품명) | 6 | 0 | 2025-05~2025-06 |
+| negpip 덕에 일반 프롬프트 칸에서 (tag:-1), 형식의 음수 가중치를 쓸 수 있다 | 6 | 0 | 2026-02~2026-08 |
 | 와일드카드는 언더바 두 개로 감싼 __파일명__ 형태로 호출하고, 하위 폴더에 있으면 __폴더/파일명__ 으로 적는다 | 6 | 0 | 2024-03~2026-07 |
 | 단품 캐릭터 LoRA 배포 — 웹툰 '동아리' 박다영(베이스 waiNSFWIllustrious_v80, 트리거 `Dayoung`, Steps 50 / Euler a / Beta / CFG 5) https://civitai.com/models/1517725?modelVersionId=1717140 · 애니 '귀환자의 마법은 특별해야 합니다' 3종(`ajest jedgar` https://civitai.com/models/596285 , `brigette` https://civitai.com/models/598370 , `romantica eru` https://civitai.com/models/598376) · '새로구미(여구미)' (트리거 `saero-gumi` / 인간형 `Saro`, 한복·한푸·기모노 의상 세트) https://civitai.com/models/1727202/anime-character-saero-gumi-saero-soju · '갸루에게 상냥한 오타쿠 군' 나루미 유우아이 (트리거 `narumi1` 필수) https://civitai.com/models/1639028 · '성인웹툰 속 엑스트라가 되었다' 4인 통합 (`parkgonggi`, `jungsil`, `nohyeju`, `leezy`) https://civitai.com/models/1664554 · 게임 '클로저스' 비나 (트리거 `binah`) https://civitai.com/models/1792789?modelVersionId=2028848 | 6 | 0 | 2025-04~2025-07 |
-| 포니 계열에서 유래한 스코어 태그는 score_9 부터 score_1 까지 아홉 단계이며, 긍정에 score_9/score_8/score_7 중 1~3개를, 네거티브에 score_1/score_2/score_3 을 넣는 것이 관례다 | 6 | 0 | 2026-02~2026-06 |
-| negpip 덕에 일반 프롬프트 칸에서 (tag:-1), 형식의 음수 가중치를 쓸 수 있다 | 6 | 0 | 2026-02~2026-08 |
-| 통합팩 출력물은 설치폴더\ComfyUI\output\날짜 에, 중간 과정은 그 아래 WIP 폴더에 저장된다 | 6 | 0 | 2026-02~2026-08 |
-| NAI Diffusion V4 Full 로 작가 태그를 비교할 때 채널이 쓰는 표준 조건은 Steps 28 / Prompt Guidance 6 / Sampler Euler Ancestral / Prompt Guidance Rescale 0.7 / Noise Schedule karras / Add Quality Tags on / Undesired Content Preset Heavy 이고, 공통 프롬프트는 `nsfw, [작가 태그], year 2024, cowboy shot, solo, straight-on, standing, arm at side` 다 | 6 | 0 | 2025-03~2025-04 |
-| 2023년 SD1.5 시절에 배포된 LoRA·병합 모델은 현행 Illustrious/Pony/SDXL 계열 체크포인트와 호환되지 않아 실사용 가치가 거의 없고, 옛 모델 계보를 확인할 때만 쓸모가 있다 | 6 | 0 | 2023-01~2023-03 |
 | ANIMA 계열 LoRA 배포글 머리의 `LoRA Base Model: anima-base-v1.0` 은 학습에 쓴 베이스일 뿐 그림을 만드는 모델이 아니다. 실제로 그림을 뽑는 체크포인트는 `waiANIMA_v10Base10` 이고 그 위에 캐릭터 LoRA 를 얹는다. | 6 | 0 | 2026-05~2026-06 |
-| 이 캐릭터 LoRA 시리즈 제작자들이 참고한 학습 가이드는 학습채널(hypernetworks)의 https://arca.live/b/hypernetworks/110021224 (포리x 개정판) 이다 — 질문자가 https://arca.live/b/hypernetworks/84182575 를 짚었을 때 원글쓴이가 그게 아니라고 정정해 주었다 | 6 | 0 | 2025-05~2025-08 |
+| 2023년 SD1.5 시절에 배포된 LoRA·병합 모델은 현행 Illustrious/Pony/SDXL 계열 체크포인트와 호환되지 않아 실사용 가치가 거의 없고, 옛 모델 계보를 확인할 때만 쓸모가 있다 | 6 | 0 | 2023-01~2023-03 |
+| 포니 계열에서 유래한 스코어 태그는 score_9 부터 score_1 까지 아홉 단계이며, 긍정에 score_9/score_8/score_7 중 1~3개를, 네거티브에 score_1/score_2/score_3 을 넣는 것이 관례다 | 6 | 0 | 2026-02~2026-06 |
 | 데이터가 없는 캐릭터는 LoRA 를 만들 수 없다 — 갤부루·단부루에 자료가 비어 있으면 학습 데이터셋을 못 모으기 때문이다. 제작자들도 데이터셋이 없는 작품 요청은 거절했다 | 6 | 0 | 2025-03~2026-07 |
-| 이 웹툰 캐릭터 LoRA 시리즈의 다운로드처는 '키오스크(kio.ac)' 서버 장애로 civitai 로 옮겨졌고, 이후 일부 제작자는 civitai 서버·정책에 회의를 느껴 아카라이브로 다시 옮겼다 — 링크가 죽었으면 civitai 에서 작품명으로 검색하는 편이 빠르다(https://civitai.com/search/models?query=작품명) | 6 | 0 | 2025-05~2025-06 |
-| SDXL 계열 기본 권장 체크포인트는 WAI-illustrious-SDXL 이며 설치폴더\ComfyUI\models\checkpoints 에 넣는다 | 5 | 0 | 2026-02~2026-08 |
-| ANIMA 캐릭터 LoRA 는 의상·장식·특이한 눈동자·문신이 제대로 구현되지 않을 가능성이 높다고 제작자가 미리 고지한다. | 5 | 0 | 2026-05~2026-06 |
-| 통합팩의 Controlnet Mode Select 값은 1=일반, 2=컨트롤넷 오픈포즈, 3=리저널이며 ANIMA 워크플로우는 1=일반, 2=컨트롤넷이다 | 5 | 0 | 2026-05~2026-08 |
-| 캐릭터의 신체·고유 특징 태그(뿔·눈 색·머리 색·가슴 크기 등)는 캡션에서 지워야 그 특징이 캐릭터의 일부로 흡수되어 항상 따라 나오고, 태그를 남기면 학습기가 '태그로 지정된 별도 요소'로 인식해 매번 프롬프트에 그 태그를 적어야 한다 | 5 | 0 | 2023-02~2026-06 |
-| ANIMA는 Base v1.0을 models\diffusion_models, 텍스트 인코더를 models\text_encoders(qwen_3_06b_base.safetensors 로 개명), VAE를 models\vae 에 넣는다 | 5 | 0 | 2026-05~2026-08 |
-| 기존 ComfyUI의 모델 폴더는 Add-Ons\Easy-Models-Linker.bat 로 연결하거나 extra_model_paths.yaml 을 복사해 공유한다 | 5 | 0 | 2026-02~2026-08 |
+| 2026년 Illustrious·SDXL·ANIMA 계열의 퀄리티 태그 관례는 masterpiece, best quality, highres, absurdres 를 프롬프트 앞머리에 두는 것이다 | 6 | 0 | 2026-02~2026-07 |
+| 이 캐릭터 LoRA 시리즈 제작자들이 참고한 학습 가이드는 학습채널(hypernetworks)의 https://arca.live/b/hypernetworks/110021224 (포리x 개정판) 이다 — 질문자가 https://arca.live/b/hypernetworks/84182575 를 짚었을 때 원글쓴이가 그게 아니라고 정정해 주었다 | 6 | 0 | 2025-05~2025-08 |
+| 통합팩 출력물은 설치폴더\ComfyUI\output\날짜 에, 중간 과정은 그 아래 WIP 폴더에 저장된다 | 6 | 0 | 2026-02~2026-08 |
+| NovelAI 계열 가중치 문법은 1.2::태그, 태그:: 형식이고 음수도 되어 -1::tears, bags under eyes:: 처럼 원치 않는 요소를 억제한다 | 5 | 0 | 2026-02~2026-08 |
 | NoobAI·V-pred 계열 체크포인트는 Kohya Deep Shrink·DCW·Spectrum 가속 노드와 상성이 나쁘므로 하나씩 바이패스해 원인을 찾는다 | 5 | 0 | 2026-05~2026-08 |
-| 해상도 프리셋은 Illustrious/SDXL은 custom_nodes\ComfyUi_NakoNode\py\aspect_ratio.py, ANIMA는 custom_nodes\comfyui-kjnodes\custom_dimensions.json 에서 수정한다 | 5 | 0 | 2026-05~2026-08 |
+| 캐릭터의 신체·고유 특징 태그(뿔·눈 색·머리 색·가슴 크기 등)는 캡션에서 지워야 그 특징이 캐릭터의 일부로 흡수되어 항상 따라 나오고, 태그를 남기면 학습기가 '태그로 지정된 별도 요소'로 인식해 매번 프롬프트에 그 태그를 적어야 한다 | 5 | 0 | 2023-02~2026-06 |
+| 통합팩의 Controlnet Mode Select 값은 1=일반, 2=컨트롤넷 오픈포즈, 3=리저널이며 ANIMA 워크플로우는 1=일반, 2=컨트롤넷이다 | 5 | 0 | 2026-05~2026-08 |
+| ANIMA는 Base v1.0을 models\diffusion_models, 텍스트 인코더를 models\text_encoders(qwen_3_06b_base.safetensors 로 개명), VAE를 models\vae 에 넣는다 | 5 | 0 | 2026-05~2026-08 |
 | ComfyUI-Image-Manager 는 2026-03 에 CoNAI(cksdnfas/CoNAI)로 이름을 바꾸며 프론트엔드를 새로 만들었고, 26.4.5~26.5.17 을 거치며 NAI Vibe/Reference 저장, NAI 와 ComfyUI 설정을 모듈로 조합하는 워크플로우, rgthree Power Lora Loader 지원이 들어갔다 (실행 후 localhost:1677, 빌드 후 localhost:1666) | 5 | 0 | 2026-02~2026-05 |
+| 해상도 프리셋은 Illustrious/SDXL은 custom_nodes\ComfyUi_NakoNode\py\aspect_ratio.py, ANIMA는 custom_nodes\comfyui-kjnodes\custom_dimensions.json 에서 수정한다 | 5 | 0 | 2026-05~2026-08 |
 | ANIMA 작가 태그는 반드시 @ 로 시작하며, 단부루 등록명이 aaaaa_bbb 이면 @aaaaa bbb 로 적는다 | 5 | 0 | 2026-02~2026-07 |
-| 웹툰 '섹톱워치' 캐릭터 LoRA 13종 배포 (베이스 illustriousXL_v0.1 / 박나영·우유연은 v1.0). 트리거워드와 civitai 링크 — 윤대리 `manager yoon` https://civitai.com/models/602386 · 오희정 `oh heejeong` https://civitai.com/models/606515 · 강지혜 `kang jihye` https://civitai.com/models/596265 · 강안나 `kang anna` https://civitai.com/models/596259 · 구혜리 `goo hye-ri` https://civitai.com/models/594238 · 최나나 `choi nana` https://civitai.com/models/1722132 · 우유연 `woo yu-yeon` https://civitai.com/models/606521 · 박나영 `park nayoung` https://civitai.com/models/602327 · 박나미 `park nami` https://civitai.com/models/598421 · 유정원 `yoo jeong-won` https://civitai.com/models/600351 · 윤민영 `yoon minyoung` https://civitai.com/models/600363 | 4 | 0 | 2025-04~2025-05 |
-| 통합팩은 ComfyUI 본체를 업데이트하지 말고 새 버전이 나오면 처음부터 새로 받아야 한다 | 4 | 0 | 2026-05~2026-08 |
+| ANIMA 캐릭터 LoRA 는 의상·장식·특이한 눈동자·문신이 제대로 구현되지 않을 가능성이 높다고 제작자가 미리 고지한다. | 5 | 0 | 2026-05~2026-06 |
+| SDXL 계열 기본 권장 체크포인트는 WAI-illustrious-SDXL 이며 설치폴더\ComfyUI\models\checkpoints 에 넣는다 | 5 | 0 | 2026-02~2026-08 |
+| 트리거 워드·권장 가중치·학습 파라미터(epoch, repeat, learning rate, dim)를 적지 않은 LoRA 배포글은 재현이 어렵다 — 채널에서도 그 수치만 풀어도 참고가 크게 된다는 지적이 반복해서 나왔다 | 5 | 0 | 2023-02~2026-07 |
+| 기존 ComfyUI의 모델 폴더는 Add-Ons\Easy-Models-Linker.bat 로 연결하거나 extra_model_paths.yaml 을 복사해 공유한다 | 5 | 0 | 2026-02~2026-08 |
 
 ## 출처
 

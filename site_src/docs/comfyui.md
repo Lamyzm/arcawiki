@@ -1,6 +1,6 @@
 # ComfyUI 쓰는 법
 
-> **원문 159건 → 이 문서 하나** · 주장 361개 · 정리 2026-08-14
+> **원문 160건 → 이 문서 하나** · 주장 362개 · 정리 2026-08-14
 
 [설치와 환경 구성](install.md) 까지 끝냈다면 브라우저에 노드가 잔뜩 깔린 화면이 떠 있을 것이다.
 이 문서는 그 다음, **"그래서 뭘 눌러야 하나"** 에 답한다.
@@ -277,7 +277,7 @@ uv·comfy-cli 설치와 torch·triton·sage 명령 전문은 → [설치와 환�
 | `torch.cuda.is_available()` 가 False | CPU 판 torch 가 깔렸거나 드라이버·CUDA wheel 불일치 |
 | SageAttention import 오류 | wheel 과 torch/CUDA 조합 불일치 |
 | `cl is not found` | torch.compile 계열이 윈도우 C++ 컴파일러를 못 찾는 것 — Visual Studio Build Tools 의 C++ 도구를 깔거나 compile 을 끈다 |
-| `extra_model_paths.yaml` 을 넣었는데 모델이 안 보임 | 파일 위치 · YAML 들여쓰기 · 키 중복 확인 |
+| `extra_model_paths.yaml` 을 넣었는데 모델이 안 보임 | 파일 위치 · YAML 들여쓰기 · 키 중복 확인. **특히 폴더 종류별 키(`loras`, `vae`, `upscale_models` 등)가 빠져 있으면 그 종류만 통째로 안 보인다** |
 
 > **한 글에서만 제시된 구성이다** (172936836, 2026-06, 추천 8). 다만 "포터블 구버전이 무조건 나쁜 것은 아니고, 최신에서 말썽부리는 노드가 있으면 구버전에서 작업하는 편이 낫다"는 판단은 통합팩 배포글들이 공유한다.
 
@@ -2745,7 +2745,7 @@ KJNodes 의 `Resize Image v2` 는 crop 은 되지만 픽셀 크기 맞춤이 없
 
 → [인페인팅](inpainting.md) · [모델 고르기](models.md)
 
-<small>근거 — [ComfyUI 뉴 원클릭 로컬 리터칭 V4A 워크플로우 26.01](https://arca.live/b/aiart/159742122) · [Qwen-Image-Edit-2511 원본 비율 유지하는 법 26.01](https://arca.live/b/aiart/160703142) · [ComfyUI - Qwen Edit 25.11](https://arca.live/b/aiart/154401699)</small>
+<small>근거 — [ComfyUI 뉴 원클릭 로컬 리터칭 V4A 워크플로우 26.01](https://arca.live/b/aiart/159742122) · [ComfyUI - Qwen Edit 25.11](https://arca.live/b/aiart/154401699) · [Qwen-Image-Edit-2511 원본 비율 유지하는 법 26.01](https://arca.live/b/aiart/160703142)</small>
 
 ## ⚠ DCW · CWM · SMC — 조용히 스킵되고 있던 조건들 (2026-05)
 <small>2026-05 기준 · 근거 3건</small>
@@ -2826,10 +2826,10 @@ DCW 노드팩(`https://github.com/namemechan/ComfyUI-DCW`)은 **DCW · CWM · SM
 
 → [자원](resources.md) · [프롬프트 쓰는 법](prompting.md)
 
-<small>근거 — [ComfyUI에서 이미지 누끼 따고, 그 안에 다른 이미지를… 26.03](https://arca.live/b/aiart/165751166) · [ComfyUI에서 누끼를 따보자 24.07](https://arca.live/b/aiart/111339977) · [(워크플로우 공모전) 겁나빠른 투닥뽑 25.06](https://arca.live/b/aiart/140754696) · [커스텀노드) ComfyUI-WD-Timm-Tagger 업데이트 26.05](https://arca.live/b/aiart/170377879)</small>
+<small>근거 — [ComfyUI에서 이미지 누끼 따고, 그 안에 다른 이미지를… 26.03](https://arca.live/b/aiart/165751166) · [ComfyUI에서 누끼를 따보자 24.07](https://arca.live/b/aiart/111339977) · [커스텀노드) ComfyUI-WD-Timm-Tagger 업데이트 26.05](https://arca.live/b/aiart/170377879) · [(워크플로우 공모전) 겁나빠른 투닥뽑 25.06](https://arca.live/b/aiart/140754696)</small>
 
 ??? note "근거 11건 전부 보기"
-    [ComfyUI에서 이미지 누끼 따고, 그 안에 다른 이미지를… 26.03](https://arca.live/b/aiart/165751166) · [ComfyUI에서 누끼를 따보자 24.07](https://arca.live/b/aiart/111339977) · [(워크플로우 공모전) 겁나빠른 투닥뽑 25.06](https://arca.live/b/aiart/140754696) · [커스텀노드) ComfyUI-WD-Timm-Tagger 업데이트 26.05](https://arca.live/b/aiart/170377879) · [(ComfyUI) 간단히 이전 그림 시드 보존하기 23.09](https://arca.live/b/aiart/87528398) · [(ComfyUI Custom Node) Mask Fourie… 26.02](https://arca.live/b/aiart/162468361) · [comfy 모바일 ui 확장 괜찮은거 하나 있네 26.02](https://arca.live/b/aiart/162164907) · [comfyui-cosmos-reference 26.06](https://arca.live/b/aiart/173603389) · [자작 컴피용 태그 가독성 커스텀노드 26.07](https://arca.live/b/aiart/177365104) · [civitAI에서 커스텀노드를 공개 26.06](https://arca.live/b/aiart/174070490) · [deep shrink 에 컨트롤넷이 호환되게 해주는 커스텀노드 26.02](https://arca.live/b/aiart/163330579)
+    [ComfyUI에서 이미지 누끼 따고, 그 안에 다른 이미지를… 26.03](https://arca.live/b/aiart/165751166) · [ComfyUI에서 누끼를 따보자 24.07](https://arca.live/b/aiart/111339977) · [커스텀노드) ComfyUI-WD-Timm-Tagger 업데이트 26.05](https://arca.live/b/aiart/170377879) · [(워크플로우 공모전) 겁나빠른 투닥뽑 25.06](https://arca.live/b/aiart/140754696) · [(ComfyUI) 간단히 이전 그림 시드 보존하기 23.09](https://arca.live/b/aiart/87528398) · [(ComfyUI Custom Node) Mask Fourie… 26.02](https://arca.live/b/aiart/162468361) · [comfy 모바일 ui 확장 괜찮은거 하나 있네 26.02](https://arca.live/b/aiart/162164907) · [comfyui-cosmos-reference 26.06](https://arca.live/b/aiart/173603389) · [자작 컴피용 태그 가독성 커스텀노드 26.07](https://arca.live/b/aiart/177365104) · [civitAI에서 커스텀노드를 공개 26.06](https://arca.live/b/aiart/174070490) · [deep shrink 에 컨트롤넷이 호환되게 해주는 커스텀노드 26.02](https://arca.live/b/aiart/163330579)
 
 ## 프롬프트 입력 노드를 유형별로 쪼개기 — 그리고 해상도 노드를 갈아 끼울 때
 <small>⚠️ 2025-06 기준 · 근거 1건</small>
@@ -2873,11 +2873,34 @@ DCW 노드팩(`https://github.com/namemechan/ComfyUI-DCW`)은 **DCW · CWM · SM
 
 <small>근거 — [(워크플로우 공모전) 라면보다 쉽다! 생활 간단 워크플로우! 25.06](https://arca.live/b/aiart/140743677)</small>
 
+## 로컬 LLM 프롬프트 노드 — Danbooru CSV를 직접 읽게 해서 가짜 태그를 막는다
+<small>2026-08 기준 · 근거 1건</small>
+
+로컬 LLM 자동프롬프트의 가장 큰 문제는 **존재하지 않는 태그를 그럴싸하게 꾸며내는 것**이다.
+
+이걸 막는 우회가 있었다. LLM이 **Danbooru 태그 CSV를 직접 읽고 그 안의 태그만 쓰게 강제**하는 커스텀 노드다.
+
+### 장점
+
+- `aged`, `animation artstyle` 같은 **없는 태그 생성 억제**
+- 와일드카드와 함께 사용 가능
+- 사람이 `artist`·`quality` 같은 핵심 태그만 따로 적고, 나머지를 LLM에게 맡길 수 있다
+
+### 전제
+
+- 로컬 LLM(예: qwen 3.6 27b 계열) 필요
+- CSV 데이터가 최신이어야 한다
+- 자동 생성이라도 **최종 프롬프트를 사람이 한 번 훑는 습관**은 남겨 둬야 한다
+
+핵심은 'LLM에게 자유롭게 쓰게 하는 것'이 아니라 **허용된 태그 목록 안에서만 조합하게 하는 것**이다.
+
+<small>근거 — [로컬 llm으로 ILXL 뽑는 커스텀노드 + 이미지 워크플로우 26.08](https://arca.live/b/aiart/179817083)</small>
+
 ## 이 문서가 딛고 선 주장
 
 이 문서가 인용한 원문에서 뽑은 것이다. 여러 글이 같은 말을 하는지 센 것이고, 근거가 1건뿐인 주장은 그만큼 약하다.
 
-근거가 센 40개만 싣는다 (나머지 321개는 생략).
+근거가 센 40개만 싣는다 (나머지 322개는 생략).
 
 | 주장 | 찬성 | 반대 | 시점 |
 |---|---:|---:|---|
@@ -3027,6 +3050,7 @@ DCW 노드팩(`https://github.com/namemechan/ComfyUI-DCW`)은 **DCW · CWM · SM
 - [[ComfyUI Custom Node] Mask Fourier Smoothing](https://arca.live/b/aiart/162468361) — 2026-02, 추천 8
 - [ComfyUI-basic_data_handling 커스텀노드 소개](https://arca.live/b/aiart/162937578) — 2026-02, 추천 8
 - [ComfyUI 버전 여러개 쓰기: UV와 ComfyCLI 기반, 포터블도 가능](https://arca.live/b/aiart/172936836) — 2026-06, 추천 8
+- [로컬 llm으로 ILXL 뽑는 커스텀노드 + 이미지 워크플로우](https://arca.live/b/aiart/179817083) — 2026-08, 추천 8
 - [아주 선명한 ComradeshipXL v14KC용 ComfyUI 워크플로우](https://arca.live/b/aiart/136415303) — 2025-05, 추천 7
 - [ComfyUI - Qwen Edit](https://arca.live/b/aiart/154401699) — 2025-11, 추천 7
 - [또 업뎃한 프롬프트 분류기](https://arca.live/b/aiart/154827249) — 2025-11, 추천 7

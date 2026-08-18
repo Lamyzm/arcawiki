@@ -509,46 +509,46 @@ when executing KSampler: mat1 and mat2 shapes cannot be multiplied (308x2048 and
 
 | 주장 | 찬성 | 반대 | 시점 |
 |---|---:|---:|---|
-| sage attention은 ComfyUI 작업 속도를 10~15% 높인다 | 8 | 1 | 2026-02~2026-08 |
 | 통합팩에서 sage attention을 쓰려면 run_nvidia_gpu.bat 대신 run_nvidia_gpu_fast_fp16_accumulation.bat 으로 실행한다 | 8 | 0 | 2026-02~2026-08 |
 | ComfyUI 포터블 통합팩 배포 링크는 본문에 base64 로 올라오고 압축 비밀번호는 `ai`, 기한은 한 달이라 지난 판은 대개 만료돼 있다 | 8 | 0 | 2026-02~2026-08 |
-| negpip 덕에 일반 프롬프트 칸에서 (tag:-1), 형식의 음수 가중치를 쓸 수 있다 | 6 | 0 | 2026-02~2026-08 |
+| sage attention은 ComfyUI 작업 속도를 10~15% 높인다 | 8 | 1 | 2026-02~2026-08 |
 | 통합팩 출력물은 설치폴더\ComfyUI\output\날짜 에, 중간 과정은 그 아래 WIP 폴더에 저장된다 | 6 | 0 | 2026-02~2026-08 |
-| 통합팩의 Controlnet Mode Select 값은 1=일반, 2=컨트롤넷 오픈포즈, 3=리저널이며 ANIMA 워크플로우는 1=일반, 2=컨트롤넷이다 | 5 | 0 | 2026-05~2026-08 |
-| 기존 ComfyUI의 모델 폴더는 Add-Ons\Easy-Models-Linker.bat 로 연결하거나 extra_model_paths.yaml 을 복사해 공유한다 | 5 | 0 | 2026-02~2026-08 |
-| ANIMA는 Base v1.0을 models\diffusion_models, 텍스트 인코더를 models\text_encoders(qwen_3_06b_base.safetensors 로 개명), VAE를 models\vae 에 넣는다 | 5 | 0 | 2026-05~2026-08 |
-| NoobAI·V-pred 계열 체크포인트는 Kohya Deep Shrink·DCW·Spectrum 가속 노드와 상성이 나쁘므로 하나씩 바이패스해 원인을 찾는다 | 5 | 0 | 2026-05~2026-08 |
+| negpip 덕에 일반 프롬프트 칸에서 (tag:-1), 형식의 음수 가중치를 쓸 수 있다 | 6 | 0 | 2026-02~2026-08 |
 | SDXL 계열 기본 권장 체크포인트는 WAI-illustrious-SDXL 이며 설치폴더\ComfyUI\models\checkpoints 에 넣는다 | 5 | 0 | 2026-02~2026-08 |
+| 통합팩의 Controlnet Mode Select 값은 1=일반, 2=컨트롤넷 오픈포즈, 3=리저널이며 ANIMA 워크플로우는 1=일반, 2=컨트롤넷이다 | 5 | 0 | 2026-05~2026-08 |
+| NoobAI·V-pred 계열 체크포인트는 Kohya Deep Shrink·DCW·Spectrum 가속 노드와 상성이 나쁘므로 하나씩 바이패스해 원인을 찾는다 | 5 | 0 | 2026-05~2026-08 |
+| ANIMA는 Base v1.0을 models\diffusion_models, 텍스트 인코더를 models\text_encoders(qwen_3_06b_base.safetensors 로 개명), VAE를 models\vae 에 넣는다 | 5 | 0 | 2026-05~2026-08 |
 | 해상도 프리셋은 Illustrious/SDXL은 custom_nodes\ComfyUi_NakoNode\py\aspect_ratio.py, ANIMA는 custom_nodes\comfyui-kjnodes\custom_dimensions.json 에서 수정한다 | 5 | 0 | 2026-05~2026-08 |
+| 기존 ComfyUI의 모델 폴더는 Add-Ons\Easy-Models-Linker.bat 로 연결하거나 extra_model_paths.yaml 을 복사해 공유한다 | 5 | 0 | 2026-02~2026-08 |
 | 통합팩은 ComfyUI 본체를 업데이트하지 말고 새 버전이 나오면 처음부터 새로 받아야 한다 | 4 | 0 | 2026-05~2026-08 |
 | ANIMA 용 LLLite 컨트롤넷 모델은 ComfyUI\models\controlnet 에 넣고 Apply Anima ControlNet-LLLite 노드로 연결한다 | 4 | 0 | 2026-05~2026-05 |
-| 설정 > Comfy > Nodes 2.0 > 모던 노드 디자인을 켜면 워크플로우 배열이 깨지고 일부 커스텀 노드가 오작동한다 | 4 | 0 | 2026-05~2026-08 |
 | SDXL/Illustrious 결과물이 탁하거나 흰 점이 찍히면 VAE Select 값을 2로 두어 별도 VAE(fixFP16ErrorsSDXLLowerMemoryUse_v10)를 적용한다 | 4 | 0 | 2026-06~2026-08 |
+| 설정 > Comfy > Nodes 2.0 > 모던 노드 디자인을 켜면 워크플로우 배열이 깨지고 일부 커스텀 노드가 오작동한다 | 4 | 0 | 2026-05~2026-08 |
 | sage attention을 켜면 손가락 찐빠(손 왜곡)가 늘어난다는 보고가 있다 | 3 | 0 | 2026-06~2026-08 |
-| 직접 노드를 짜기보다 Civitai 에서 사용량 많은 남의 워크플로우를 골라 쓰는 편이 낫다 | 2 | 0 | 2026-01~2026-06 |
-| SAM3 모델 파일을 넣는 폴더는 노드마다 다르다 — ComfyUI 공식 sam3 노드는 통합 모델 입력을 써서 models\checkpoints 에, 개인이 만든 커스텀 노드는 전용 입력 라인을 써서 models\sam3 에 넣어야 인식한다 | 2 | 0 | 2026-05~2026-06 |
+| 채널 규정상 실존 인물 사진에서 컨트롤넷으로 포즈·깊이를 추출하는 것은 실존 인물 기반 자료로 보지 않지만, 유두·음부가 직간접 노출되면 실사 음란물로 취급된다 | 2 | 0 | 2023-02~2026-01 |
+| ComfyUI 업데이트 이후 ANIMA LLLite 모델은 models/model_patches 로 옮기고 ModelPatchLoader(모델 패치 로더) 노드를 Apply Anima ControlNet-LLLite 앞에 연결해야 동작한다 | 2 | 0 | 2026-05~2026-05 |
+| 그록 빌드(imagine-video-1.5)는 검열이 없어 덴덴AI 연동으로 I2V 에 쓸 수 있었다(이후 서비스 종료) | 2 | 1 | 2026-06~2026-06 |
 | ILXL 리저널의 강제 영역 분리 attention_bootstrap 모드는 euler_ancestral 샘플러에서 그림이 망가지며, bootstrap_steps 5~6 은 분리가 과해 그림 두 장처럼 보이므로 2 까지 낮춰야 자연스럽게 합성된다 | 2 | 0 | 2026-05 |
 | 음수 가중치는 (choker:-1) 이나 (testicles:-1) 처럼 일반 프롬프트 칸에 그대로 적어 요소를 빼는 데 쓰이며, ComfyUI 에서는 negpip 계열 노드가 있어야 동작한다 | 2 | 0 | 2026-06~2026-08 |
-| ComfyUI 업데이트 이후 ANIMA LLLite 모델은 models/model_patches 로 옮기고 ModelPatchLoader(모델 패치 로더) 노드를 Apply Anima ControlNet-LLLite 앞에 연결해야 동작한다 | 2 | 0 | 2026-05~2026-05 |
+| SAM3 모델 파일을 넣는 폴더는 노드마다 다르다 — ComfyUI 공식 sam3 노드는 통합 모델 입력을 써서 models\checkpoints 에, 개인이 만든 커스텀 노드는 전용 입력 라인을 써서 models\sam3 에 넣어야 인식한다 | 2 | 0 | 2026-05~2026-06 |
+| 직접 노드를 짜기보다 Civitai 에서 사용량 많은 남의 워크플로우를 골라 쓰는 편이 낫다 | 2 | 0 | 2026-01~2026-06 |
 | 남이 공유한 뼈대 이미지를 직접 넣을 때는 `Preprocessor: none` + `Model: openpose` 로 맞춰야 하고, 검은 선으로 직접 그린 포즈는 관절의 숫자와 컬러가 정해져 있어 인식되지 않는다 | 2 | 0 | 2023-02~2023-02 |
-| 그록 빌드(imagine-video-1.5)는 검열이 없어 덴덴AI 연동으로 I2V 에 쓸 수 있었다(이후 서비스 종료) | 2 | 1 | 2026-06~2026-06 |
+| ILXL 리저널에서는 베이스 프롬프트에 2girls 를, 각 area 에는 1girl 을 넣어야 하며 area 에 2girls 를 적으면 네 명이 나온다 | 1 | 0 | 2026-05 |
+| 여러 명을 뽑는 것이 목적이면 리저널 프롬프트·컨트롤넷 대신 Anima 모델을 쓰는 편이 낫다 — Anima 는 리저널도 컨트롤넷도 없이 여러 명을 잘 뽑아 준다 (리저널 강좌 원문 161686015 의 댓글 4번, 제작자 확인) | 1 | 0 | 2026-02~2026-02 |
+| SDXL/Illustrious(ILXL)에서 동작하는 오픈포즈 컨트롤넷은 https://huggingface.co/xinsir/controlnet-openpose-sdxl-1.0 에서 받고 `diffusion_pytorch_model` 과 `diffusion_pytorch_model_twins` 둘 다 ILXL 에서 동작이 확인됐다. 같은 저장소에 depth·canny 도 있으며, 여러 전처리기를 하나로 처리하는 `union sdxl` 모델을 쓰는 편이 편하다는 권고가 있다 | 1 | 0 | 2024-11 |
+| 2023년 SD1.5 기준 컨트롤넷은 `https://github.com/Mikubill/sd-webui-controlnet` 로 설치하고 받은 모델을 `stable-diffusion-webui\extensions\sd-webui-controlnet\models` 에 넣는다 | 1 | 0 | 2023-02 |
+| ComfyUI 업데이트 후 인페인트 워크플로우가 `Required input is missing: model_patch` 로 죽는 것은 `Apply Anima ControlNet-LLLite` 가 커스텀 노드에서 ComfyUI 내장 노드로 바뀌며 `model_patch` 입력이 새로 생겼기 때문이다 — LLLite 컨트롤넷 파일을 `ComfyUI/models/model_patches/` 로 옮기고 그 입력에 '모델 패치 로더(model patch loader)' 노드를 연결한다 | 1 | 0 | 2026-07 |
+| 컨트롤넷 오픈포즈를 쓰는 데 포토샵이나 블렌더는 필요 없다 — 컨트롤넷에 사진을 넣기만 하면 자동으로 포즈를 추출한다 | 1 | 0 | 2023-02 |
+| NovelAI 이미지 생성 캔버스가 3D 모델을 직접 불러와 포즈와 구도를 참조할 수 있게 됐다 (2026-02) — 지원 확장자는 `.glb` · `.gltf` · `.pmd` · `.pmx` · `.vrm` 이고 fbx 는 오토데스크 라이선스 때문으로 보인다. 함께 들어온 스케치(색상 채우기·블러 브러쉬·올가미)와 인페인트 마스크 기능은 별도 이미지 편집 툴이 없는 사람이 NAI 안에서 편집할 수 있게 돕는 것이다 | 1 | 0 | 2026-02 |
+| 2023년 ComfyUI 의 영역 분할 프롬프트는 Attention Couple 노드에 마스크를 칠해 나누는 방식이었고, Attention 모드는 한 Unet 안에서 처리해 빠르지만 영역 간 간섭이 많아 로라 없는 랜덤짤에, Latent 모드는 영역별로 따로 샘플링해 느리지만 간섭이 덜해 로라 사용에 적합했다 — 이후 노드가 사라져 '누락' 오류가 났다 | 1 | 0 | 2023-09 |
+| ControlNet Canny 는 원래 없던 요소가 추가되는 문제가 있지만 캐릭터 디테일은 HED 보다 낫고 밑그림 채색 용도에서는 성능이 압도적이며, HED 는 그림의 전체 틀을 깨지 않고 분위기만 바꿔 준다 | 1 | 0 | 2023-02~2023-02 |
+| 컨트롤넷 조절바 — Weight 는 분석 결과를 결과물에 반영하는 정도, `○○ resolution` 은 중간 정보 이미지(뼈대·뎁스맵·선화)의 해상도, low/high threshold 는 원본에서 인식할 범위다 | 1 | 0 | 2023-02 |
+| 오픈포즈는 실제 사람 사진에서 포즈를 추출하려고 만든 것이라 그림에서는 인식 타율이 낮거나 아예 인식하지 못하므로, 그림은 depth 나 normal 로 대체한다 | 1 | 0 | 2023-02 |
 | ComfyUI 안에서 캔버스 작업을 하는 프롬프트 매니저3 는 마스크에 1~6번 번호를 붙이면 프롬프트 노드의 같은 번호 칸과 연결돼 영역 지정에 쓰이고, 디테일러는 SEGS(떨어진 마스크를 각각 샘플링)와 마스크 병합(한 번만 샘플링) 중 고른다 | 1 | 0 | 2026-06 |
+| 디테일러가 마스킹한 자리에 엉뚱한 영역을 그려 넣는 고질적 증상의 원인은 컨트롤넷이다 — 디테일러는 대상을 크롭해 다시 그린 뒤 되붙이는데, 크롭되어 작아진 이미지에 컨트롤넷이 크롭 전 좌표 기준 데이터를 그대로 밀어 넣어 어긋난다. 마스킹 영역이 작고 `crop_factor` 가 낮을 때 두드러지며 일반 KSampler 에서는 나타나지 않고 크롭&스티치처럼 내부 로직이 비슷한 노드에서만 일어난다 | 1 | 0 | 2026-04 |
 | ControlNet 전처리기 Depth 는 캐릭터 깊이를 뭉뚱그리는 대신 배경 뎁스까지 계산하고, Normal 은 배경을 무시하는 대신 캐릭터 깊이를 Depth 보다 더 깊게 계산한다 | 1 | 0 | 2023-02 |
-| 로라를 많이 쓰면 컨트롤넷 오픈포즈를 따라가지 않으므로 로라 개수를 줄이거나 찐빠를 내는 원인 로라를 찾아야 한다 | 1 | 0 | 2025-12 |
-| 채널 규정상 실존 인물 사진에서 컨트롤넷으로 포즈·깊이를 추출하는 것은 실존 인물 기반 자료로 보지 않지만, 유두·음부가 직간접 노출되면 실사 음란물로 취급된다 | 1 | 0 | 2026-01 |
-| ControlNet 오픈포즈는 초반 디노이즈에 강하게 관여하므로 strength 1(또는 0.75) 에 적용 구간 0~0.25 로 두면 자세를 확실히 따라가고, 강도를 1 로 올려도 구간을 0.75~1 로 뒤에 배치하면 상관없는 자세가 많이 나온다 (Euler A / SGM Uniform 실험, 2025-11) | 1 | 0 | 2025-11 |
-| Canny 를 그냥 쓰면 배경·눈·머리카락의 쓸데없는 선까지 따서 원본 향이 짙게 남고 프롬프트를 무시하므로, 선화에서 불필요한 선을 지우고 다시 넣어야 한다 | 1 | 0 | 2023-02~2023-03 |
-| Latent Hires Fix 의 그림 변형은 1차 생성 결과를 VAE Decode → `Normal Lineart` 전처리기 → `Apply Controlnet` 으로 라인아트 컨트롤넷을 만들어 **Hires 샘플러 단계에만** 걸어 억제한다 — 1차 그림의 선 정보를 붙잡아 두므로 디노이즈 0.6 이상에서도 형태가 유지되고 변형 정도는 Apply Controlnet 의 strength 로 조절한다 (2023-09 자료지만 발상은 유효) | 1 | 0 | 2023-09 |
-| 오픈포즈를 초반 구간에만 걸어도 되는지는 스케줄러에 달려 있다 — `simple`·`lcm` 처럼 초반에 후딱 끝내는 스케줄러는 초반 집중으로 충분하지만 `karras` 계열은 구간을 꾸준히 줘야 한다 | 1 | 0 | 2025-11 |
-| LLLite pose 모델은 preview3 기준 학습이라 사실상 쓸 수 없고 ANIMA 용 오픈포즈 컨트롤넷은 존재하지 않는다 | 1 | 0 | 2026-05 |
-| ANIMA 워크플로우에서 컨트롤넷을 쓸 때는 SPEED 샘플러를 빼고 spectrum 만 써야 한다 | 1 | 0 | 2026-05 |
-| ANIMA 에는 오픈포즈 컨트롤넷이 없고 kohya-ss 의 Anima-LLLite 가 컨트롤넷 역할을 하며, 글쓴이 권장값은 strength 0.8 / start_percent 0.0 / end_percent 0.4 다 | 1 | 0 | 2026-05 |
-| 컨트롤넷↔디테일러 간섭의 해결은 둘의 연결을 전부 끊는 것이다 — 컨트롤넷은 일반 KSampler 로 한 번 생성하는 데만 쓰고, 그때 망가지는 경계선과 디테일은 컨트롤넷 없이 프롬프트에 직결한 디테일러로 잡는다. `crop_factor` 를 10씩 키워 어거지로 덮는 것보다 훨씬 원활하다 | 1 | 0 | 2026-04 |
-| 파일을 옮겨 연결한 뒤에도 strength 칸에 파일명(`anima-lllite-inpainting-v2.safetensors`)이 들어가 NaN 으로 표시되고 `Failed to convert an input value to a FLOAT value` 가 나는 것은 구버전 워크플로우에 남은 위젯 배치가 새 노드 정의와 어긋나 값이 밀려 들어간 탓이라, 값을 고치지 말고 그 노드를 삭제한 뒤 새로 불러와 재연결해야 한다 — 임의로 1.0 을 넣으면 에러는 없어도 결과가 어색하거나 레퍼런스와 무관한 이미지가 나온다 | 1 | 0 | 2026-07 |
-| Deep Shrink 와 컨트롤넷은 기본적으로 호환되지 않으며, `controlnet deep shrink patch` wrapper 노드를 사이에 끼우면 함께 쓸 수 있다 — 선행 노드 `ComfyUI_GradientDeepShrink` 의 advanced 노드 전용이라 일반 버전과 함께 쓰면 안 되고, 단일 샘플링으로 1700x1700 이상을 갈 때 반필수라는 것이 제작자 평이다 | 1 | 0 | 2026-02 |
 | SDXL·Illustrious(ILXL)용 컨트롤넷 오픈포즈 모델은 `https://huggingface.co/xinsir/controlnet-openpose-sdxl-1.0` 에서 받으며 reForge·ILXL 에서 동작이 확인됐다. 댓글은 `union sdxl` 모델을 권한다 | 1 | 0 | 2024-11~2026-04 |
-| 태거가 virtual_youtuber, ponytail, star_hair_ornament 처럼 해당 없는 태그를 붙이는 경우가 있으므로 Exclude tags 에 넣어 걸러야 한다 | 1 | 0 | 2023-03~2023-03 |
-| 컨트롤넷 포즈가 이상하게 나오는 가장 흔한 원인은 포즈 추출용 입력 이미지와 출력 해상도의 가로세로 비율 불일치다 | 1 | 0 | 2023-02~2025-12 |
+| 로라를 많이 쓰면 컨트롤넷 오픈포즈를 따라가지 않으므로 로라 개수를 줄이거나 찐빠를 내는 원인 로라를 찾아야 한다 | 1 | 0 | 2025-12 |
 
 ## 출처
 

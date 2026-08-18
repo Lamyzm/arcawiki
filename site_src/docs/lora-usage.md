@@ -2423,45 +2423,45 @@ LoRA 로 풀어 본 실험기다 (1건, 2026-07). 픽시브의 마이너 작가 
 | 주장 | 찬성 | 반대 | 시점 |
 |---|---:|---:|---|
 | 이 시리즈의 예시 이미지는 ComfyUI 로 뽑았으므로 이미지를 ComfyUI 캔버스에 끌어다 놓으면 노드(워크플로우)가 그대로 불러와진다 | 44 | 0 | 2025-04~2026-07 |
+| 배포글에 적힌 'LoRA Base Model' 은 그 로라를 만들 때 쓴 학습용 베이스 모델일 뿐이고, 그림을 실제로 뽑는 것은 별도의 'Checkpoint Model' 이다 — 제작자가 뉴비 혼동을 막으려고 본문에 못 박아 둔 문구다 | 31 | 0 | 2025-02~2026-07 |
 | 같은 제작자의 웹툰·애니 캐릭터 LoRA 배포 목록 (전부 LoRA Base illustriousXL_v1.1 / 체크포인트 WaiNSFWillustrious V140) — 퀘스트지상주의 6종 `baek chaerin, elisa, kim dahyeon, lee jihyeon, yang soha, yeon seohui` · 초인의 게임 6종 `higpr(대사제), baek hayeon, lee nayeon, qun1(여왕), saniya ahmetova, shuran` · 일진담당일진 5종 · 수요웹툰의 나강림 13종 · 사시미 한 자루로 아카데미를 씹어먹음 6종 · 전지적 독자 시점 14종 · 현실퀘스트 7종 `choi minhye` 외 · 이세계 밀프 헌터 10종 · 광마회귀 공손월 · 동아리 11종. 짝 글 관계 — 전독시 https://arca.live/b/aiart/139326347 ↔ https://arca.live/b/aiart/139333927 , 밀프헌터 https://arca.live/b/aiart/140473932 ↔ https://arca.live/b/aiart/140480040 | 26 | 0 | 2025-05~2025-12 |
 | 채널의 웹툰·애니 캐릭터 LoRA 배포 시리즈는 동봉된 Metadata(json) 파일의 파일명을 LoRA(.safetensors) 파일명과 똑같이 맞춰 같은 폴더에 넣으면 WebUI 에서 트리거워드·프롬프트가 자동으로 뜬다. 이 json 은 ComfyUI 전용이 아니라 WebUI(Stable Diffusion) 사용자도 로라 폴더에 같이 넣으면 된다 | 25 | 0 | 2025-04~2025-08 |
 | 채널의 모델·로라 배포글은 한 달 기한 링크나 만료된 클라우드 주소가 많아, 오래된 배포글은 링크가 죽어 있을 것을 전제하고 댓글의 대체 링크를 먼저 확인해야 한다 | 24 | 0 | 2022-12~2026-06 |
-| 배포글에 적힌 'LoRA Base Model' 은 그 로라를 만들 때 쓴 학습용 베이스 모델일 뿐이고, 그림을 실제로 뽑는 것은 별도의 'Checkpoint Model' 이다 — 제작자가 뉴비 혼동을 막으려고 본문에 못 박아 둔 문구다 | 24 | 0 | 2025-05~2026-07 |
 | 이 시리즈의 트리거 워드는 없어도 대체로 잘 나오지만 넣는 편이 타율이 높다. 다만 의상·장식·특이한 눈동자·문신은 재현이 잘 안 될 수 있어 배포글이 의상 태그를 따로 나열해 두었다 | 15 | 0 | 2025-04~2025-06 |
 | 이 시리즈의 공통 부정 프롬프트는 `bad quality, worst quality, worst detail, sketch, (censor:1.1), (shaded face:1.1), (dark:1.1)` 이다(초기 글은 `(shaded face:1.1), (dark:1.1)` 없이 `shaded face` 만 쓴다) | 13 | 0 | 2025-04~2025-06 |
 | 채널에는 배포 링크를 base64 로 인코딩해 올리는 관행이 있어, 뜻 없는 영문+숫자 덩어리가 보이면 base64 디코더에 넣으면 실제 주소(kio.ac · mega.nz 가 많다)가 나온다 | 12 | 0 | 2023-03~2026-06 |
 | 학습 데이터셋 장수 권장치는 자료마다 다르다 — 캐릭터 10~50장(스타일 100~4000장), 한 의상당 20~40장, 50~150장에 100장이 적당, 최소 30장·50장 이상 안정권·200장 초과는 의미 없음 | 8 | 0 | 2023-03~2026-06 |
-| ANIMA 는 Euler A + automatic/normal 조합에서 그림이 기괴해지므로 Euler 또는 ER SDE 샘플러에 simple 또는 SGM uniform 스케줄러를 써야 한다 | 7 | 0 | 2026-04~2026-08 |
 | 캐릭터·작가·매체 태그 안의 괄호는 역슬래시로 이스케이프해 nagisa \(blue archive\), star \(sky\), graphite \(medium\) 처럼 적는다 | 7 | 0 | 2025-08~2026-07 |
-| ANIMA 계열 LoRA 배포글 머리의 `LoRA Base Model: anima-base-v1.0` 은 학습에 쓴 베이스일 뿐 그림을 만드는 모델이 아니다. 실제로 그림을 뽑는 체크포인트는 `waiANIMA_v10Base10` 이고 그 위에 캐릭터 LoRA 를 얹는다. | 6 | 0 | 2026-05~2026-06 |
+| ANIMA 는 Euler A + automatic/normal 조합에서 그림이 기괴해지므로 Euler 또는 ER SDE 샘플러에 simple 또는 SGM uniform 스케줄러를 써야 한다 | 7 | 0 | 2026-04~2026-08 |
 | 포니 계열에서 유래한 스코어 태그는 score_9 부터 score_1 까지 아홉 단계이며, 긍정에 score_9/score_8/score_7 중 1~3개를, 네거티브에 score_1/score_2/score_3 을 넣는 것이 관례다 | 6 | 0 | 2026-02~2026-06 |
-| 이 캐릭터 LoRA 시리즈 제작자들이 참고한 학습 가이드는 학습채널(hypernetworks)의 https://arca.live/b/hypernetworks/110021224 (포리x 개정판) 이다 — 질문자가 https://arca.live/b/hypernetworks/84182575 를 짚었을 때 원글쓴이가 그게 아니라고 정정해 주었다 | 6 | 0 | 2025-05~2025-08 |
 | ANIMA 의 작가 태그는 반드시 `@` 로 시작한다 — 작가 태그가 `abcd efg` 이면 `@abcd efg` 로 쓰고 (단부루 표기가 `aaaaa_bbb` 이면 `@aaaaa bbb`), `@` 를 안 붙이면 태그 효과가 미미하다 | 6 | 0 | 2026-02~2026-05 |
 | 2026년 Illustrious·SDXL·ANIMA 계열의 퀄리티 태그 관례는 masterpiece, best quality, highres, absurdres 를 프롬프트 앞머리에 두는 것이다 | 6 | 0 | 2026-02~2026-07 |
-| ANIMA 의 공식 지원 해상도는 512x512(NAI1) ~ 1024x1024(SDXL) ~ 1536x1536(ILXL1) 버킷이고, 공식·입문 자료는 SDXL 해상도(1024급, 세로 832x1216)를 무난한 기본값으로 권한다 | 5 | 0 | 2026-01~2026-05 |
-| 캐릭터의 신체·고유 특징 태그(뿔·눈 색·머리 색·가슴 크기 등)는 캡션에서 지워야 그 특징이 캐릭터의 일부로 흡수되어 항상 따라 나오고, 태그를 남기면 학습기가 '태그로 지정된 별도 요소'로 인식해 매번 프롬프트에 그 태그를 적어야 한다 | 5 | 0 | 2023-02~2026-06 |
+| 이 캐릭터 LoRA 시리즈 제작자들이 참고한 학습 가이드는 학습채널(hypernetworks)의 https://arca.live/b/hypernetworks/110021224 (포리x 개정판) 이다 — 질문자가 https://arca.live/b/hypernetworks/84182575 를 짚었을 때 원글쓴이가 그게 아니라고 정정해 주었다 | 6 | 0 | 2025-05~2025-08 |
+| ANIMA 계열 LoRA 배포글 머리의 `LoRA Base Model: anima-base-v1.0` 은 학습에 쓴 베이스일 뿐 그림을 만드는 모델이 아니다. 실제로 그림을 뽑는 체크포인트는 `waiANIMA_v10Base10` 이고 그 위에 캐릭터 LoRA 를 얹는다. | 6 | 0 | 2026-05~2026-06 |
 | ANIMA 캐릭터 LoRA 는 의상·장식·특이한 눈동자·문신이 제대로 구현되지 않을 가능성이 높다고 제작자가 미리 고지한다. | 5 | 0 | 2026-05~2026-06 |
 | ANIMA 는 safe/sensitive/nsfw/explicit 안전등급 태그, year 2025 같은 연도 태그, newest·recent·mid·early·old 시대 태그를 받으며 안 야한 것을 뽑으려면 safe 를 넣어야 한다 | 5 | 0 | 2026-02~2026-05 |
+| 캐릭터의 신체·고유 특징 태그(뿔·눈 색·머리 색·가슴 크기 등)는 캡션에서 지워야 그 특징이 캐릭터의 일부로 흡수되어 항상 따라 나오고, 태그를 남기면 학습기가 '태그로 지정된 별도 요소'로 인식해 매번 프롬프트에 그 태그를 적어야 한다 | 5 | 0 | 2023-02~2026-06 |
 | 채널의 2023년 로라 학습글 다수가 작성자 스스로 철회했거나 낡음 단서를 붙였다 — 71341748 은 '오래된 글이니 읽지 말고 최신 정보를 찾으라', 69186437 은 '원글 68205055 을 따라가라', 68205055 는 2023-06-01 AS 중단, 84182288 은 2024-10-29 '참고용으로만 보라', 81325841 은 본문 블로그 링크 사망 | 5 | 0 | 2023-01~2023-08 |
+| ANIMA 의 공식 지원 해상도는 512x512(NAI1) ~ 1024x1024(SDXL) ~ 1536x1536(ILXL1) 버킷이고, 공식·입문 자료는 SDXL 해상도(1024급, 세로 832x1216)를 무난한 기본값으로 권한다 | 5 | 0 | 2026-01~2026-05 |
 | `MemoryError`, `you tried to allocate xxxx bytes`, `OSError: [WinError 1455] 이 작업을 완료하기 위한 페이징 파일이 너무 작습니다` 는 가상 메모리(페이징 파일)를 늘려 대처한다 | 5 | 0 | 2022-12~2023-02 |
-| SDXL 시대에 DPM++ 권장이 뒤집혔다 — Illustrious·NoobAI 는 `Euler`·`Euler A`, ANIMA 는 `er_sde` 계열을 쓴다. | 4 | 0 | 2023-02~2026-05 |
-| 2026년 중반부터 같은 제작자의 캐릭터 LoRA 시리즈가 ANIMA 계열로 넘어갔다 — LoRA 학습 베이스는 `anima-base-v1.0`, 그림 생성 체크포인트는 `waiANIMA_v10Base10` 이며 Illustrious 용 LoRA 와는 호환되지 않으므로 체크포인트를 계열에 맞춰야 한다. 확인된 작품은 현실퀘스트 9종(2026-06-29) · 화이트데이 4종(2026-07-02) · 아카데미에서 살아남기 17종(2026-07-12) · 아카데미에 위장취업당했다 약 30종(2026-07-26) 이고, 링크는 civitai.red 도메인으로 표기된다 | 4 | 0 | 2026-06~2026-07 |
-| 이미지 생성(ANIMA)에서는 dynamic vram 을 끄는 쪽이 빠르며, torch.compile 을 쓸 때는 --disable-dynamic-vram 이 사실상 필수다 | 4 | 0 | 2026-05~2026-08 |
-| ANIMA 전용으로 학습된 LoRA 는 정상 동작한다 — 캐릭터 LoRA(강도 1), 터보 로라, 디테일러 로라가 실제로 쓰인다. 호환되지 않는 것은 SDXL(Illustrious·NoobAI)용 LoRA·임베딩·컨트롤넷이다 | 4 | 0 | 2026-05~2026-07 |
 | ANIMA 의 가중치 문법은 ComfyUI 에서 SDXL 과 같은 `(tag:weight)` 이지만 cross attention 구조상 SDXL 보다 훨씬 높은 값이 필요해 `(chibi:2)` 처럼 :2 정도에서 시작하며, 4 이상을 남발하면 연산이 깨져 검은 화면이 나올 수 있다 | 4 | 0 | 2026-05~2026-07 |
+| SDXL 시대에 DPM++ 권장이 뒤집혔다 — Illustrious·NoobAI 는 `Euler`·`Euler A`, ANIMA 는 `er_sde` 계열을 쓴다. | 4 | 0 | 2023-02~2026-05 |
+| ANIMA 전용으로 학습된 LoRA 는 정상 동작한다 — 캐릭터 LoRA(강도 1), 터보 로라, 디테일러 로라가 실제로 쓰인다. 호환되지 않는 것은 SDXL(Illustrious·NoobAI)용 LoRA·임베딩·컨트롤넷이다 | 4 | 0 | 2026-05~2026-07 |
+| 이미지 생성(ANIMA)에서는 dynamic vram 을 끄는 쪽이 빠르며, torch.compile 을 쓸 때는 --disable-dynamic-vram 이 사실상 필수다 | 4 | 0 | 2026-05~2026-08 |
 | 그림체 LoRA 는 베이스 모델을 바꿔 가며 평가해야 한다 — Unstable 로라 제작자는 NTR xiii 한 모델에서만 테스트해 결과가 목표에 못 미친 원인을 확정하지 못했다 | 4 | 0 | 2023-02~2026-07 |
-| `Torch is not able to use GPU` 에는 `--skip-torch-cuda-test` 를 붙이고 그래도 같은 오류면 `--precision full --no-half` 를 함께 쓰며, GTX 16xx 는 `set COMMANDLINE_ARGS=--skip-torch-cuda-test --no-half --precision=full --listen --lowvram` 로 쓴 사례가 있다 | 3 | 0 | 2022-12~2023-02 |
+| 2026년 중반부터 같은 제작자의 캐릭터 LoRA 시리즈가 ANIMA 계열로 넘어갔다 — LoRA 학습 베이스는 `anima-base-v1.0`, 그림 생성 체크포인트는 `waiANIMA_v10Base10` 이며 Illustrious 용 LoRA 와는 호환되지 않으므로 체크포인트를 계열에 맞춰야 한다. 확인된 작품은 현실퀘스트 9종(2026-06-29) · 화이트데이 4종(2026-07-02) · 아카데미에서 살아남기 17종(2026-07-12) · 아카데미에 위장취업당했다 약 30종(2026-07-26) 이고, 링크는 civitai.red 도메인으로 표기된다 | 4 | 0 | 2026-06~2026-07 |
+| 전체 torch.compile 보다 블록 컴파일(Anima Block Compile / compile_transformer_blocks_only)이 컴파일 시간이 짧아 실용적이다 | 3 | 0 | 2026-05~2026-06 |
+| **AI 가 생성한 그림만으로 LoRA 를 학습시키는 것은 가능하지만 결과가 깨진다.** 공식 일러가 단 2장뿐인 캐릭터를 나노 바나나로 약 40장 뽑아 학습한 사례에서 포니테일·생머리 같은 캐릭터 특징은 잡혔으나 눈동자가 뭉개지고 리본의 흰 부분이 엉켰다. 비용도 만만치 않다 — 한 장 뽑는 데 1분 이상이고 2~3번 시도해야 한 장을 건지며, 건진 그림도 부위마다 인페인트로 고쳐야 했다. 결론은 **정말 어지간히 마이너한 캐릭터가 아니면 사람이 직접 그린 그림으로 학습시키라**는 것이다 | 3 | 0 | 2025-04~2026-01 |
+| 특수 개념 LoRA 는 학습 데이터에 전혀 없는 요소가 고착되기도 한다 — hanged(고어) LoRA ILXL v2 는 타율 95% 이상에 그림체 보존 98% 를 달성했으나, 데이터셋에 하나도 없는 '밧줄이 머리에 붙는 현상'은 무엇을 해도 해결되지 않았다. 포즈는 `(dancing:1.5), (jumping:1.5)` 처럼 큰 가중치를 줘야 반영된다 | 3 | 0 | 2025-01~2026-05 |
 | WD14 Tagger 의 threshold 는 1 에 가까울수록 확실한 태그만 붙으며, 일반·그림체·배경 학습이면 0.35, 사물·캐릭터면 0.85 를 권하고 ComfyUI 1장 학습에서는 0.35~0.5 가 가장 잘 됐다 | 3 | 0 | 2023-01~2026-02 |
-| 로라 종류는 셋이다 — LoRA(WebUI 에서 별도 설치 없이 사용), LoCon(레이어를 더 많이 학습해 그림체에 유리), LoHa(더 복잡한 캐릭터·그림체지만 시간이 오래 걸림). LoCon·LoHa 는 WebUI 에 Lycoris 확장을 설치해야 일반 LoRA 처럼 쓸 수 있다. 권장 dim/alpha 는 LoRA 32/16, LoCon 16/8(conv_dim 8/conv_alpha 1), LoHa 8/4(conv_dim 4/conv_alpha 1) 이다 | 3 | 0 | 2023-03~2023-04 |
+| `Torch is not able to use GPU` 에는 `--skip-torch-cuda-test` 를 붙이고 그래도 같은 오류면 `--precision full --no-half` 를 함께 쓰며, GTX 16xx 는 `set COMMANDLINE_ARGS=--skip-torch-cuda-test --no-half --precision=full --listen --lowvram` 로 쓴 사례가 있다 | 3 | 0 | 2022-12~2023-02 |
+| 로라 종류는 셋이다 — LoRA(WebUI 에서 별도 설치 없이 사용), LoCon(레이어를 더 많이 학습해 그림체에 유리), LoHa(더 복잡한 캐릭터·그림체지만 시간이 오래 걸림). LoCon·LoHa 는 WebUI 에 Lycoris 확장을 설치해야 일반 LoRA 처럼 쓸 수 있다. 권장 dim/alpha 는 LoRA 32/16, LoCon 16/8(conv_dim 8/conv_alpha 1), LoHa 8/4(conv_dim 4/conv_alpha 1) 이다 | 3 | 0 | 2023-03~2026-07 |
 | flip(좌우 반전) 증강은 다양성을 늘리고 과적합을 막지만, 가르마·오드아이·한쪽에만 있는 장식처럼 좌우 비대칭 특징이 있는 대상에는 쓰면 안 된다 | 3 | 0 | 2022-10~2023-03 |
 | VAE 는 그림체에 아무런 영향도 주지 않는다 — 극실사체가 나오면 모델을 다시 확인해야 한다. VAE 가 좌우하는 것은 색감과 선명도뿐이다 | 3 | 0 | 2023-01~2023-02 |
 | ANIMA 생성에서 sage attention 은 약 9~11% 속도 향상이며 품질 손상이 거의 없다 | 3 | 0 | 2026-02~2026-05 |
-| 챈의 Anima LoRA 배포는 kio.ac·mega·구글 드라이브 같은 임시 공유가 많아 만료가 잦다 — `165231841`(kio.ac, 2026-03-21 만료) · `164800666`(구글 드라이브, 공유 기간 종료) · `178293143`(kio.ac, 공개 직후 닫힌 것으로 보임)은 만료가 확인됐고, 링크를 base64 로 인코딩해 올리는 것은 저작권 시비를 피하려는 챈의 관행이다 | 3 | 0 | 2026-03~2026-07 |
-| 전체 torch.compile 보다 블록 컴파일(Anima Block Compile / compile_transformer_blocks_only)이 컴파일 시간이 짧아 실용적이다 | 3 | 0 | 2026-05~2026-06 |
 | Anima LoRA 를 쓸 때는 **생성 시 긍정 프롬프트를 학습 캡션과 비슷하게 맞추는 것**이 원칙이고, 단부루 태그와 자연어 문장을 한 프롬프트에 섞어 쓰며 작가 태그에는 Anima 문법인 `@` 접두사를 붙인다 | 3 | 0 | 2026-02~2026-07 |
+| 챈의 Anima LoRA 배포는 kio.ac·mega·구글 드라이브 같은 임시 공유가 많아 만료가 잦다 — `165231841`(kio.ac, 2026-03-21 만료) · `164800666`(구글 드라이브, 공유 기간 종료) · `178293143`(kio.ac, 공개 직후 닫힌 것으로 보임)은 만료가 확인됐고, 링크를 base64 로 인코딩해 올리는 것은 저작권 시비를 피하려는 챈의 관행이다 | 3 | 0 | 2026-03~2026-07 |
 | ANIMA 는 SDXL(Illustrious, NoobAI)과 구조가 달라 기존 로라·임베딩·컨트롤넷이 전혀 호환되지 않는다 | 3 | 0 | 2025-09~2026-07 |
-| ANIMA 의 퀄리티 태그는 두 계통이다 — 사람 좋아요/싫어요 기준 `masterpiece, best quality, good quality, normal quality, low quality, worst quality` 와 PonyV7 품질 판정 AI 기준 `score_1`(최하)~`score_9`(최상)이며, 둘 다 써도 되고 하나만 쓰거나 안 써도 동작한다 | 3 | 0 | 2026-02~2026-05 |
-| 2026년 ANIMA·Illustrious 네거티브도 lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits 처럼 2022년 국룰의 뼈대를 그대로 이어 쓰되 worst quality, low quality 와 score_1~score_3 을 앞에 붙인다 | 3 | 0 | 2026-02~2026-05 |
 
 ## 출처
 

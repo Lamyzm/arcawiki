@@ -92,14 +92,158 @@ D:\ComfyUI-Easy-Install\ComfyUI\models\loras
 | **ANIMA** (2026년 채널 기본) | `anima-base-v1.0.safetensors` + `qwen_3_06b_base.safetensors` + `qwen_image_vae.safetensors` |
 | **Illustrious 계열** | `WAI-illustrious-SDXL` |
 
+**실제로 처음 검증할 때는 ANIMA 쪽이 더 쉽다.** 이유는 간단하다 — 세 파일이 모두 **공식 Hugging Face 직링크**로 바로 받아지고, Civitai 쪽처럼 로그인·연령·필터에 막힐 가능성이 적다.
+즉 **"설치가 됐는지 지금 당장 확인"** 하는 목적이면 먼저 ANIMA 3파일로 한 장을 뽑아 보고, 그 다음에 Illustrious 나 다른 체크포인트로 넓히는 편이 덜 막힌다.
+
 **세 파일짜리(ANIMA)는 넣는 폴더가 서로 다르다.** 체크포인트 폴더에 전부 넣으면 안 된다 —
 어느 것을 어디에 넣는지는 이 문서의 **'폴더 경로 표'** 와 [ANIMA](anima.md)를 보라.
 
-**4) 실행** — 체크포인트 로더 노드를 눌러 받은 모델이 드롭다운에 뜨는지 확인하고 실행한다.
+**검증용 배치만 먼저 적으면 이렇게다.**
+
+| 파일 | 넣는 폴더 |
+|---|---|
+| `anima-base-v1.0.safetensors` | `설치폴더\ComfyUI\models\diffusion_models` |
+| `qwen_3_06b_base.safetensors` | `설치폴더\ComfyUI\models\text_encoders` |
+| `qwen_image_vae.safetensors` | `설치폴더\ComfyUI\models\vae` |
+
+**4) 실행** — 모델 파일을 넣었으면 먼저 ComfyUI 를 다시 열고, **첫 화면에 뜨는 기본 워크플로우가 깨져 있어도 당황하지 말라.**
+실검증에서는 기본 예제 대신 **`템플릿` → 검색창에 `Anima` → `Anima Base v1: 텍스트 기반 이미지 생성`** 으로 들어가는 쪽이 더 곧다.
+
+**지금 버전에서는 여기서 한 번 더 막힌다.** 템플릿을 열면 `anima-turbo-lora-v0.2.safetensors` 누락 오류가 뜰 수 있다.
+이 경우는 실패가 아니라 **템플릿이 추가 로라 1개를 더 요구한다는 뜻**이다.
+
+| 추가 파일 | 넣는 폴더 |
+|---|---|
+| `anima-turbo-lora-v0.2.safetensors` | `설치폴더\ComfyUI\models\loras` |
+
+오류 패널의 **다운로드** 버튼이나 아래 링크로 받아 넣으면 된다.
+
+`https://huggingface.co/circlestone-labs/Anima-Official-LoRAs/resolve/main/anima-turbo-lora-v0.2.safetensors`
+
+파일을 넣은 뒤에는 **오류 패널의 `새로고침`** 을 눌러라. 이번 실검증에서는 **재시작 없이 `새로고침` 만으로 오류가 사라지고 바로 실행**됐다.
+
+**여기서 진짜로 설치 성공 여부를 가르는 확인은 네 가지다.**
+
+1. `diffusion_models` 드롭다운에 `anima-base-v1.0` 이 뜬다
+2. `text_encoders` 드롭다운에 `qwen_3_06b_base` 가 뜬다
+3. `vae` 드롭다운에 `qwen_image_vae` 가 뜬다
+4. `템플릿 → Anima Base v1` 로 연 뒤 **`실행`** 을 눌렀을 때 에러 없이 한 장이 저장된다
+
+셋 중 하나라도 안 뜨면 **파일이 없는 것**이 아니라 **잘못된 폴더에 넣었거나, 복사 후 재시작을 안 했을 가능성**부터 먼저 의심한다.
+템플릿에서만 `anima-turbo-lora-v0.2` 누락이 뜨면 체크포인트 3파일 문제는 아니고, **로라 폴더에 그 파일 하나가 더 없는 것**이다.
 
 **5) 로라가 뭔지 눈으로 확인하는 법** — 자동 프롬프트를 끄고 방금 쓰인 프롬프트를 수동 칸에 복사한 뒤 **시드를 고정**하고 실행하면 같은 그림만 반복해서 나온다. 그 상태에서 **로라 스위치만 켜고** 다시 실행하면 그림체가 바뀌는 것이 보인다.
 
 > **같은 모델 + 같은 프롬프트 + 같은 시드 = 같은 결과.** 이 원리를 눈으로 확인시키는 방식이다. (다만 하드웨어가 다르면 완전히 같지는 않다 → [오류 해결](troubleshooting.md))
+
+**6) 첫 결과가 너무 밋밋하면** — 설치 검증용 최소 프롬프트는 "돌아간다" 확인에는 좋지만, 그림은 심심하게 나오기 쉽다.
+실검증에서 아래 프롬프트로 바꾸자마자 **더 그럴듯한 아니메 상반신**이 나왔다.
+
+```text
+1girl, solo, upper body, long black hair, red eyes, sailor uniform,
+night city bokeh, anime illustration, detailed eyes, delicate face,
+clean lineart, soft rim light, subtle blush, polished shading
+```
+
+네거티브는 이 정도면 충분했다.
+
+```text
+worst quality, low quality, blurry, jpeg artifacts, sepia,
+realistic, photo, 3d, extra fingers, bad hands
+```
+
+같은 시드·같은 프롬프트·같은 설정으로 이 **짧은 네거티브**와,
+여기에 `score_1~3`, `artist name`, `chromatic aberration`, `bad anatomy`, `bad proportions` 등을 더한
+**길어진 공식형**을 맞붙여 봤는데, **차이는 아주 작고 결과를 뒤집을 정도는 아니었다.**
+그래서 **처음 한 장은 이 짧은 네거티브로 시작**하고, 문제가 생길 때만 공식형으로 늘리는 편이 낫다.
+
+실검증 기준으로는 **`832x1216` + `steps 30` + `cfg 4` + `er_sde` + `simple`** 조합이,
+최소 프롬프트보다 훨씬 덜 밋밋하고 입문용 예시로 쓰기 좋았다.
+
+**6-1) 태그로 시작할지, 자연어 2문장으로 시작할지** — 입문자가 여기서 바로 헤맨다.
+채널 자료는 갈리지만, **이번 로컬 실검증에서는 "정확한 외형 보존" 쪽은 자연어 2문장이 더 낫게 나왔다.**
+같은 모델·비슷한 해상도에서 아래 둘을 비교했더니, 짧은 태그 나열은 `long black hair` 를 넣었는데도
+머리가 **짧은 보브컷 쪽으로 기울었고**, 자연어 2문장은 **긴 검은 머리**를 더 안정적으로 유지했다.
+
+| 목적 | 먼저 쓸 형식 |
+|---|---|
+| **캐릭터 외형을 정확히 잡고 싶다** | **자연어 2문장** — 머리 길이·복장·배경 관계를 문장으로 적기 |
+| **단부루 태그에 익숙하고 빠르게 바꿔 보고 싶다** | **태그 나열** |
+
+처음 한 장은 아래처럼 **2문장 자연어**로 시작하는 편이 덜 흔들렸다.
+
+```text
+Masterpiece, best quality, safe. An anime schoolgirl with long black hair and red eyes is standing in front of blurred city lights at night. She is shown from the upper body with delicate facial features, clean lineart, soft rim lighting, and a subtle blush.
+```
+
+반대로 태그 나열은 **짧고 빠르지만 속성을 일부 뭉개 먹을 수 있다.**
+즉 **외형 고정이 먼저면 자연어 2문장, 빠른 변주가 먼저면 태그**로 시작하라.
+
+**7) 속도와 품질을 갈라 쓴다** — 같은 프롬프트로 실측해 보니
+`anima-base-v1.0` 은 **약 23.7초**, 공식 `anima-turbo-lora-v0.2` 는 **약 4.6초**였다
+(`832x1216`, RTX 5070 Ti, ComfyUI 로컬 실행).
+
+정리하면 이렇게 쓰면 된다.
+
+| 목적 | 권장 |
+|---|---|
+| 프롬프트를 빠르게 바꿔 가며 방향만 잡기 | **터보 로라** — `steps 8`, `cfg 1`, `euler` |
+| 한 장을 더 예쁘게 뽑아 저장하기 | **베이스 모델** — `steps 30`, `cfg 4`, **`er_sde` 우선** · `euler` 는 대안 |
+
+터보는 빠른 대신 **디테일이 조금 단순해지고 네거티브가 사실상 죽는다.**
+그래서 **빠른 시안 확인은 터보, 최종 저장은 베이스**로 가는 흐름이 입문자에게 가장 덜 헷갈린다.
+
+같은 자연어 프롬프트로 다시 맞붙여 본 실검증(2026-08-18)에서는,
+`er_sde` 가 **선이 더 또렷하고 얼굴·옷 주름이 더 중립적이며 안정적**이었다.
+`euler` 는 시간 차이는 거의 없었지만 **조금 더 말랑하고 귀여운 쪽으로 기울고 2.5D 느낌이 더 섞였다.**
+그래서 **첫 기본값은 `er_sde`**, 얼굴을 좀 더 부드럽고 귀엽게 틀고 싶을 때만 `euler` 로 바꾸는 편이 낫다.
+
+**7-1) 해상도는 어디서 멈추나** — 같은 시드·같은 프롬프트·같은 샘플러(`er_sde`)로
+`832x1216` 과 `1024x1536` 을 다시 맞붙여 보니, 큰 쪽이 **확실히 더 예쁘긴 했지만**
+시간이 함께 오른다.
+
+| 해상도 | 시간 | 관찰 |
+|---|---:|---|
+| `832x1216` | **23.2초** | 이미 충분히 깔끔하다. 입문 기본값으로 쓰기 좋다 |
+| `1024x1536` | **35.5초** | 머리카락 결·배경 보케·광원 분위기가 더 정리돼 **한 장 완성도**는 올라간다 |
+
+즉 이 PC 기준으로 `1024x1536` 은 **약 1.5배 느린 대신 더 예쁜 한 장**을 주고,
+`832x1216` 은 **속도와 품질 균형점**이다.
+
+- **처음 검증 / 프롬프트 탐색**: `832x1216`
+- **마음에 든 프롬프트로 최종 한 장 저장**: `1024x1536`
+
+무작정 크게 올리는 것은 권하지 않는다. `1024x1536` 까지는 실익이 있었지만,
+그보다 더 큰 해상도는 [ANIMA](anima.md)의 해상도 절처럼 **highres / 업스케일 단계 문제**로 넘어간다.
+
+**다만 여기서 바로 latent hires 로 넘어가면 된다고 생각하면 또 막힌다.**
+이번 로컬 실검증에서 **bare ANIMA 설치만으로 가능한 최소 highres**도 한 번 돌려 봤다:
+
+- 1차: `832x1216`
+- latent upscale: `1024x1536`
+- 2차 KSampler: `12 steps`, `denoise 0.5`
+
+시간은 **직출 1024x1536 = 36.8초**, **latent hires = 37.8초**로 거의 비슷했다.
+문제는 **그림이 더 예뻐지는 대신 같은 시드라도 구도와 얼굴 방향이 크게 흔들렸다**는 점이다.
+즉 **'지금 가진 기본 설치만으로 바로 쓸 수 있는 next step' 은 맞지만, 안전한 기본값은 아니다.**
+
+정리:
+
+- **안전한 최종 한 장**: 직출 `1024x1536`
+- **실험적 다음 단계**: latent hires
+- **안정적인 업그레이드 루트**: 전용 업스케일 모델 / PiD / ResShift / USDU 같은 별도 경로를 갖춘 뒤
+
+2026-08-18 로컬 재검증으로 이 마지막 줄도 한 단계 더 구체화됐다.
+`2x-AnimeSharpV4_RCAN.safetensors` 를 `models/upscale_models` 에 두고
+ComfyUI 의 `Load Upscale Model → Upscale Image (using Model)` 만 붙여 보니,
+**구도와 얼굴 방향은 그대로 둔 채 1024x1536 → 2048x3072 로 안전하게 커졌다.**
+같은 날 bare latent hires 는 같은 시드에서도 얼굴 방향이 흔들렸으므로,
+**지금 이 문서 기준의 다음 단계는 latent hires 보다 전용 업스케일 모델 쪽이 더 안전하다.**
+
+주의:
+
+- shared models 방식이면 `extra_model_paths.yaml` 에 **`upscale_models: upscale_models`** 항목도 있어야 한다
+- 파일을 넣은 뒤 목록이 안 보이면 **F5 새로고침 또는 ComfyUI 재시작**
 
 → [자원 — 받는 곳 모음](resources.md) · [모델 고르기](models.md) · [ComfyUI 쓰는 법](comfyui.md) · [로라 쓰는 법](lora-usage.md)
 

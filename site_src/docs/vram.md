@@ -1,6 +1,6 @@
 # VRAM·속도 최적화
 
-> **원문 24건 → 이 문서 하나** · 주장 52개 · 정리 2026-08-14
+> **원문 25건 → 이 문서 하나** · 주장 53개 · 정리 2026-08-14
 
 ANIMA 가 SDXL 보다 느리다는 문제의식에서 채널의 최적화 논의가 시작됐다.
 2026-02 부터 2026-08 사이에 sage attention · torch.compile · 블록 컴파일 · Spectrum · int8 양자화 ·
@@ -493,43 +493,67 @@ RTX 4090: 순정 71.6℃ / 1.05V / **346W** → `0.95V 2745MHz` 언더볼팅 **6
 
 <small>근거 — [아니마 전용 티캐시 노드 26.07](https://arca.live/b/aiart/178238402)</small>
 
+## VRAM 8GB로 WAN 720p i2v — 3060 Ti 실측
+<small>2026-06 기준 · 근거 1건</small>
+
+8GB로 영상이 '되느냐'보다 **어떤 워크플로우를 쓰느냐**가 더 중요하다.
+
+### 실측
+
+| 환경 | 결과 |
+| --- | --- |
+| GPU | **RTX 3060 Ti 8GB** |
+| RAM | **32GB** |
+| 방식 1 | WanGP + Sage2 → **20분 초과** |
+| 방식 2 | ComfyUI 전용 `720p on 8GB VRAM` 워크플로우 → **7~8분** |
+
+추가 비교도 있었다.
+
+- `uni_pc` 가 `euler` 보다 약 **4%** 빠름
+- 입력 이미지는 원본을 바로 넣지 않고 **480x720** 정도로 줄여 시작
+- 중간 이미지와 마지막 프레임을 따로 저장해 **이어 만들기**에 쓴다
+
+즉 8GB는 '절대 불가'가 아니라, **프레임 수·해상도·워크플로우를 맞추면 실사용 가능** 쪽에 가깝다.
+
+<small>근거 — [VRAM 8GB로 영상 만들어 보기 26.06](https://arca.live/b/aiart/173487735)</small>
+
 ## 이 문서가 딛고 선 주장
 
 이 문서가 인용한 원문에서 뽑은 것이다. 여러 글이 같은 말을 하는지 센 것이고, 근거가 1건뿐인 주장은 그만큼 약하다.
 
-근거가 센 40개만 싣는다 (나머지 12개는 생략).
+근거가 센 40개만 싣는다 (나머지 13개는 생략).
 
 | 주장 | 찬성 | 반대 | 시점 |
 |---|---:|---:|---|
 | ANIMA 는 Euler A + automatic/normal 조합에서 그림이 기괴해지므로 Euler 또는 ER SDE 샘플러에 simple 또는 SGM uniform 스케줄러를 써야 한다 | 7 | 0 | 2026-04~2026-08 |
 | 캐릭터·작가·매체 태그 안의 괄호는 역슬래시로 이스케이프해 nagisa \(blue archive\), star \(sky\), graphite \(medium\) 처럼 적는다 | 7 | 0 | 2025-08~2026-07 |
-| 와일드카드는 언더바 두 개로 감싼 __파일명__ 형태로 호출하고, 하위 폴더에 있으면 __폴더/파일명__ 으로 적는다 | 6 | 0 | 2024-03~2026-07 |
-| 2026년 Illustrious·SDXL·ANIMA 계열의 퀄리티 태그 관례는 masterpiece, best quality, highres, absurdres 를 프롬프트 앞머리에 두는 것이다 | 6 | 0 | 2026-02~2026-07 |
 | 포니 계열에서 유래한 스코어 태그는 score_9 부터 score_1 까지 아홉 단계이며, 긍정에 score_9/score_8/score_7 중 1~3개를, 네거티브에 score_1/score_2/score_3 을 넣는 것이 관례다 | 6 | 0 | 2026-02~2026-06 |
+| 2026년 Illustrious·SDXL·ANIMA 계열의 퀄리티 태그 관례는 masterpiece, best quality, highres, absurdres 를 프롬프트 앞머리에 두는 것이다 | 6 | 0 | 2026-02~2026-07 |
+| 와일드카드는 언더바 두 개로 감싼 __파일명__ 형태로 호출하고, 하위 폴더에 있으면 __폴더/파일명__ 으로 적는다 | 6 | 0 | 2024-03~2026-07 |
 | ANIMA 는 safe/sensitive/nsfw/explicit 안전등급 태그, year 2025 같은 연도 태그, newest·recent·mid·early·old 시대 태그를 받으며 안 야한 것을 뽑으려면 safe 를 넣어야 한다 | 5 | 0 | 2026-02~2026-05 |
 | 이미지 생성(ANIMA)에서는 dynamic vram 을 끄는 쪽이 빠르며, torch.compile 을 쓸 때는 --disable-dynamic-vram 이 사실상 필수다 | 4 | 0 | 2026-05~2026-08 |
 | ANIMA All in One 워크플로우는 V5/V5.1(2026-06) 이 기준판이고 그 이전 preview3 시절 판들은 작성자 스스로 낡았다고 철회했다 | 4 | 0 | 2026-04~2026-06 |
-| 초보자용 ANIMA All in One 워크플로우 v2 는 생성 → SeedVR2 1차 업스케일 → SAM3 디텍터 디테일러 → USDU 2차 업스케일 구조다 | 3 | 0 | 2026-04~2026-05 |
 | 터보(고속) 로라를 쓸 때는 Spectrum·Layer Replay 계열이 부적합하고 Anima NAG 를 쓰며, 터보 로라를 안 쓰면 정반대로 Spectrum 을 쓰고 NAG 를 뺀다 | 3 | 0 | 2026-05~2026-05 |
 | 2026년 ANIMA·Illustrious 네거티브도 lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits 처럼 2022년 국룰의 뼈대를 그대로 이어 쓰되 worst quality, low quality 와 score_1~score_3 을 앞에 붙인다 | 3 | 0 | 2026-02~2026-05 |
+| 초보자용 ANIMA All in One 워크플로우 v2 는 생성 → SeedVR2 1차 업스케일 → SAM3 디텍터 디테일러 → USDU 2차 업스케일 구조다 | 3 | 0 | 2026-04~2026-05 |
+| ComfyUI 와일드카드 파일은 ComfyUI\custom_nodes\comfyui-impact-pack\wildcards 에 txt 든 yaml 이든 넣으면 되고, 다른 커스텀 노드들도 이 Impact Pack 폴더를 공유한다 | 3 | 0 | 2025-01~2026-05 |
 | ANIMA 에는 디테일러 자체가 맞는 방법이 아니라 Highres 를 먼저 하고 눈 정도만 디테일러를 돌리는 것이 낫다 | 3 | 0 | 2026-04~2026-06 |
-| ANIMA 의 기본 shift 값은 3 이고(ComfyUI supported_models.py 에서 3.0 확인) shift 0 은 CFG·스텝 조합과 무관하게 공통적으로 검은 화면이 나오므로 쓰면 안 된다 | 3 | 0 | 2026-02~2026-06 |
 | ComfyUI 네이티브 PiD 구현은 gemma 를 불필요하게 받게 하고 정중앙이 찢어지는 결함이 있어, 재구현 노드(ComfyUI-Anima-PiD)로 옮겨가는 편이 낫다 | 3 | 0 | 2026-06~2026-06 |
 | Nvidia PiD 업스케일은 SeedVR2 보다 최소 10배 빠르지만 배율이 4배로 고정되고 입력 긴 변을 512 또는 1024 에 정확히 맞춰야 일렁임이 없다 | 3 | 0 | 2026-06~2026-06 |
-| Spectrum 계열 가속은 ANIMA 단일 최적화 중 효과가 가장 커서 속도를 2배 이상(+116~124%) 올린다 | 3 | 0 | 2026-05~2026-05 |
 | ANIMA 생성에서 sage attention 은 약 9~11% 속도 향상이며 품질 손상이 거의 없다 | 3 | 0 | 2026-02~2026-05 |
 | 전체 torch.compile 보다 블록 컴파일(Anima Block Compile / compile_transformer_blocks_only)이 컴파일 시간이 짧아 실용적이다 | 3 | 0 | 2026-05~2026-06 |
+| ANIMA 의 기본 shift 값은 3 이고(ComfyUI supported_models.py 에서 3.0 확인) shift 0 은 CFG·스텝 조합과 무관하게 공통적으로 검은 화면이 나오므로 쓰면 안 된다 | 3 | 0 | 2026-02~2026-06 |
+| Spectrum 계열 가속은 ANIMA 단일 최적화 중 효과가 가장 커서 속도를 2배 이상(+116~124%) 올린다 | 3 | 0 | 2026-05~2026-05 |
 | 영상 생성에는 엔비디아 RTX 16GB 이상이 필요하고 AMD/Intel GPU는 사실상 부적합하다 | 3 | 0 | 2025-05~2026-01 |
-| ComfyUI 와일드카드 파일은 ComfyUI\custom_nodes\comfyui-impact-pack\wildcards 에 txt 든 yaml 이든 넣으면 되고, 다른 커스텀 노드들도 이 Impact Pack 폴더를 공유한다 | 3 | 0 | 2025-01~2026-05 |
-| bf16 을 못 쓰는 튜링(RTX20·GTX16) 세대는 KSampler(spectrum) 대신 ruwwww/ComfyUI-Spectrum-sdxl 와 Anzhc 의 Anima Mod Guidance 로 우회한다 | 2 | 0 | 2026-05~2026-05 |
 | torch.compile 의 ANIMA 가속 효과는 GPU 에 따라 14~41% 로 편차가 크고 일부 환경에서는 오히려 느려지거나 동작하지 않는다 | 2 | 0 | 2026-02~2026-05 |
+| 로컬에서 문제가 생기면 원인은 99% cmd 창에 영어로 적혀 있고 error 바로 옆이나 다음 줄에 해결법이 있는 경우가 많다. 긴 로그는 통째로 메모장에 붙여 Ctrl+F 로 `error` 를 찾으면 된다. 검색이 안 될 때는 대개 문장으로 검색해서 그런 것이므로 단어로·다른 키워드로·영문으로 바꿔 본다. 에러 메시지는 번역기라도 돌려 보고 질문하라는 것이 채널의 오래된 답이다 | 2 | 0 | 2023-02~2026-07 |
 | Spectrum 가속 노드는 ancestral(euler a)·sde 계열 샘플러 및 karras 스케줄러와 호환되지 않는다 | 2 | 0 | 2026-02~2026-05 |
 | int8rowwise 양자화 모델은 bf16 대비 +43~47% 빠르지만 로라를 적용하면 이득이 +21~28% 로 절반 가까이 줄어든다 | 2 | 0 | 2026-05 |
 | ANIMA 의 highres 는 모델 지원 해상도를 넘지 않는 것이 좋고 2048 을 넘는 길이는 USDU(타일 분할)로 처리해야 한다 | 2 | 0 | 2026-05~2026-06 |
-| 로컬에서 문제가 생기면 원인은 99% cmd 창에 영어로 적혀 있고 error 바로 옆이나 다음 줄에 해결법이 있는 경우가 많다. 긴 로그는 통째로 메모장에 붙여 Ctrl+F 로 `error` 를 찾으면 된다. 검색이 안 될 때는 대개 문장으로 검색해서 그런 것이므로 단어로·다른 키워드로·영문으로 바꿔 본다. 에러 메시지는 번역기라도 돌려 보고 질문하라는 것이 채널의 오래된 답이다 | 2 | 0 | 2023-02~2026-07 |
 | MiniMax H3 의 w4a8_int 양자화는 int8convrot 보다 약 1.09배 느리며(69.90초 vs 64.99초), VRAM 이 작거나 큰 해상도에서만 cpu offload 감소로 유리할 수 있다 | 2 | 0 | 2026-08~2026-08 |
 | RuntimeError: Fault failed: 2 는 torch compile 과 dynamic vram 이 함께 켜져 있을 때 발생하므로 --disable-dynamic-vram 으로 실행하거나 토치컴파일을 끈다 | 2 | 0 | 2026-06~2026-06 |
 | ANIMA All in One v5 는 ComfyUI 포터블 0.20.1 을 권장하며 0.20.0 미만은 sam3 노드 미지원, 0.21.0 이상은 node2.0 문제로 UI 가 깨질 수 있다 | 2 | 0 | 2026-06~2026-06 |
+| bf16 을 못 쓰는 튜링(RTX20·GTX16) 세대는 KSampler(spectrum) 대신 ruwwww/ComfyUI-Spectrum-sdxl 와 Anzhc 의 Anima Mod Guidance 로 우회한다 | 2 | 0 | 2026-05~2026-05 |
 | torch.compile 캐시는 TORCHINDUCTOR_CACHE_DIR 와 TORCHINDUCTOR_FX_GRAPH_CACHE=1 로 디스크에 남겨 첫 로딩을 60초에서 10~20초로 줄일 수 있고, 드라이버·PyTorch 업데이트 시 초기화된다 | 1 | 0 | 2026-05 |
 | Anzhc 의 CLIP 사용 Anima Mod Guidance 는 기존 Anima Mod Guidance 와 노드 이름이 겹쳐 목록에 안 뜰 수 있어 custom_nodes 를 직접 수정해야 한다 | 1 | 0 | 2026-05~2026-05 |
 | NVFP4 는 RTX 50 시리즈에서 영상 생성 최대 2.5배·VRAM 60% 감소를 내세우지만, LoRA·커스텀 노드 호환을 계속 신경 써야 해서 실사용에서는 기피된다 | 1 | 0 | 2026-03 |
@@ -538,9 +562,9 @@ RTX 4090: 순정 71.6℃ / 1.05V / **346W** → `0.95V 2745MHz` 언더볼팅 **6
 | PiD 업스케일의 degrade_sigma 는 0(+null embedding)이 가장 낫고 0.05 이상은 할루시네이션만 늘린다 | 1 | 1 | 2026-06~2026-06 |
 | --disable-pinned-memory 는 MiniMax H3 의 RAM 사용량을 크게 줄여 준다(Windows 14~16GB, Linux 6GB) 다만 느려질 수 있다 | 1 | 0 | 2026-08 |
 | AMD·Intel GPU 는 MiniMax H3 구동에서 NVIDIA 대비 크게 밀리며(R9700 3분27초 vs RTX3090 2분41초), Intel B580 은 구동 자체가 실패했다 | 1 | 0 | 2026-08 |
+| RTX 3060 Ti 8GB + RAM 32GB 급에서도 전용 ComfyUI 워크플로우로 WAN 720p i2v를 7~8분에 돌릴 수 있다 | 1 | 0 | 2026-06 |
 | MASK to SEGS 의 `crop_factor` 는 다시 그릴 때 참조할 영역의 크기이며, 크게 잡을수록 주변과 어우러지지만 디테일이 떨어진다 | 1 | 0 | 2026-02~2026-05 |
 | 채널 규정 — 질문글은 반드시 질문탭에, 19금이면 19금 질문탭에 써야 하며 어기면 삭제 + 1일 차단이고 이것이 채널 차단 사유 1위다. 정보 없이 '안 켜져요 / 그림 이상해요 / 에러 떴어요' 만 쓴 질문도 삭제 + 1일(최대 3일) 차단이며, 질문할 때는 생성 환경(세팅) · 쓰는 모델 · 생성된 그림(EXIF 포함) · 에러 메시지 · 로컬이면 사양을 함께 적어야 한다. NAI·그록 등 외부 사이트의 결제·구독·환불 문의는 무통보 삭제 대상이다 | 1 | 0 | 2026-07 |
-| ANIMA 전용 TeaCache 노드(`https://github.com/CocyNoric/ComfyUI-Anima-TeaCache`)는 EasyCache 처럼 이미 만들어진 부분을 다시 연산할 때 건너뛰도록 캐시를 써서 샘플링 속도를 올린다. 기본값 `rel_l1_thresh` 는 `0.050` 인데 이는 euler 샘플러 기준으로 보수적으로 잡힌 값이고 샘플러별 설정은 GitHub 를 봐야 한다. RTX 2070 SUPER 8GB + int8/mxfp8 환경에서 EasyCache 대비 확실한 속도 차이가 났으나, 글쓴이 실험 세팅 기준 품질은 EasyCache 가 더 위였고 `rel_l1_thresh` 를 0.15 로 낮추면 디테일이 EasyCache 를 넘지만 속도가 몇 초 늘어난다 | 1 | 0 | 2026-07 |
 
 ## 출처
 
@@ -565,6 +589,7 @@ RTX 4090: 순정 71.6℃ / 1.05V / **346W** → `0.95V 2745MHz` 언더볼팅 **6
 - [아니마만을 위한 아니마를 위한 아니마 전용 노드들](https://arca.live/b/aiart/171378660) — 2026-05, 추천 15
 - [WAN2.2 COMFYUI용 TILING VAE 인코딩 화질/속도 직접 개선한 노드(추가)](https://arca.live/b/aiart/164043399) — 2026-03, 추천 13
 - [Anima 최적화 속도테스트](https://arca.live/b/aiart/171106264) — 2026-05, 추천 12
+- [VRAM 8GB로 영상 만들어 보기](https://arca.live/b/aiart/173487735) — 2026-06, 추천 8
 - [초고속 아니마 (초당 10장) + 간단한 최적화 후기](https://arca.live/b/aiart/179371306) — 2026-08, 추천 8
 - [튜링용 아니마 최적화 워크플로우](https://arca.live/b/aiart/171232354) — 2026-05, 추천 5
 - [ComfyUI w4a8_int 양자화 모델 지원](https://arca.live/b/aiart/179270173) — 2026-08, 추천 5

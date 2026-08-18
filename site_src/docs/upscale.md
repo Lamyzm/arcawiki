@@ -1118,9 +1118,16 @@ scale_by = 원하는 배율 ÷ 모델 배율
 
 2025년 워크플로우 공모전 출품작 셋이 모두 `2x-AnimeSharpV4` 계열 + **`0.63`** 을 HiresFix 배율로 쓴다 (141180724 · 141718826 · 141991828).
 업스케일러 모델 파일은 `models\upscale_models` 에 넣는다.
+shared models 방식이면 `extra_model_paths.yaml` 에 **`upscale_models: upscale_models`** 키도 있어야
+ComfyUI 가 이 폴더를 실제로 읽는다. 2026-08-18 로컬 검증에서도 이 키가 빠져 있으면
+파일을 받아 둬도 `Load Upscale Model` 목록이 비어 있었다.
 
 > ⚠ `2x-AnimeSharpV4_RCAN` 처럼 **RCAN 계열**을 쓰려면 먼저 ComfyUI 설치 폴더에서 Shift+우클릭 → '여기에서 명령 프롬프트 열기' 후
 > `python -m pip install spandrel --upgrade` 를 실행해야 한다 (142197182).
+
+2026-08-18 로컬 실검증에서는 `2x-AnimeSharpV4_RCAN.safetensors` 가 bare ComfyUI 에서 정상 로드됐고,
+`1024x1536 → 2048x3072` 업스케일이 **구도 변화 없이** 수행됐다.
+즉 이 계열은 **새 그림을 다시 그리는 latent hires 보다 훨씬 보수적인 확대용 기본값**으로 볼 수 있다.
 
 → [ComfyUI 쓰는 법](comfyui.md) 의 '배포 워크플로우를 처음 열었을 때'
 

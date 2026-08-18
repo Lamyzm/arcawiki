@@ -2157,22 +2157,22 @@ v5.0 에 대해서는 *'객관적으로 봐도 지리는 게 맞는 것 같다'*
 | `more than two arm per body`·`more than five fingers on one hand`·`best ratio four finger and one thumb`·`5 fingers, hyper detailed fingers`·`clear boundaries of the arms` 처럼 팔·다리·손가락 개수를 영어 문장으로 비는 것은 2022~2023년의 대표적 미신 관용구이고 학습된 표현이 아니다 | 6 | 0 | 2022-12~2023-11 |
 | 2026년 Illustrious·SDXL·ANIMA 계열의 퀄리티 태그 관례는 masterpiece, best quality, highres, absurdres 를 프롬프트 앞머리에 두는 것이다 | 6 | 0 | 2026-02~2026-07 |
 | NAI 보조 도구로는 NAIA(구독자용 자동 생성 클라이언트), NAI-Auto-Generator V4.5(비공식 데스크톱 앱, https://github.com/sagawa8b/NAI-Auto-Generator-V4/releases), NAI Prompt Selector(크롬 확장, https://github.com/StopOverthinking/NAI-Prompt-Selector/releases/tag/v0.2.0), NAIM Studio(HTML 한 장짜리 모바일 생성기), 채씨프리셋(https://github.com/DooMokDdongGae/Chaessi-Preset/releases)이 있다 | 6 | 0 | 2024-02~2026-08 |
-| NAI 에서만 되는 음수 가중치 활용법 — 제거는 `-1::hat ::`, 색상 반전·추가는 `-1::monochrome ::`, 디테일 추가는 `-3::simple illustration ::` 이다 | 5 | 0 | 2025-06~2026-08 |
 | 2022~2023년 프롬프트에 관용구처럼 박혀 있던 `best_detailed_shadow`·`160_centimeter`·`Proper breasts`·`hair crosses the screen border`·`non-linear background`·`spread hand`·`looking at front`·`expression face`·`elf-ears` 는 전부 학습된 태그가 아니다 (각각 `looking at viewer`·`spread fingers`/`open hand`·`expressionless`·`pointy ears` 가 맞는 표기다) | 5 | 0 | 2022-12~2023-11 |
+| NovelAI 계열 가중치 문법은 1.2::태그, 태그:: 형식이고 음수도 되어 -1::tears, bags under eyes:: 처럼 원치 않는 요소를 억제한다 | 5 | 0 | 2026-02~2026-08 |
+| NAI 에서만 되는 음수 가중치 활용법 — 제거는 `-1::hat ::`, 색상 반전·추가는 `-1::monochrome ::`, 디테일 추가는 `-3::simple illustration ::` 이다 | 5 | 0 | 2025-06~2026-08 |
 | A1111 계열 가중치 문법은 (태그:1.2) 이고 괄호를 겹치는 표기는 한 겹당 1.1배라서 (((검은머리))) 세 겹은 1.1^3 = 1.331배다 | 5 | 0 | 2022-10~2026-07 |
-| NAI 의 가중치 문법은 `weight::tag ::` 이고 닫는 `::` 앞에 공백이 필수다 — `tag::` 는 틀리고 `tag ::` 가 맞다. 로컬(A1111·ComfyUI)은 `(tag:weight)` 로 다르다 | 4 | 2 | 2025-06~2026-07 |
-| 2026년 7월 이후 NAI 서드파티 도구가 400 을 뱉으면 API 엔드포인트 이전을 가장 먼저 의심해야 한다 — `ANLAS remaining fetch failed: 400 {"statusCode":400,"message":"Please refresh NovelAI.net. If using a third-party tool, update to the image URL."}` 가 그 신호다 | 4 | 0 | 2026-07~2026-07 |
-| 태그는 지어내지 말고 단부루에 실제로 존재하는지 확인해서 써야 하며, 게시물 수가 500 미만인 태그는 재현율이 낮아 대체 태그를 찾는 편이 낫다 | 4 | 0 | 2022-10~2026-07 |
 | NAI 가중치의 정본 표기는 `weight::tag ::` 로 닫는 `::` 앞 공백이 필수이고 로컬(A1111·ComfyUI)은 `(tag:weight)` 이지만, 채널에 유통되는 예시 프롬프트와 도구 출력에는 `1.3::artist::` 처럼 공백을 뺀 표기가 섞여 있어 표기가 갈린다 — 가중치가 안 먹는 느낌이면 공백부터 확인한다 | 4 | 0 | 2025-08~2026-08 |
-| 뉴비가 공유받은 워크플로우에서 오류가 터지는 범인 1위는 sage-attention 이다 | 3 | 0 | 2026-05~2026-08 |
-| NovelAI 기존 로그인 API 에 reCAPTCHA 인증이 추가되어 서드파티 도구는 이메일·비밀번호 로그인을 쓸 수 없고 `Persistent API Token` 만 쓸 수 있다 — 발급은 NovelAI 웹 로그인 → 좌측 상단 설정(톱니) → Account → Persistent API Token 이며 토큰은 `pst-` 로 시작한다 | 3 | 0 | 2026-04~2026-07 |
+| NAI 의 가중치 문법은 `weight::tag ::` 이고 닫는 `::` 앞에 공백이 필수다 — `tag::` 는 틀리고 `tag ::` 가 맞다. 로컬(A1111·ComfyUI)은 `(tag:weight)` 로 다르다 | 4 | 2 | 2025-06~2026-07 |
+| 태그는 지어내지 말고 단부루에 실제로 존재하는지 확인해서 써야 하며, 게시물 수가 500 미만인 태그는 재현율이 낮아 대체 태그를 찾는 편이 낫다 | 4 | 0 | 2022-10~2026-07 |
+| 2026년 7월 이후 NAI 서드파티 도구가 400 을 뱉으면 API 엔드포인트 이전을 가장 먼저 의심해야 한다 — `ANLAS remaining fetch failed: 400 {"statusCode":400,"message":"Please refresh NovelAI.net. If using a third-party tool, update to the image URL."}` 가 그 신호다 | 4 | 0 | 2026-07~2026-07 |
 | EXIF(메타데이터)는 이미지 파일 안에 텍스트로 박히는 생성 정보(프롬프트·시드·스텝·모델 해시)이며, 아카라이브는 업로드 시 EXIF 보존 옵션을 제공하고 채널은 EXIF 공유를 권장한다 | 3 | 0 | 2023-01~2023-12 |
 | 트리거 워드가 없는 Anima 스타일 LoRA 는 데이터셋 편향이 프롬프트 없이 그대로 튀어나온다 — 흰 고양이 캐릭터 위주로 학습한 판은 깡으로 돌리면 비슷한 헤어스타일만 계속 나오고, 헤어·색을 프롬프트로 지정하면 정상 동작한다 | 3 | 0 | 2026-07~2026-07 |
 | NovelAI 이미지 API 서버가 `api.novelai.net` 에서 `image.novelai.net` 으로 이전됐다 — `GET /user/information` · `GET /user/subscription` · `POST /user/login` 이 모두 새 주소이고, 구 서버의 `POST /user/login` 은 HTTP 400 만 반환한다 (2026-07-04 확인) | 3 | 0 | 2026-07~2026-07 |
-| NovelAI 계열 가중치 문법은 1.2::태그, 태그:: 형식이고 음수도 되어 -1::tears, bags under eyes:: 처럼 원치 않는 요소를 억제한다 | 3 | 0 | 2026-02~2026-08 |
 | NAI 프롬프트 배열 관례 — 인원 수(`1girl` 등) → 작품 태그 → 캐릭터 태그 → 작가 태그 → 화풍 → 구도 → 기본 포즈(`sitting`, `standing`) → 얼굴 → 머리카락 → 신체 → 구체적 자세 → 옷 → 배경 → 퀄리티 태그 순으로, 큰 단위에서 작은 단위로 내려가며 적는다 | 3 | 0 | 2025-02~2025-04 |
 | melowh 계열을 베이스로 병합한 Anima 그림체 LoRA 들은 눈이 작게 표현될 때(wide shot 처럼 멀리서 보거나 반눈을 뜬 경우) 눈 디테일이 깨지는 공통 결함이 있어 디테일러나 인페인팅으로 보정해야 하고, 눈 디테일이 좋은 작가를 하나 더 섞은 개선판에서도 이 증상은 고쳐지지 않았다 | 3 | 0 | 2026-07~2026-07 |
 | 그림의 작가·모델을 묻는 질문은 EXIF(메타데이터)가 없으면 아무도 알 수 없다 | 3 | 0 | 2023-12~2026-06 |
+| 뉴비가 공유받은 워크플로우에서 오류가 터지는 범인 1위는 sage-attention 이다 | 3 | 0 | 2026-05~2026-08 |
+| NovelAI 기존 로그인 API 에 reCAPTCHA 인증이 추가되어 서드파티 도구는 이메일·비밀번호 로그인을 쓸 수 없고 `Persistent API Token` 만 쓸 수 있다 — 발급은 NovelAI 웹 로그인 → 좌측 상단 설정(톱니) → Account → Persistent API Token 이며 토큰은 `pst-` 로 시작한다 | 3 | 0 | 2026-04~2026-07 |
 | NAI V4 는 다인물 상호작용을 태그 단위로 나눠 배정한다 — 행위를 하는 쪽 캐릭터 프롬프트에 `source#태그`, 당하는 쪽에 `target#태그`, 양쪽 상호작용에 `mutual#태그` 를 붙이며, 같은 행위는 `source#sex` / `target#sex` 처럼 양쪽에 짝으로 적어야 한다 | 2 | 0 | 2025-03~2025-03 |
 | NovelAI 는 novelai.net 의 구독 등급 중 Opus 만 기본 해상도 이미지를 사실상 무제한으로 생성할 수 있고 가격은 월 3만원대다 | 2 | 0 | 2023-11~2024-06 |
 | 단부루 태그의 언더바는 공백으로 바꿔 써도 되고 white_collared_shirt 처럼 그대로 둬도 되며, 태그 검증 시 언더바와 공백은 같은 것으로 취급한다 | 2 | 0 | 2022-10~2026-07 |

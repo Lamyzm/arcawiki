@@ -1,6 +1,6 @@
 # 비디오 생성
 
-> **원문 205건 → 이 문서 하나** · 주장 322개 · 정리 2026-08-14
+> **원문 217건 → 이 문서 하나** · 주장 331개 · 정리 2026-08-14
 
 ComfyUI 로컬 영상 생성과 외부 서비스(Seedance)를 다룬다. 채널 허브에는 정리가 없는 주제라, 2026년 글에서 직접 모았다.
 
@@ -66,7 +66,7 @@ LTX 계열이 2D 에 약한 이유는 **영상 편집용 모델이라 데이터�
 <small>근거 — [오픈소스 무검열 비디오 생성 모델 Sulphur 2 배포!!… 26.05](https://arca.live/b/aiart/169565904) · [그록갤에 LTX Director 소개 26.06](https://arca.live/b/aiart/172586632) · [고급 응애를 위한 오픈 I2V AI 영상 모델 선택 가이드 25.05](https://arca.live/b/aiart/137338844) · [오픈소스 무검열 비디오 생성 모델 Sulphur 2 발표 26.05](https://arca.live/b/aiart/169384763)</small>
 
 ??? note "근거 10건 전부 보기"
-    [오픈소스 무검열 비디오 생성 모델 Sulphur 2 배포!!… 26.05](https://arca.live/b/aiart/169565904) · [그록갤에 LTX Director 소개 26.06](https://arca.live/b/aiart/172586632) · [고급 응애를 위한 오픈 I2V AI 영상 모델 선택 가이드 25.05](https://arca.live/b/aiart/137338844) · [오픈소스 무검열 비디오 생성 모델 Sulphur 2 발표 26.05](https://arca.live/b/aiart/169384763) · [LTX I2V + FLF2V 추가 테스트 26.03](https://arca.live/b/aiart/164076209) · [비디오 모델 5개 비교 26.08](https://arca.live/b/aiart/179643391) · [LTX2.3 아니메 미세팁 26.03](https://arca.live/b/aiart/164305753) · [LTX2.5 뽑아봄 (혐주의?) 26.08](https://arca.live/b/aiart/179641750) · [LTX 2.5 증류 모델 vs Minimax H3 터보 Lo… 26.08](https://arca.live/b/aiart/179653186) · [LTX-2.5 속도는 ㅈ되긴 하네. 26.08](https://arca.live/b/aiart/179641866)
+    [오픈소스 무검열 비디오 생성 모델 Sulphur 2 배포!!… 26.05](https://arca.live/b/aiart/169565904) · [그록갤에 LTX Director 소개 26.06](https://arca.live/b/aiart/172586632) · [고급 응애를 위한 오픈 I2V AI 영상 모델 선택 가이드 25.05](https://arca.live/b/aiart/137338844) · [오픈소스 무검열 비디오 생성 모델 Sulphur 2 발표 26.05](https://arca.live/b/aiart/169384763) · [LTX I2V + FLF2V 추가 테스트 26.03](https://arca.live/b/aiart/164076209) · [LTX2.3 아니메 미세팁 26.03](https://arca.live/b/aiart/164305753) · [비디오 모델 5개 비교 26.08](https://arca.live/b/aiart/179643391) · [LTX2.5 뽑아봄 (혐주의?) 26.08](https://arca.live/b/aiart/179641750) · [LTX-2.5 속도는 ㅈ되긴 하네. 26.08](https://arca.live/b/aiart/179641866) · [LTX 2.5 증류 모델 vs Minimax H3 터보 Lo… 26.08](https://arca.live/b/aiart/179653186)
 
 ## WAN 2.2 — 기본 설정으로 쓰면 안 된다
 <small>2026-01 기준 · 근거 2건</small>
@@ -381,10 +381,10 @@ Ollama 자동프롬프트 세팅이 전제다. 이미지 100장 폴더를 걸어
 ⚠ 같은 글의 실패 기록 — 마지막 컷을 **QWEN EDIT 멀티 앵글 LoRA** 로 다른 각도의 이미지를 만들어 연결하려 했지만 여러 번 시도해도 계속 실패했다.
 댓글의 보충: **멀티 앵글 LoRA 는 만능이 아니라서 남녀의 다리가 꼬인 채 복잡하게 얽힌 구도에서는 제대로 된 결과를 만들지 못한다.** 처음 받아 썼을 때는 일관성이 놀라울 정도지만 실전에서 써먹기는 어렵다는 소감이 함께 달렸다.
 
-<small>근거 — [미니맥스 I2V (shot) 프롬프트는 앞뒤 장면을 독립적으… 26.08](https://arca.live/b/aiart/179574875) · [DaSiWa에서 만든 미니맥스 워크플로우 꽤 괜찮은듯 26.08](https://arca.live/b/aiart/178949797) · [WAN2.2 SVI 결과에 음성 추가용 WAN2.2 (SVI… 26.06](https://arca.live/b/aiart/173733176) · [Comfy 자동프롬프트 + 영상연결 딸깍 워크 플로우 - 가… 26.02](https://arca.live/b/aiart/163169341)</small>
+<small>근거 — [미니맥스 I2V (shot) 프롬프트는 앞뒤 장면을 독립적으… 26.08](https://arca.live/b/aiart/179574875) · [DaSiWa에서 만든 미니맥스 워크플로우 꽤 괜찮은듯 26.08](https://arca.live/b/aiart/178949797) · [Comfy 자동프롬프트 + 영상연결 딸깍 워크 플로우 - 가… 26.02](https://arca.live/b/aiart/163169341) · [WAN2.2 SVI 결과에 음성 추가용 WAN2.2 (SVI… 26.06](https://arca.live/b/aiart/173733176)</small>
 
 ??? note "근거 8건 전부 보기"
-    [미니맥스 I2V (shot) 프롬프트는 앞뒤 장면을 독립적으… 26.08](https://arca.live/b/aiart/179574875) · [DaSiWa에서 만든 미니맥스 워크플로우 꽤 괜찮은듯 26.08](https://arca.live/b/aiart/178949797) · [WAN2.2 SVI 결과에 음성 추가용 WAN2.2 (SVI… 26.06](https://arca.live/b/aiart/173733176) · [Comfy 자동프롬프트 + 영상연결 딸깍 워크 플로우 - 가… 26.02](https://arca.live/b/aiart/163169341) · [T2I2V 스토리 워크플로우(워크플로우는 맨 밑에) 26.02](https://arca.live/b/aiart/163389665) · [wan 2.2 프롬프트 릴레이 (kijai 아재가 작업 중) 26.04](https://arca.live/b/aiart/168139926) · [프롬프트 자동 생성 기능 + 동작 연속성 테스트 성공 26.08](https://arca.live/b/aiart/179620630) · [강간, 인페인팅을 이용해 긴 영상 만들기 실험, 26.06](https://arca.live/b/aiart/174726627)
+    [미니맥스 I2V (shot) 프롬프트는 앞뒤 장면을 독립적으… 26.08](https://arca.live/b/aiart/179574875) · [DaSiWa에서 만든 미니맥스 워크플로우 꽤 괜찮은듯 26.08](https://arca.live/b/aiart/178949797) · [Comfy 자동프롬프트 + 영상연결 딸깍 워크 플로우 - 가… 26.02](https://arca.live/b/aiart/163169341) · [WAN2.2 SVI 결과에 음성 추가용 WAN2.2 (SVI… 26.06](https://arca.live/b/aiart/173733176) · [T2I2V 스토리 워크플로우(워크플로우는 맨 밑에) 26.02](https://arca.live/b/aiart/163389665) · [wan 2.2 프롬프트 릴레이 (kijai 아재가 작업 중) 26.04](https://arca.live/b/aiart/168139926) · [프롬프트 자동 생성 기능 + 동작 연속성 테스트 성공 26.08](https://arca.live/b/aiart/179620630) · [강간, 인페인팅을 이용해 긴 영상 만들기 실험, 26.06](https://arca.live/b/aiart/174726627)
 
 ## LTX 2.3 ID-LoRA — 음색 유지
 <small>2026-04 기준 · 근거 1건 · **근거 약함**</small>
@@ -1131,10 +1131,10 @@ https://www.ffmpeg.org/download.html   # 설치 불필요. 아무 데나 풀고 
 색감·그림체가 계속 변하는 문제는 **CFG 를 6으로 올리면 대체로 잡히지만**, 캐릭터 일관성은 결국 캐릭터 로라가 필요하다 *(댓글)*.
 → [같은 캐릭터 계속 뽑기](consistency.md)
 
-<small>근거 — [간단한 WAN영상 일관성 복원 워크플로우 26.01](https://arca.live/b/aiart/160532251) · [이제 스토리만 잘 짜면 되! 스토리 워크플로우 v1.2(기능… 25.11](https://arca.live/b/aiart/154339713) · [딸깍 AUTO-WAN 워크플로우 업데이트함 (순서 제어) 25.11](https://arca.live/b/aiart/154065928) · [램96G 이상을 가진 당신, WAN으로 1분 스토리 영상을 … 25.11](https://arca.live/b/aiart/154102588)</small>
+<small>근거 — [간단한 WAN영상 일관성 복원 워크플로우 26.01](https://arca.live/b/aiart/160532251) · [이제 스토리만 잘 짜면 되! 스토리 워크플로우 v1.2(기능… 25.11](https://arca.live/b/aiart/154339713) · [딸깍 AUTO-WAN 워크플로우 업데이트함 (순서 제어) 25.11](https://arca.live/b/aiart/154065928) · [긴 루프 영상용 딸깍 AUTO-WAN 워크플로우 25.11](https://arca.live/b/aiart/154908337)</small>
 
 ??? note "근거 5건 전부 보기"
-    [간단한 WAN영상 일관성 복원 워크플로우 26.01](https://arca.live/b/aiart/160532251) · [이제 스토리만 잘 짜면 되! 스토리 워크플로우 v1.2(기능… 25.11](https://arca.live/b/aiart/154339713) · [딸깍 AUTO-WAN 워크플로우 업데이트함 (순서 제어) 25.11](https://arca.live/b/aiart/154065928) · [램96G 이상을 가진 당신, WAN으로 1분 스토리 영상을 … 25.11](https://arca.live/b/aiart/154102588) · [긴 루프 영상용 딸깍 AUTO-WAN 워크플로우 25.11](https://arca.live/b/aiart/154908337)
+    [간단한 WAN영상 일관성 복원 워크플로우 26.01](https://arca.live/b/aiart/160532251) · [이제 스토리만 잘 짜면 되! 스토리 워크플로우 v1.2(기능… 25.11](https://arca.live/b/aiart/154339713) · [딸깍 AUTO-WAN 워크플로우 업데이트함 (순서 제어) 25.11](https://arca.live/b/aiart/154065928) · [긴 루프 영상용 딸깍 AUTO-WAN 워크플로우 25.11](https://arca.live/b/aiart/154908337) · [램96G 이상을 가진 당신, WAN으로 1분 스토리 영상을 … 25.11](https://arca.live/b/aiart/154102588)
 
 ## MMAudio 로 효과음 붙이기 — 25fps 가 답이다 (본문의 24fps 는 틀렸다)
 <small>2025-11 기준 · 근거 4건</small>
@@ -1227,7 +1227,7 @@ ComfyUI 좌측 설정 → VHS 에서 `Keep required intermediate files after suc
 
 → 소리 붙이기 전반은 위 "영상에 소리 붙이기" 절 참조
 
-<small>근거 — [Wan 영상에 NSFW 효과음 넣기 (+ 내용 업데이트) 25.10](https://arca.live/b/aiart/151331018) · [MMaudio 싱크 맞추는법 25.10](https://arca.live/b/aiart/151497792) · [WAN용 video2sound 소리생성기 25.10](https://arca.live/b/aiart/151138778) · [MMaudio 싱크 관련 추가정보 25.11](https://arca.live/b/aiart/152614659)</small>
+<small>근거 — [Wan 영상에 NSFW 효과음 넣기 (+ 내용 업데이트) 25.10](https://arca.live/b/aiart/151331018) · [WAN용 video2sound 소리생성기 25.10](https://arca.live/b/aiart/151138778) · [MMaudio 싱크 맞추는법 25.10](https://arca.live/b/aiart/151497792) · [MMaudio 싱크 관련 추가정보 25.11](https://arca.live/b/aiart/152614659)</small>
 
 ## ✔ MiniMax H3 터보 LoRA — 스텝 하한, 그리고 pruned 에서도 작동한다
 <small>2026-08 기준 · 근거 5건</small>
@@ -1951,10 +1951,10 @@ Wan2.2 로 여러 영상을 연속 생성해 하나로 병합하는 워크플로
 
 > **남의 프롬프트를 통째로 복붙할 때의 주의** — 그 프롬프트에 박힌 특성(예: 가슴 크기가 항상 크게 나오는 것)까지 그대로 따라온다. 체형처럼 취향이 갈리는 요소는 복붙한 프롬프트 안에서 찾아 직접 바꿔야 한다 (173199382).
 
-<small>근거 — [현 시점 그록 검열 강화기준 정리 25.10](https://arca.live/b/aiart/150762399) · [젖꼭지(유두) 발기 프롬 25.10](https://arca.live/b/aiart/150625566) · [이번주 그록 검열 리트 결과 26.07](https://arca.live/b/aiart/176837450) · [(Grok, 이상성욕&농주의!) 역시 아직 자지라는 단어를 … 26.07](https://arca.live/b/aiart/175583242)</small>
+<small>근거 — [현 시점 그록 검열 강화기준 정리 25.10](https://arca.live/b/aiart/150762399) · [이번주 그록 검열 리트 결과 26.07](https://arca.live/b/aiart/176837450) · [젖꼭지(유두) 발기 프롬 25.10](https://arca.live/b/aiart/150625566) · [(Grok, 이상성욕&농주의!) 역시 아직 자지라는 단어를 … 26.07](https://arca.live/b/aiart/175583242)</small>
 
 ??? note "근거 5건 전부 보기"
-    [현 시점 그록 검열 강화기준 정리 25.10](https://arca.live/b/aiart/150762399) · [젖꼭지(유두) 발기 프롬 25.10](https://arca.live/b/aiart/150625566) · [이번주 그록 검열 리트 결과 26.07](https://arca.live/b/aiart/176837450) · [(Grok, 이상성욕&농주의!) 역시 아직 자지라는 단어를 … 26.07](https://arca.live/b/aiart/175583242) · [그록) 코믹마켓에 처음 코스플레이 하러 온 수수한 소녀들의 … 26.06](https://arca.live/b/aiart/173199382)
+    [현 시점 그록 검열 강화기준 정리 25.10](https://arca.live/b/aiart/150762399) · [이번주 그록 검열 리트 결과 26.07](https://arca.live/b/aiart/176837450) · [젖꼭지(유두) 발기 프롬 25.10](https://arca.live/b/aiart/150625566) · [(Grok, 이상성욕&농주의!) 역시 아직 자지라는 단어를 … 26.07](https://arca.live/b/aiart/175583242) · [그록) 코믹마켓에 처음 코스플레이 하러 온 수수한 소녀들의 … 26.06](https://arca.live/b/aiart/173199382)
 
 ## X-RAY 를 움직이게 하는 편법 — 그림에서 안팎을 이어 붙인다 (2026-07)
 <small>2026-07 기준 · 근거 1건</small>
@@ -2330,10 +2330,10 @@ ACCVid·CausVid 로라 수치를 '제작자 권장 사항' 이라고 소개한 �
 ⚠ **triton·SageAttention 이 안 깔려 있으면 위 숫자는 아무 의미가 없다.**
 4090 에서 1시간이라던 값이 그 둘을 깔자 10분이 된 사례가 그 증거다 → [오류 해결](troubleshooting.md) · [설치와 환경 구성](install.md)
 
-<small>근거 — [로컬의 희망 Smooth Mix Wan 2.2 모델 공유 25.10](https://arca.live/b/aiart/149889518) · [minimax h3로 만들어본 카체이싱 26.08](https://arca.live/b/aiart/178888116) · [괜찮은 wan2.2 워크플로우 공유 25.10](https://arca.live/b/aiart/149705161) · [터보 v4 vs H3 Cache vs 기본 20steps 비교 26.08](https://arca.live/b/aiart/179337362)</small>
+<small>근거 — [로컬의 희망 Smooth Mix Wan 2.2 모델 공유 25.10](https://arca.live/b/aiart/149889518) · [minimax h3로 만들어본 카체이싱 26.08](https://arca.live/b/aiart/178888116) · [터보 v4 vs H3 Cache vs 기본 20steps 비교 26.08](https://arca.live/b/aiart/179337362) · [괜찮은 wan2.2 워크플로우 공유 25.10](https://arca.live/b/aiart/149705161)</small>
 
 ??? note "근거 22건 전부 보기"
-    [로컬의 희망 Smooth Mix Wan 2.2 모델 공유 25.10](https://arca.live/b/aiart/149889518) · [minimax h3로 만들어본 카체이싱 26.08](https://arca.live/b/aiart/178888116) · [괜찮은 wan2.2 워크플로우 공유 25.10](https://arca.live/b/aiart/149705161) · [터보 v4 vs H3 Cache vs 기본 20steps 비교 26.08](https://arca.live/b/aiart/179337362) · [Wan 2.1의 놀라운 성능 (+Steps별 비교) 25.02](https://arca.live/b/aiart/130065480) · [Wan 2.2 DaSiWa Smooth 체크포인트 영상비교 25.10](https://arca.live/b/aiart/151005608) · [WAN 2.2 SVI 올라마 자동프롬프트 15초 워크플로우 … 26.01](https://arca.live/b/aiart/160056290) · [MiniMax_H3 15초. 26.08](https://arca.live/b/aiart/178825117) · [미니맥스 워크플로우 예제 그대로 돌린 것 26.08](https://arca.live/b/aiart/178815737) · [결국 못참고 H3 돌려봄 26.08](https://arca.live/b/aiart/178827894) · [미니맥스 h3 대충 후기 26.08](https://arca.live/b/aiart/178821596) · [Minimax 좋은데 26.08](https://arca.live/b/aiart/178973056) · [WAN-2.2 I2V Low만 사용해봤음? 25.09](https://arca.live/b/aiart/148267696) · [H3 15초 테스트 26.08](https://arca.live/b/aiart/178858542) · [미니맥스H3 4070s + 64gb 로 돌린 후기 26.08](https://arca.live/b/aiart/178836175) · [미니맥스 h3 TPU로 돌려보기 26.08](https://arca.live/b/aiart/179180656) · [미맥 rtx3070 8gb + 32gb(ddr4) 테스트 26.08](https://arca.live/b/aiart/178872484) · [아 미맥 비디오 레퍼 모르겠다 26.08](https://arca.live/b/aiart/179453440) · [미맥레퍼 터보로라 테스트 26.08](https://arca.live/b/aiart/179156980) · [미니맥스 돌려봄. (빅파이 주의) 26.08](https://arca.live/b/aiart/179390905) · [MiniMax-H3 ITOV 테스트 영상 26.08](https://arca.live/b/aiart/178850966) · [미니맥스 테스트 야짤 26.08](https://arca.live/b/aiart/178976951)
+    [로컬의 희망 Smooth Mix Wan 2.2 모델 공유 25.10](https://arca.live/b/aiart/149889518) · [minimax h3로 만들어본 카체이싱 26.08](https://arca.live/b/aiart/178888116) · [터보 v4 vs H3 Cache vs 기본 20steps 비교 26.08](https://arca.live/b/aiart/179337362) · [괜찮은 wan2.2 워크플로우 공유 25.10](https://arca.live/b/aiart/149705161) · [Wan 2.1의 놀라운 성능 (+Steps별 비교) 25.02](https://arca.live/b/aiart/130065480) · [Wan 2.2 DaSiWa Smooth 체크포인트 영상비교 25.10](https://arca.live/b/aiart/151005608) · [WAN 2.2 SVI 올라마 자동프롬프트 15초 워크플로우 … 26.01](https://arca.live/b/aiart/160056290) · [MiniMax_H3 15초. 26.08](https://arca.live/b/aiart/178825117) · [미니맥스 워크플로우 예제 그대로 돌린 것 26.08](https://arca.live/b/aiart/178815737) · [결국 못참고 H3 돌려봄 26.08](https://arca.live/b/aiart/178827894) · [미니맥스 h3 대충 후기 26.08](https://arca.live/b/aiart/178821596) · [Minimax 좋은데 26.08](https://arca.live/b/aiart/178973056) · [WAN-2.2 I2V Low만 사용해봤음? 25.09](https://arca.live/b/aiart/148267696) · [H3 15초 테스트 26.08](https://arca.live/b/aiart/178858542) · [미니맥스 h3 TPU로 돌려보기 26.08](https://arca.live/b/aiart/179180656) · [미니맥스H3 4070s + 64gb 로 돌린 후기 26.08](https://arca.live/b/aiart/178836175) · [아 미맥 비디오 레퍼 모르겠다 26.08](https://arca.live/b/aiart/179453440) · [미맥레퍼 터보로라 테스트 26.08](https://arca.live/b/aiart/179156980) · [미맥 rtx3070 8gb + 32gb(ddr4) 테스트 26.08](https://arca.live/b/aiart/178872484) · [미니맥스 돌려봄. (빅파이 주의) 26.08](https://arca.live/b/aiart/179390905) · [MiniMax-H3 ITOV 테스트 영상 26.08](https://arca.live/b/aiart/178850966) · [미니맥스 테스트 야짤 26.08](https://arca.live/b/aiart/178976951)
 
 ## MiniMax H3 R2V — 역할을 선언하고, 무엇을 어디서 보존할지 나눈다
 <small>2026-08 기준 · 근거 8건</small>
@@ -2429,7 +2429,7 @@ pitch, tone, and delivery of <Audio 1>
 <small>근거 — [미니맥스 H3 R2V 오디오 레퍼런스 시연 26.08](https://arca.live/b/aiart/179459020) · [미니맥스 r2v로 만든것 26.08](https://arca.live/b/aiart/179207537) · [AnimateDiff 때 돌려본 래퍼런스 영상을 R2V 해보… 26.08](https://arca.live/b/aiart/179265081) · [MiniMax H3 R2V로 만든 애니메이션 샘플 26.08](https://arca.live/b/aiart/179236931)</small>
 
 ??? note "근거 8건 전부 보기"
-    [미니맥스 H3 R2V 오디오 레퍼런스 시연 26.08](https://arca.live/b/aiart/179459020) · [미니맥스 r2v로 만든것 26.08](https://arca.live/b/aiart/179207537) · [AnimateDiff 때 돌려본 래퍼런스 영상을 R2V 해보… 26.08](https://arca.live/b/aiart/179265081) · [MiniMax H3 R2V로 만든 애니메이션 샘플 26.08](https://arca.live/b/aiart/179236931) · [minimax itov 사용 소감 2 26.08](https://arca.live/b/aiart/179207732) · [H3//  마법소녀 야스 (대사 입모양 싱크 프롬프트 포함) 26.08](https://arca.live/b/aiart/179013948) · [H3 lightx2v vs turbo v4 vs H3 cac… 26.08](https://arca.live/b/aiart/179425941) · [미맥 레퍼에 depth 이미지 넣기 26.08](https://arca.live/b/aiart/179423997)
+    [미니맥스 H3 R2V 오디오 레퍼런스 시연 26.08](https://arca.live/b/aiart/179459020) · [미니맥스 r2v로 만든것 26.08](https://arca.live/b/aiart/179207537) · [AnimateDiff 때 돌려본 래퍼런스 영상을 R2V 해보… 26.08](https://arca.live/b/aiart/179265081) · [MiniMax H3 R2V로 만든 애니메이션 샘플 26.08](https://arca.live/b/aiart/179236931) · [minimax itov 사용 소감 2 26.08](https://arca.live/b/aiart/179207732) · [미맥 레퍼에 depth 이미지 넣기 26.08](https://arca.live/b/aiart/179423997) · [H3 lightx2v vs turbo v4 vs H3 cac… 26.08](https://arca.live/b/aiart/179425941) · [H3//  마법소녀 야스 (대사 입모양 싱크 프롬프트 포함) 26.08](https://arca.live/b/aiart/179013948)
 
 ## MiniMax H3 가속 3종 — 숫자로 고른다 (lightx2v · turbo v4 · H3 Cache)
 <small>2026-08 기준 · 근거 4건</small>
@@ -2548,7 +2548,7 @@ RTX 5070 Ti 16GB + RAM 64GB, 배율 0.8 기준.
 <small>근거 — [minimax h3로 만들어본 카체이싱 26.08](https://arca.live/b/aiart/178888116) · [MiniMax_H3 15초. 26.08](https://arca.live/b/aiart/178825117) · [Minimax 좋은데 26.08](https://arca.live/b/aiart/178973056) · [미맥 i2v nsfw 26.08](https://arca.live/b/aiart/178891232)</small>
 
 ??? note "근거 13건 전부 보기"
-    [minimax h3로 만들어본 카체이싱 26.08](https://arca.live/b/aiart/178888116) · [MiniMax_H3 15초. 26.08](https://arca.live/b/aiart/178825117) · [Minimax 좋은데 26.08](https://arca.live/b/aiart/178973056) · [미맥 i2v nsfw 26.08](https://arca.live/b/aiart/178891232) · [H3 T2V 해보고 있다. 26.08](https://arca.live/b/aiart/179075042) · [H3 15초 테스트 26.08](https://arca.live/b/aiart/178858542) · [그냥 대충 써본 minimax H3 26.08](https://arca.live/b/aiart/178820916) · [아니마 + 미니맥스 엣찌씬 테스트 26.08](https://arca.live/b/aiart/179269525) · [MiniMax_H3 테스트 26.08](https://arca.live/b/aiart/178822617) · [MiniMax_H3 2트 26.08](https://arca.live/b/aiart/178823162) · [농) 미니맥스 i2v 해봄 26.08](https://arca.live/b/aiart/179286230) · [미니맥스 테스트 야짤 26.08](https://arca.live/b/aiart/178976951) · [nsfw) 영상은 어렵구나 26.08](https://arca.live/b/aiart/179031489)
+    [minimax h3로 만들어본 카체이싱 26.08](https://arca.live/b/aiart/178888116) · [MiniMax_H3 15초. 26.08](https://arca.live/b/aiart/178825117) · [Minimax 좋은데 26.08](https://arca.live/b/aiart/178973056) · [미맥 i2v nsfw 26.08](https://arca.live/b/aiart/178891232) · [H3 T2V 해보고 있다. 26.08](https://arca.live/b/aiart/179075042) · [H3 15초 테스트 26.08](https://arca.live/b/aiart/178858542) · [그냥 대충 써본 minimax H3 26.08](https://arca.live/b/aiart/178820916) · [아니마 + 미니맥스 엣찌씬 테스트 26.08](https://arca.live/b/aiart/179269525) · [MiniMax_H3 테스트 26.08](https://arca.live/b/aiart/178822617) · [농) 미니맥스 i2v 해봄 26.08](https://arca.live/b/aiart/179286230) · [MiniMax_H3 2트 26.08](https://arca.live/b/aiart/178823162) · [미니맥스 테스트 야짤 26.08](https://arca.live/b/aiart/178976951) · [nsfw) 영상은 어렵구나 26.08](https://arca.live/b/aiart/179031489)
 
 ## WAN 2.2 I2I 일관성 통일 — 비디오 모델로 이미지 사이를 맞춘다
 <small>2026-01 기준 · 근거 1건</small>
@@ -3022,7 +3022,7 @@ nvfp4 는 NVIDIA 가 RTX 세대에서 가속을 지원한다고 홍보한 4비�
 <small>근거 — [LTX2.3 nvfp4 초간단 테스트 26.03](https://arca.live/b/aiart/165113288)</small>
 
 ## WAN 2.2 GGUF 최소 워크플로우 — 113f 와 블록 스왑을 끄는 근거
-<small>2025-08 기준 · 근거 1건</small>
+<small>⚠️ 2025-08 기준 · 근거 1건</small>
 
 civitai 워크플로우들이 안 되거나 에러가 나서 직접 고쳐 만든 **최소 기능 워크플로우**의 설계 선택들이다 (1건, 2025-08).
 실사 위주이고 업스케일을 안 쓰는 사람 기준이라 안 쓰는 기능이 전부 걷어내져 있다.
@@ -3172,10 +3172,10 @@ MiniMax H3 로 60초를 **3초 클립 20회분**으로 나눠 프롬프트를 �
 
 → 판정 단계와 크레딧 소모는 위 '그록(Grok) 영상 검열 — 2단계 판정' 절.
 
-<small>근거 — [grok)이게 왜 검열 뚫리냐 26.06](https://arca.live/b/aiart/173045680) · [grok)대유쾌 마운틴 26.08](https://arca.live/b/aiart/178639518) · [그록) 공앱 내부이미지로 몸비틀기 26.06](https://arca.live/b/aiart/172879435) · [grok,잡다한거,한글,영어 프롬차이 26.07](https://arca.live/b/aiart/176009512)</small>
+<small>근거 — [grok)이게 왜 검열 뚫리냐 26.06](https://arca.live/b/aiart/173045680) · [grok)대유쾌 마운틴 26.08](https://arca.live/b/aiart/178639518) · [grok,잡다한거,한글,영어 프롬차이 26.07](https://arca.live/b/aiart/176009512) · [그록) 공앱 내부이미지로 몸비틀기 26.06](https://arca.live/b/aiart/172879435)</small>
 
 ??? note "근거 6건 전부 보기"
-    [grok)이게 왜 검열 뚫리냐 26.06](https://arca.live/b/aiart/173045680) · [grok)대유쾌 마운틴 26.08](https://arca.live/b/aiart/178639518) · [그록) 공앱 내부이미지로 몸비틀기 26.06](https://arca.live/b/aiart/172879435) · [grok,잡다한거,한글,영어 프롬차이 26.07](https://arca.live/b/aiart/176009512) · [(Grok, 고어&이상성욕주의!) 해부. 26.08](https://arca.live/b/aiart/178645883) · [그록 이매진 프롬프트 조언좀 26.07](https://arca.live/b/aiart/175683923)
+    [grok)이게 왜 검열 뚫리냐 26.06](https://arca.live/b/aiart/173045680) · [grok)대유쾌 마운틴 26.08](https://arca.live/b/aiart/178639518) · [grok,잡다한거,한글,영어 프롬차이 26.07](https://arca.live/b/aiart/176009512) · [그록) 공앱 내부이미지로 몸비틀기 26.06](https://arca.live/b/aiart/172879435) · [(Grok, 고어&이상성욕주의!) 해부. 26.08](https://arca.live/b/aiart/178645883) · [그록 이매진 프롬프트 조언좀 26.07](https://arca.live/b/aiart/175683923)
 
 ## Grok 프롬프트 골격 — 한글로 쓰고, 유지와 대사 억제를 명시한다
 <small>2026-08 기준 · 근거 11건</small>
@@ -3302,7 +3302,7 @@ MiniMax H3 로 60초를 **3초 클립 20회분**으로 나눠 프롬프트를 �
 <small>근거 — [그록 타율 높은 보지 휘젓는 자위 프롬 공유 25.10](https://arca.live/b/aiart/150375880) · [블아,후타)무지성그록고봉밥 26.06](https://arca.live/b/aiart/173083150) · [그록의 연출에 대한 생각과 방법 25.10](https://arca.live/b/aiart/150372288) · [(이상성욕 주의!) 그록으로 최애의 아이 최면자위. 26.06](https://arca.live/b/aiart/173862026)</small>
 
 ??? note "근거 11건 전부 보기"
-    [그록 타율 높은 보지 휘젓는 자위 프롬 공유 25.10](https://arca.live/b/aiart/150375880) · [블아,후타)무지성그록고봉밥 26.06](https://arca.live/b/aiart/173083150) · [그록의 연출에 대한 생각과 방법 25.10](https://arca.live/b/aiart/150372288) · [(이상성욕 주의!) 그록으로 최애의 아이 최면자위. 26.06](https://arca.live/b/aiart/173862026) · [그록)촉수물 프롬 공유한다 25.10](https://arca.live/b/aiart/150194494) · [grok,잡다한거,한글,영어 프롬차이 26.07](https://arca.live/b/aiart/176009512) · [그록 프롬프트 짧팁? 25.10](https://arca.live/b/aiart/150035793) · [grok,기승 몇개 26.06](https://arca.live/b/aiart/175177035) · [grok)그록 업그레이드 했다 해서 가슴만지러 왔다가 26.08](https://arca.live/b/aiart/179725976) · [(Grok) 신이치 엄마. 26.08](https://arca.live/b/aiart/179677365) · [(Grok) 시이나 마히루. 26.08](https://arca.live/b/aiart/179667106)
+    [그록 타율 높은 보지 휘젓는 자위 프롬 공유 25.10](https://arca.live/b/aiart/150375880) · [블아,후타)무지성그록고봉밥 26.06](https://arca.live/b/aiart/173083150) · [그록의 연출에 대한 생각과 방법 25.10](https://arca.live/b/aiart/150372288) · [(이상성욕 주의!) 그록으로 최애의 아이 최면자위. 26.06](https://arca.live/b/aiart/173862026) · [그록)촉수물 프롬 공유한다 25.10](https://arca.live/b/aiart/150194494) · [grok,잡다한거,한글,영어 프롬차이 26.07](https://arca.live/b/aiart/176009512) · [(Grok) 신이치 엄마. 26.08](https://arca.live/b/aiart/179677365) · [grok)그록 업그레이드 했다 해서 가슴만지러 왔다가 26.08](https://arca.live/b/aiart/179725976) · [grok,기승 몇개 26.06](https://arca.live/b/aiart/175177035) · [그록 프롬프트 짧팁? 25.10](https://arca.live/b/aiart/150035793) · [(Grok) 시이나 마히루. 26.08](https://arca.live/b/aiart/179667106)
 
 ## 영상 프롬프트의 문법 — 상태가 아니라 행동을, 그리고 `then` 으로 순서를
 <small>2026-07 기준 · 근거 4건</small>
@@ -3508,54 +3508,156 @@ completely unaltered first frame at 0.00 seconds.
 
 <small>근거 — [갱뱅은 어려워 26.06](https://arca.live/b/aiart/174522277) · [grok,기승 몇개 26.06](https://arca.live/b/aiart/175177035)</small>
 
+## MiniMax 레퍼런스 길이와 해상도 예산 — `5+17n` 과 픽셀 총량을 먼저 계산한다
+<small>2026-08 기준 · 근거 2건 · 자료 엇갈림</small>
+
+MiniMax 계열은 **길이와 해상도를 따로 보지 말고 같이 계산**해야 한다.
+
+### 레퍼런스 비디오 길이 — 24fps 5초는 `120` 이 아니라 `124`
+
+`while n % 17 != 5: n -= 1` 규칙 때문에 입력 프레임 수가 **`5 + 17n`** 꼴이 아니면 끝부분이 잘린다.
+
+| 목표 | 그대로 넣으면 | 맞춰야 하는 값 |
+| --- | --- | --- |
+| 24fps 5초 | 120프레임 → **107프레임(4.46초)** 로 깎임 | **124프레임** |
+| 30fps 5초 | 150프레임 → 끝 0.83초 손실 | `5 + 17n` 에 맞춘 프레임 수 |
+
+### 해상도 한계 — `768p` 고정이 아니라 픽셀 예산
+
+실측상 **`픽셀 수 × 24fps × 길이(초)` 가 대략 12~13억**을 넘기면 실패가 늘어난다.
+
+| 길이 | 대략 되는 쪽 | 실패가 나오기 시작한 쪽 |
+| --- | --- | --- |
+| 5초 | **3072x3072** 급까지 성공 사례 | 3264x3264 실패 |
+| 20초 | 1632x1632 성공 | 1728x1728 실패 |
+| 60초 | 1280x788 실패 | 1MP 안쪽으로 낮춰야 안전 |
+
+즉 **'MiniMax는 768p까지만 된다'는 식으로 외우면 틀린다.** 길이를 줄이면 고해상도도 되고, 길이를 늘리면 1MP도 버겁다.
+
+<small>근거 — [미니맥스 최대해상도는 768p가 아니다 (10MP 도 된다고… 26.08](https://arca.live/b/aiart/179711212) · [미맥 비디오레퍼 쓸거면 신경써야 할 부분이 있는듯 26.08](https://arca.live/b/aiart/179703022)</small>
+
+## MiniMax H3를 TTS처럼 쓰기 — 프레임은 버리고 오디오만 챙긴다
+<small>2026-08 기준 · 근거 2건</small>
+
+MiniMax H3 R2V는 꼭 '영상 생성기'로만 쓸 필요가 없다.
+
+오디오 레퍼런스만 살리고 해상도를 **320x192**, 더 줄이면 **32x32** 수준까지 떨어뜨리면
+사실상 **보이스클로닝/TTS처럼** 굴릴 수 있다.
+
+### 요령
+
+| 항목 | 값 |
+| --- | --- |
+| 입력 | 레퍼런스 오디오 + 최소 프레임 |
+| 해상도 | `320x192` → 더 줄이면 `32x32` 도 실사용 보고 |
+| 장점 | 프레임 계산을 거의 버려 속도가 빨라진다 |
+| 실측 | 15초 오디오를 **8초 안팎**에 생성 |
+
+영상이 목적이 아니라 **음성 톤만 가져오고 싶을 때** 쓰는 우회법이다. 화질은 포기하고 오디오만 회수한다고 생각하면 된다.
+
+<small>근거 — [미니맥스 H3 제로샷 보이스클로닝 TTS처럼 사용하기 26.08](https://arca.live/b/aiart/179683231) · [미니맥스 H3 R2V 모델을 TTS 처럼 사용해보기 26.08](https://arca.live/b/aiart/179692654)</small>
+
+## Bernini·SVI·AniFlow — 기능 이름보다 모델 성격을 먼저 본다
+<small>2026-08 기준 · 근거 6건</small>
+
+겉으로는 다 `i2v`·`연장`·`대사 영상`처럼 보이지만, 실제 성격은 많이 다르다.
+
+### Bernini
+
+- **첫 프레임 보존용 모델이 아니다.**
+- 포즈·배경·화풍을 멋대로 바꾸기 쉽고, 애니 그림을 반실사 쪽으로 밀기도 한다.
+- NSFW i2v 에선 **전용 로라나 보정 파이프라인** 없이는 자기주장이 강하다.
+- `v2v`/편집 성향이 강해서, 순수 i2v 기대치로 쓰면 실망하기 쉽다.
+
+### SVI
+
+- 단순히 '길게 이어 붙이는 옵션'이 아니다.
+- **프롬프트 해석 자체를 바꾼다.**
+- 같은 `Camera fans` 도 SVI가 없으면 시점 회전, 있으면 실물 카메라로 읽힌 사례가 있다.
+- 연장할 생각이면 **첫 구간부터 SVI를 켜고 프롬프트를 다시 깎는 편이 낫다.**
+
+### AniFlow
+
+- 강점은 **캐릭터 시트 + 대사 기반 파이프라인**이다.
+- 대신 준비 공정이 길고, **10초당 2000포인트**라 비용이 빠르게 커진다.
+- 지출이 누적되면 실제로 **수십만 원 단위**가 된다.
+
+이 셋은 이름만 보고 고르면 안 되고, **편집형인지 / 연장형인지 / 대사형인지**부터 구분해야 한다.
+
+<small>근거 — [천박, 농밀, 겨충, 땀충, 오버워치 짤들 뽑은거 1탄 26.08](https://arca.live/b/aiart/179814870) · [(후타주의) WAN2.2 Bernini I2V 기능 간단 리뷰 26.06](https://arca.live/b/aiart/173002044) · [애니플로우 결제하고 만든 것 26.06](https://arca.live/b/aiart/174420367) · [로컬영상2 26.06](https://arca.live/b/aiart/174566205)</small>
+
+??? note "근거 6건 전부 보기"
+    [천박, 농밀, 겨충, 땀충, 오버워치 짤들 뽑은거 1탄 26.08](https://arca.live/b/aiart/179814870) · [(후타주의) WAN2.2 Bernini I2V 기능 간단 리뷰 26.06](https://arca.live/b/aiart/173002044) · [애니플로우 결제하고 만든 것 26.06](https://arca.live/b/aiart/174420367) · [로컬영상2 26.06](https://arca.live/b/aiart/174566205) · [bernini 실험 26.07](https://arca.live/b/aiart/175974381) · [SVI는 원래 동작이 약해지나요? 26.06](https://arca.live/b/aiart/172946367)
+
+## 입 모양·립싱크 — 모델마다 고쳐야 하는 축이 다르다
+<small>2026-08 기준 · 근거 2건</small>
+
+입 관련 문제는 전부 같은 문제가 아니다.
+
+### WAN 계열
+
+- 입술만 현실적으로 튀는 경우가 있다.
+- Smooth 계열 low 쪽이 원인으로 의심되면 **low를 끄거나 스무스 가중치를 낮춰** 본다.
+- 얼굴은 고정하고 몸만 움직이게 하는 프롬프트를 따로 짜도, 모델 종특이면 프롬프트만으로는 안 막힌다.
+
+### MiniMax H3 립싱크
+
+- **20스텝**: 입 모양과 가사 동기화는 좋아지지만 얼굴 주름이 생기고 실사체로 민다.
+- **저스텝(대략 10)**: 2D/2.5D 그림체는 지키기 쉽지만 움직임이 뚝뚝 끊긴다.
+- **LTX 2.5**: 2D 립싱크 쪽에선 얼굴 변형과 실사화가 심해 부적합하다는 평가가 나왔다.
+
+즉 WAN은 **입 주변 아티팩트**, H3는 **스텝에 따른 스타일 변질**이 핵심 축이다.
+
+<small>근거 — [<Minimax H3> 노래 립씽크 테스트 26.08](https://arca.live/b/aiart/179773311) · [입 혼자 현실 느낌 나는 거 어케 고치냐 26.06](https://arca.live/b/aiart/173238044)</small>
+
 ## 이 문서가 딛고 선 주장
 
 이 문서가 인용한 원문에서 뽑은 것이다. 여러 글이 같은 말을 하는지 센 것이고, 근거가 1건뿐인 주장은 그만큼 약하다.
 
-근거가 센 40개만 싣는다 (나머지 282개는 생략).
+근거가 센 40개만 싣는다 (나머지 291개는 생략).
 
 | 주장 | 찬성 | 반대 | 시점 |
 |---|---:|---:|---|
 | 워크플로우는 EXIF 가 든 이미지·영상 파일을 다운로드해 ComfyUI 창에 드래그앤드롭해 불러온다 | 11 | 0 | 2024-06~2026-08 |
-| ComfyUI 포터블 통합팩 배포 링크는 본문에 base64 로 올라오고 압축 비밀번호는 `ai`, 기한은 한 달이라 지난 판은 대개 만료돼 있다 | 8 | 0 | 2026-02~2026-08 |
 | sage attention은 ComfyUI 작업 속도를 10~15% 높인다 | 8 | 1 | 2026-02~2026-08 |
 | 통합팩에서 sage attention을 쓰려면 run_nvidia_gpu.bat 대신 run_nvidia_gpu_fast_fp16_accumulation.bat 으로 실행한다 | 8 | 0 | 2026-02~2026-08 |
+| ComfyUI 포터블 통합팩 배포 링크는 본문에 base64 로 올라오고 압축 비밀번호는 `ai`, 기한은 한 달이라 지난 판은 대개 만료돼 있다 | 8 | 0 | 2026-02~2026-08 |
 | 긴 영상은 통짜로 만들면 타이밍과 두 번째 상황을 제대로 못 그리므로, 프롬프트를 나눠 이어붙이는 편이 낫다 | 6 | 0 | 2026-02~2026-08 |
 | LTX 계열은 2D·애니메이션이 약해 아니메 LoRA 를 물리거나 프롬프트에 스타일을 명시해야 한다 | 6 | 0 | 2026-03~2026-08 |
-| WAN 2.2 계열 워크플로우는 High/Low 모델을 나눠 쓰고 lightx2v(라이트닝) 로라를 별도로 물리는 것이 표준 구성이다 | 5 | 0 | 2026-01~2026-04 |
+| 영상 모델은 Danbooru식 태그 나열보다 자연어 장면 설명이 잘 먹는다 — MiniMax·AniFlow·WAN 계열은 역할과 행동을 문장으로 써야 한다 | 5 | 0 | 2026-06~2026-08 |
 | ANIMA는 Base v1.0을 models\diffusion_models, 텍스트 인코더를 models\text_encoders(qwen_3_06b_base.safetensors 로 개명), VAE를 models\vae 에 넣는다 | 5 | 0 | 2026-05~2026-08 |
-| 통합팩의 Controlnet Mode Select 값은 1=일반, 2=컨트롤넷 오픈포즈, 3=리저널이며 ANIMA 워크플로우는 1=일반, 2=컨트롤넷이다 | 5 | 0 | 2026-05~2026-08 |
-| NoobAI·V-pred 계열 체크포인트는 Kohya Deep Shrink·DCW·Spectrum 가속 노드와 상성이 나쁘므로 하나씩 바이패스해 원인을 찾는다 | 5 | 0 | 2026-05~2026-08 |
 | 해상도 프리셋은 Illustrious/SDXL은 custom_nodes\ComfyUi_NakoNode\py\aspect_ratio.py, ANIMA는 custom_nodes\comfyui-kjnodes\custom_dimensions.json 에서 수정한다 | 5 | 0 | 2026-05~2026-08 |
-| MiniMax H3 가속은 MiniMaxH3 Cache(TeaCache 계열, 스텝 스킵이 아니라 계산 결과 재사용)가 EasyCache·Spectrum 보다 품질 손실이 적어 사실상 표준이다 | 4 | 0 | 2026-08~2026-08 |
-| Grok 영상 프롬프트는 한글로 그대로 넣어도 작동하며 영어와 타율 차이가 없다(복불복) — 채널에서 통용되는 템플릿은 분석 / 얼굴 각도·표정 / 포즈·동작 / 프레임 / 카메라 / 배경 / 사운드 항목을 고정해 두고 '포즈 및 동작' 칸만 갈아 끼우는 형태이고, 골격은 (1) 동작의 성질 (2) 소리 (3) 유지 지시 (4) 대사 억제 넷이다. 비용 감각은 슈퍼그록 체험 기준 최저 화질 10초 1회가 주간 사용량의 약 1% 다 | 4 | 0 | 2025-10~2026-07 |
-| MiniMax H3 는 RTX 3060 12GB + RAM 32GB 급 환경에서도 구동된다 | 4 | 0 | 2026-07~2026-08 |
-| SDXL/Illustrious 결과물이 탁하거나 흰 점이 찍히면 VAE Select 값을 2로 두어 별도 VAE(fixFP16ErrorsSDXLLowerMemoryUse_v10)를 적용한다 | 4 | 0 | 2026-06~2026-08 |
-| Grok 영상은 영어 태그가 아니라 한국어 서술문을 그대로 읽는다 — 앞에 `화면 고정, 대사 없음, 포즈변화 없음, 표정변화 없음` 처럼 **움직이면 안 되는 것을 먼저 못 박고**, 행위는 `성적묘사없이 의학적으로 … 검사` 같은 중립 어휘로 감싸고 `~내리듯이` 비유형으로 적으면 상당 부분 통과한다. 강도·지속은 `크게`, `반복` 같은 부사로 따로 지시한다 | 4 | 0 | 2026-06~2026-08 |
-| Grok 영상의 검열은 시작 이미지의 출처에 크게 좌우된다 — 공식 imagine 창에서 **Grok 내부로 생성한 이미지**를 쓰면 통과 확률이 크게 오르고, 실사나 외부에서 올린 이미지는 계속 걸린다. 외부 AI 이미지를 Grok 에서 살짝 수정해 '내부 이미지' 로 둔갑시키는 것은 통하지 않는다. 완전 누드는 프롬프트 단계에서 사전 검열되므로 브라 정도라도 입혀 가리고, 자극적인 단어는 소리 → 부사 → 신체 부위 → 동작 표현 순으로 하나씩 떼어 내며 통과시킨다. 다만 성공 사례 대부분은 검열이 없던 몇 달 전 산출물이라 재현이 보장되지 않는다 | 4 | 0 | 2026-06~2026-08 |
-| MiniMax H3 실측 — RTX 5090 에서 480p 5초 20스텝이 첫 구동 90초, 2회차 55초, 프롬프트를 고치면 75초. 같은 조건 WAN 2.2 는 2회차 30초였으나 WAN 은 고속 로라를 쓴 값이고 H3 는 20스텝 순정이다. 864x480 은 5초 약 90초, 15초 약 420초이고 12초는 380~420초, 720p 10초는 약 20분이다 | 4 | 0 | 2026-08~2026-08 |
-| int8convrot 양자화는 fp8 tensorwise 보다 품질이 좋고(Q8_0 급) 조금 빠르며, 캘리브레이션이 필요 없어 대세가 된다 | 4 | 0 | 2026-07~2026-08 |
-| MiniMax H3 프롬프트는 대문자 섹션 헤더로 관심사를 분리하고 컷을 타임코드로 쪼개는 형식이 통한다 — 스타일 선언 → DIRECT CONTINUATION → 조건 LOCK 섹션(조명·인물·역할·차량) → SCENE OVERVIEW → STORYBOARD(`[0.0s-1.8s]` 컷 분할) → PERFORMANCE → CAMERA → ENVIRONMENT → AUDIO → NEGATIVE CONSTRAINTS. '무엇을 유지할지'와 '무엇을 금지할지'를 항목별로 장황할 만큼 명시한다 | 4 | 0 | 2026-08 |
+| NoobAI·V-pred 계열 체크포인트는 Kohya Deep Shrink·DCW·Spectrum 가속 노드와 상성이 나쁘므로 하나씩 바이패스해 원인을 찾는다 | 5 | 0 | 2026-05~2026-08 |
+| WAN 2.2 계열 워크플로우는 High/Low 모델을 나눠 쓰고 lightx2v(라이트닝) 로라를 별도로 물리는 것이 표준 구성이다 | 5 | 0 | 2026-01~2026-04 |
+| 통합팩의 Controlnet Mode Select 값은 1=일반, 2=컨트롤넷 오픈포즈, 3=리저널이며 ANIMA 워크플로우는 1=일반, 2=컨트롤넷이다 | 5 | 0 | 2026-05~2026-08 |
 | MiniMax H3 는 2D 그림체·얼굴 유지력에서 WAN·LTX 를 압도한다는 평가가 반복된다 — 다른 모델에서 나타나는 '아마조네스 강제 변형'(근육질 서양인 체형화)이 없고, 대사도 외계어가 아니라 어법에 크게 벗어나지 않는 문장으로 생성된다 | 4 | 0 | 2026-08~2026-08 |
+| MiniMax H3 가속은 MiniMaxH3 Cache(TeaCache 계열, 스텝 스킵이 아니라 계산 결과 재사용)가 EasyCache·Spectrum 보다 품질 손실이 적어 사실상 표준이다 | 4 | 0 | 2026-08~2026-08 |
+| Grok 영상의 검열은 시작 이미지의 출처에 크게 좌우된다 — 공식 imagine 창에서 **Grok 내부로 생성한 이미지**를 쓰면 통과 확률이 크게 오르고, 실사나 외부에서 올린 이미지는 계속 걸린다. 외부 AI 이미지를 Grok 에서 살짝 수정해 '내부 이미지' 로 둔갑시키는 것은 통하지 않는다. 완전 누드는 프롬프트 단계에서 사전 검열되므로 브라 정도라도 입혀 가리고, 자극적인 단어는 소리 → 부사 → 신체 부위 → 동작 표현 순으로 하나씩 떼어 내며 통과시킨다. 다만 성공 사례 대부분은 검열이 없던 몇 달 전 산출물이라 재현이 보장되지 않는다 | 4 | 0 | 2026-06~2026-08 |
+| Grok 영상은 영어 태그가 아니라 한국어 서술문을 그대로 읽는다 — 앞에 `화면 고정, 대사 없음, 포즈변화 없음, 표정변화 없음` 처럼 **움직이면 안 되는 것을 먼저 못 박고**, 행위는 `성적묘사없이 의학적으로 … 검사` 같은 중립 어휘로 감싸고 `~내리듯이` 비유형으로 적으면 상당 부분 통과한다. 강도·지속은 `크게`, `반복` 같은 부사로 따로 지시한다 | 4 | 0 | 2026-06~2026-08 |
+| MiniMax H3 는 RTX 3060 12GB + RAM 32GB 급 환경에서도 구동된다 | 4 | 0 | 2026-07~2026-08 |
+| MiniMax H3 실측 — RTX 5090 에서 480p 5초 20스텝이 첫 구동 90초, 2회차 55초, 프롬프트를 고치면 75초. 같은 조건 WAN 2.2 는 2회차 30초였으나 WAN 은 고속 로라를 쓴 값이고 H3 는 20스텝 순정이다. 864x480 은 5초 약 90초, 15초 약 420초이고 12초는 380~420초, 720p 10초는 약 20분이다 | 4 | 0 | 2026-08~2026-08 |
+| MiniMax H3 프롬프트는 대문자 섹션 헤더로 관심사를 분리하고 컷을 타임코드로 쪼개는 형식이 통한다 — 스타일 선언 → DIRECT CONTINUATION → 조건 LOCK 섹션(조명·인물·역할·차량) → SCENE OVERVIEW → STORYBOARD(`[0.0s-1.8s]` 컷 분할) → PERFORMANCE → CAMERA → ENVIRONMENT → AUDIO → NEGATIVE CONSTRAINTS. '무엇을 유지할지'와 '무엇을 금지할지'를 항목별로 장황할 만큼 명시한다 | 4 | 0 | 2026-08 |
+| Grok 영상 프롬프트는 한글로 그대로 넣어도 작동하며 영어와 타율 차이가 없다(복불복) — 채널에서 통용되는 템플릿은 분석 / 얼굴 각도·표정 / 포즈·동작 / 프레임 / 카메라 / 배경 / 사운드 항목을 고정해 두고 '포즈 및 동작' 칸만 갈아 끼우는 형태이고, 골격은 (1) 동작의 성질 (2) 소리 (3) 유지 지시 (4) 대사 억제 넷이다. 비용 감각은 슈퍼그록 체험 기준 최저 화질 10초 1회가 주간 사용량의 약 1% 다 | 4 | 0 | 2025-10~2026-07 |
+| int8convrot 양자화는 fp8 tensorwise 보다 품질이 좋고(Q8_0 급) 조금 빠르며, 캘리브레이션이 필요 없어 대세가 된다 | 4 | 0 | 2026-07~2026-08 |
+| SDXL/Illustrious 결과물이 탁하거나 흰 점이 찍히면 VAE Select 값을 2로 두어 별도 VAE(fixFP16ErrorsSDXLLowerMemoryUse_v10)를 적용한다 | 4 | 0 | 2026-06~2026-08 |
 | MiniMax H3 프롬프트 분량 — 장문 상세 서술이 유리하다는 보고가 여럿이지만, 성인 장면에서는 세부 묘사를 덜어낸 짧은 프롬프트가 오히려 나았다는 반례가 있다. 결론이 나지 않았다 | 3 | 1 | 2026-08 |
-| I2V 는 입력 이미지에 이미 존재하는 물체를 그대로 유지하려는 성향이 강하다 — 그래서 LoRA 를 못 쓰는 온라인 서비스에서는 입력 이미지를 미리 인페인팅해 원하는 상태로 만들어 넣는 것이 실전 우회법이고, 같은 원리로 인페인팅한 파생 이미지를 이어 붙이거나 X-RAY 내부를 그림 단계에서 고치는 편법이 성립한다 | 3 | 0 | 2026-06~2026-07 |
-| 영상 생성에는 엔비디아 RTX 16GB 이상이 필요하고 AMD/Intel GPU는 사실상 부적합하다 | 3 | 0 | 2025-05~2026-01 |
 | 워크플로우가 든 이미지는 브라우저에서 '새 탭 열기'나 '다른 이름으로 저장'으로 받으면 EXIF 가 날아가므로, 글의 원본 파일을 받아(또는 새 창에서 로드가 끝난 뒤) ComfyUI 캔버스에 드래그 앤 드롭해야 한다 | 3 | 0 | 2025-08~2025-08 |
+| 영상 생성에는 엔비디아 RTX 16GB 이상이 필요하고 AMD/Intel GPU는 사실상 부적합하다 | 3 | 0 | 2025-05~2026-01 |
 | LTX 2.5 는 RTX3090 + sage attention 만으로 1280x720 10초를 약 1분 30초에 뽑고 0.4MP·5초 동일 조건 43.05초로 MiniMax H3 대비 3.72배 빠르지만, 2D 는 학습 중심이 아니어서 품질이 낮아 '속도는 독보적 / 포지션은 범부 / 용도는 장난감' 으로 평가된다 | 3 | 0 | 2026-08~2026-08 |
+| I2V 는 입력 이미지에 이미 존재하는 물체를 그대로 유지하려는 성향이 강하다 — 그래서 LoRA 를 못 쓰는 온라인 서비스에서는 입력 이미지를 미리 인페인팅해 원하는 상태로 만들어 넣는 것이 실전 우회법이고, 같은 원리로 인페인팅한 파생 이미지를 이어 붙이거나 X-RAY 내부를 그림 단계에서 고치는 편법이 성립한다 | 3 | 0 | 2026-06~2026-07 |
+| Bernini는 첫 프레임 보존용 i2v가 아니라 편집 성향이 강한 모델이다 — 포즈·배경·화풍이 멋대로 바뀔 수 있다 | 3 | 0 | 2026-06~2026-07 |
 | MiniMax H3 터보 LoRA 는 공식 가이드가 4스텝을 말하지만 실제로는 4~6스텝에서 음성이 깨지고 8스텝까지 올려야 들어줄 만하다. H3 는 영상과 오디오를 함께 만들기 때문에 스텝을 낮추면 화면보다 소리가 먼저 무너진다. | 3 | 0 | 2026-08~2026-08 |
-| MiniMax H3 는 SageAttention·fp16 accumulation·torch compile 같은 옵션만으로 25~30% 빨라지며 품질 차이는 보이지 않는다 — RTX 4070 SUPER + RAM 64GB 에서 0.4MP 5초 첫 실행이 최적화 없이 240초, Sage + fp16 accumulation 으로 182초, Sage 를 `sageattn_qk_int8_pv_fp8_cuda++` 계열로 바꿔 168초까지 줄었다 | 2 | 0 | 2026-08 |
 | Grok 영상 생성은 한국어 속어(예: '자지')를 이해하지 못하고, '펠라치오' 같은 직접적인 단어는 검열에 걸려 '~하는 모션을 취함' 식으로 우회 서술해야 하는데 그렇게 우회하면 모델이 대상을 잘못 잡는 부작용이 생긴다. 한국어 프롬프트 자체가 영어처럼 정확히는 먹히지 않는다는 것이 작성자들의 공통 인정이다 | 2 | 0 | 2025-10~2026-07 |
+| Ollama 자동 프롬프트에는 `huihui_ai/qwen3-vl-abiterated:8b-instruct` 를 쓴다. instruct 가 붙지 않은 `:8b` 는 다른 모델이라 자동 프롬프트가 동작하지 않는다. | 2 | 0 | 2025-10~2026-01 |
+| Sulphur 2 계열(10Eros 포함)의 기본 Distilled LoRA 에는 문제가 있어 별도 배포판을 써야 한다 | 2 | 0 | 2026-05 |
+| MiniMax H3 는 일반 동작·물리 지시는 두루뭉술하게 적어도 알아서 처리하지만 성행위만큼은 전부 직접 서술해야 한다. 실전 해법은 MiniMax 공식 프롬프팅 가이드를 LLM(Grok 등)의 시스템 프롬프트로 넣고 이미지를 준 뒤 수정 사항을 반영해 가며 프롬프트를 생성시키는 것이고, 해부학 용어 대신 '고정/왕복/길이가 줄었다 늘었다' 같은 기하학적 운동 묘사로 우회하는 요령도 쓰인다 | 2 | 0 | 2026-08~2026-08 |
 | 그록(Grok)에서 SFW 이미지를 NSFW 영상으로 바꾸는 우회는 '이미 NSFW 인 조각을 합성해 붙이고 첫 프레임부터 지우라고 지시하는 것'이며, 조각에 빨간 테두리를 둘러 '빨간색 테두리 이미지를 지워라'로 지시하면 정확도가 올라간다(원글쓴이도 인정). 다만 조각이 깔끔히 안 지워져 직접 잘라내야 했다는 보고도 있다 | 2 | 0 | 2025-10~2025-10 |
-| MiniMax H3 가속 3종 정량 비교(RTX 5090 400W · 0.7Mpx · 5초 · conditioning 제외) — 터보 v4 로라 4스텝 30초, lightx2v 로라 4스텝 30초, H3 Cache 75초. 별도 측정(RTX 5090 + 12600K + DDR4 64GB, 0.7Mpx · 2:3 · 5초 I2V, 샘플링만)에서는 4step 로라 24초(6.21s/it), H3 Cache 20스텝 53초(2.68s/it, 로그에 Skipped 11/20 steps = 2.22x), 순정 20스텝 118초(5.92s/it) | 2 | 0 | 2026-08~2026-08 |
-| 그록 빌드(imagine-video-1.5)는 검열이 없어 덴덴AI 연동으로 I2V 에 쓸 수 있었다(이후 서비스 종료) | 2 | 1 | 2026-06~2026-06 |
+| 고속(터보·CFG distilled) 모델이나 고속 로라를 써서 `cfg` 를 1.0 으로 두면 **네거티브 프롬프트가 사실상 작동하지 않는다.** 네거티브를 살리려면 cfg 를 1.0 이 아닌 값으로 올려야 하고, 그 대가로 샘플링 시간이 약 2배가 된다 | 2 | 0 | 2025-06~2025-12 |
 | SVI 워크플로우에서 LoRA 는 SVI 2.0 PRO 버전이어야 하고 WAN 모델 버전은 상관없다. 5초짜리 세 덩어리에 같은 LoRA 가 전부 들어가므로 LoRA 는 최소한만 쓴다. | 2 | 0 | 2026-01~2026-01 |
 | i2v 의 start image 에는 출력 영상 해상도의 2배 크기 이미지를 넣으면 결과가 깔끔해진다(경험칙이고 공식 근거는 아니다). | 2 | 0 | 2025-10~2025-10 |
+| 사정 장면에서 인물의 입에서도 정액이 흘러나오는 현상은 특정 모델의 결함이 아니라 WAN 계열을 바탕으로 만든 모델들의 고질병이다(그록 무검열 1.5 로 만든 영상에서도 일상적이었다는 증언이 있다) | 2 | 0 | 2026-06~2026-07 |
 | ComfyUI 용 LTX Director(WhatDreamsCost, Lightricks 공식 아님)는 멀티 레퍼런스 입력과 시간 타이밍에 맞춘 장면·대사 생성, hard cut 을 지원해 보급형 Seedance 를 흉내 낼 수 있고 2.0 에서 타임라인 트리밍·분할·결합, IC-LoRA 트랙, 오디오 인페인팅이 추가됐으나, LTX 가 영상 편집용 모델이라 데이터가 실사에 치우쳐 2D 는 많이 뭉개진다 | 2 | 0 | 2026-06~2026-06 |
-| MiniMax H3 에 Spectrum Apply 노드를 붙이면 생성 시간이 약 30% 줄어든다 | 2 | 0 | 2026-08~2026-08 |
 | MiniMax H3 i2v 에서 음성 레퍼런스가 먹지 않으면 립싱크 지시문을 `<Subject 1> (S1) speaks in a voice that faithfully replicates the vocal timbre, pitch, tone, and delivery of <Audio 1>` 형태로 바꿔 쓴다. 극단적인 음성 샘플을 넣으면 결과도 극단적으로 나온다 | 2 | 0 | 2026-08~2026-08 |
-| 영상 모델이 알아서 상태를 유지해 주기를 기대하지 말고, 유지하고 싶은 상태를 동작 프롬프트 안에 한 번 더 서술해야 한다 — WAN I2V 에서 눈 감은 상태를 유지하려면 `her eyes closed in ecstasy` 처럼 명시하면 어지간하면 영상 내내 유지된다(가끔 눈을 뜨는 찐빠는 남는다) | 2 | 0 | 2026-05~2026-06 |
-| WAN 영상 프롬프트에서 `|` 는 모션 구분자로, 여러 모션이 뭉쳐 동시 수행으로 꼬이는 것을 막아 준다 | 2 | 0 | 2025-06~2025-06 |
-| LTX2.3 영상 생성에서 dynamic_vram 을 켜면 RAM 사용이 약 80GB 에서 10~15GB 로 줄어들므로 반드시 켜야 한다(이미지 생성에서는 끄는 편이 낫다) | 2 | 0 | 2026-03~2026-08 |
 
 ## 출처
 
@@ -3612,6 +3714,7 @@ completely unaltered first frame at 0.00 seconds.
 - [wan2.2 고속로라 + 샘플러 활용 역동적인 모션 워크플로우 공유해봄](https://arca.live/b/aiart/143818664) — 2025-07, 추천 24
 - [딸깍용 AUTO-WAN에 페이스 디테일러 추가한 워크플로우](https://arca.live/b/aiart/153449181) — 2025-11, 추천 24
 - [[Bernini with LTX2.3] 생애최초 워크플로우 설명 및 공유](https://arca.live/b/aiart/174027680) — 2026-06, 추천 24
+- [천박, 농밀, 겨충, 땀충, 오버워치 짤들 뽑은거 1탄](https://arca.live/b/aiart/179814870) — 2026-08, 추천 24
 - [멀티 컨트롤넷 + video loopback 32프레임 다 뽑음](https://arca.live/b/aiart/70993518) — 2023-03, 추천 23
 - [뉴비용) 나는 진짜 업스케일만 하고 싶어요](https://arca.live/b/aiart/163774464) — 2026-03, 추천 23
 - [LTX 2.3 워크플로우 V2 공유 및 팁 정리](https://arca.live/b/aiart/172671768) — 2026-06, 추천 23
@@ -3645,6 +3748,7 @@ completely unaltered first frame at 0.00 seconds.
 - [레전드 개천박한 사운드](https://arca.live/b/aiart/179271609) — 2026-08, 추천 18
 - [WAN) ACCVid 조합법 예시 workflow (ACCVid 제작자 workflow 포함)](https://arca.live/b/aiart/139426511) — 2025-06, 추천 17
 - [Wan 2.2 SVI pro 로라로 15초 영상을 딸깍하는 워크플로우에 Ollama로 자동 프롬프트를 붙인것](https://arca.live/b/aiart/158811110) — 2026-01, 추천 17
+- [(후타주의) WAN2.2 Bernini I2V 기능 간단 리뷰](https://arca.live/b/aiart/173002044) — 2026-06, 추천 17
 - [Minimax H3 서면 허가 신청 폼](https://arca.live/b/aiart/178825020) — 2026-08, 추천 17
 - [미니맥스 H3 터보로라 vs 순정 비교샷](https://arca.live/b/aiart/179654804) — 2026-08, 추천 17
 - [WAN 2.2 SVI 올라마 자동프롬프트 15초 워크플로우 업데이트 + 빡통워크 업데이트](https://arca.live/b/aiart/160056290) — 2026-01, 추천 16
@@ -3664,12 +3768,14 @@ completely unaltered first frame at 0.00 seconds.
 - [LTX 워크플로우 추가 변경(초보자는비추)](https://arca.live/b/aiart/172913467) — 2026-06, 추천 12
 - [미니맥스 h3 대충 후기](https://arca.live/b/aiart/178821596) — 2026-08, 추천 12
 - [Minimax 좋은데](https://arca.live/b/aiart/178973056) — 2026-08, 추천 12
+- [<Minimax H3> 노래 립씽크 테스트](https://arca.live/b/aiart/179773311) — 2026-08, 추천 10
 - [wan 2.2 gguf 간단한 워크플로우](https://arca.live/b/aiart/145421486) — 2025-08, 추천 9
 - [그록의 연출에 대한 생각과 방법](https://arca.live/b/aiart/150372288) — 2025-10, 추천 9
 - [램96G 이상을 가진 당신, WAN으로 1분 스토리 영상을 뽑아보자](https://arca.live/b/aiart/154102588) — 2025-11, 추천 9
 - [긴 루프 영상용 딸깍 AUTO-WAN 워크플로우](https://arca.live/b/aiart/154908337) — 2025-11, 추천 9
 - [bernini 연구 (팁 공유)](https://arca.live/b/aiart/173924712) — 2026-06, 추천 9
 - [미니맥스 H3 동영상 하나 퍼옴](https://arca.live/b/aiart/178629834) — 2026-08, 추천 9
+- [미니맥스 최대해상도는 768p가 아니다 (10MP 도 된다고?)](https://arca.live/b/aiart/179711212) — 2026-08, 추천 9
 - [일단 타율좋은 프롬 올려드림](https://arca.live/b/aiart/150899368) — 2025-10, 추천 8
 - [정보, 후방) 그록 음성 퀄리티를 올려보자](https://arca.live/b/aiart/151695848) — 2025-10, 추천 8
 - [Wan 작은팁) 옷을 벗었는데 팬티가 있고, 다시 팬티를 벗으려면?](https://arca.live/b/aiart/152655125) — 2025-11, 추천 8
@@ -3703,6 +3809,7 @@ completely unaltered first frame at 0.00 seconds.
 - [Seedance 2.0 프롬프트를 모아놓은 사이트](https://arca.live/b/aiart/162264712) — 2026-02, 추천 5
 - [grok)이게 왜 검열 뚫리냐](https://arca.live/b/aiart/173045680) — 2026-06, 추천 5
 - [[이상성욕 주의!] 그록으로 최애의 아이 최면자위.](https://arca.live/b/aiart/173862026) — 2026-06, 추천 5
+- [애니플로우 결제하고 만든 것](https://arca.live/b/aiart/174420367) — 2026-06, 추천 5
 - [그냥 대충 써본 minimax H3](https://arca.live/b/aiart/178820916) — 2026-08, 추천 5
 - [미니맥스H3 4070s + 64gb 로 돌린 후기](https://arca.live/b/aiart/178836175) — 2026-08, 추천 5
 - [H3//  마법소녀 야스 (대사 입모양 싱크 프롬프트 포함)](https://arca.live/b/aiart/179013948) — 2026-08, 추천 5
@@ -3726,6 +3833,7 @@ completely unaltered first frame at 0.00 seconds.
 - [애니플로우 프롬프트](https://arca.live/b/aiart/174189168) — 2026-06, 추천 3
 - [LLLite로 배경 고정해봄](https://arca.live/b/aiart/174421651) — 2026-06, 추천 3
 - [(보추 쇼타주의) 쇼타를 여장시키고 곧휴를 괴롭히는 바니걸 누나들](https://arca.live/b/aiart/174466076) — 2026-06, 추천 3
+- [로컬영상2](https://arca.live/b/aiart/174566205) — 2026-06, 추천 3
 - [(후타주의) Arcshot 로라로 I2V에 역동성 주기](https://arca.live/b/aiart/175521759) — 2026-07, 추천 3
 - [MiniMax_H3 2트](https://arca.live/b/aiart/178823162) — 2026-08, 추천 3
 - [농) 미니맥스 i2v 해봄](https://arca.live/b/aiart/179286230) — 2026-08, 추천 3
@@ -3734,6 +3842,8 @@ completely unaltered first frame at 0.00 seconds.
 - [<Minimax H3> 준철이 시리즈 3](https://arca.live/b/aiart/179615316) — 2026-08, 추천 3
 - [프롬프트 자동 생성 기능 + 동작 연속성 테스트 성공](https://arca.live/b/aiart/179620630) — 2026-08, 추천 3
 - [LTX2.5 비디오 업스케일용으로 써본 간단 후기](https://arca.live/b/aiart/179654601) — 2026-08, 추천 3
+- [미니맥스 H3 제로샷 보이스클로닝 TTS처럼 사용하기](https://arca.live/b/aiart/179683231) — 2026-08, 추천 3
+- [미맥 비디오레퍼 쓸거면 신경써야 할 부분이 있는듯](https://arca.live/b/aiart/179703022) — 2026-08, 추천 3
 - [그록 영상 생성후 wan2.2로 hires fix 할 필요 없음](https://arca.live/b/aiart/149978246) — 2025-10, 추천 2
 - [Ubuntu,윈도우 ai max 395 wan2.2 후기](https://arca.live/b/aiart/160894544) — 2026-01, 추천 2
 - [그록) 공앱 내부이미지로 몸비틀기](https://arca.live/b/aiart/172879435) — 2026-06, 추천 2
@@ -3744,6 +3854,7 @@ completely unaltered first frame at 0.00 seconds.
 - [MiniMax-H3 ITOV 테스트 영상](https://arca.live/b/aiart/178850966) — 2026-08, 추천 2
 - [LTX-2.5 속도는 ㅈ되긴 하네.](https://arca.live/b/aiart/179641866) — 2026-08, 추천 2
 - [LTX 2.5 증류 모델 vs Minimax H3 터보 LoRA I2V 초간단 비교](https://arca.live/b/aiart/179653186) — 2026-08, 추천 2
+- [미니맥스 H3 R2V 모델을 TTS 처럼 사용해보기](https://arca.live/b/aiart/179692654) — 2026-08, 추천 2
 - [그록 프롬프트 짧팁?](https://arca.live/b/aiart/150035793) — 2025-10, 추천 1
 - [애니플로우도 타율이 썩 좋진 않네](https://arca.live/b/aiart/174022708) — 2026-06, 추천 1
 - [grok,기승 몇개](https://arca.live/b/aiart/175177035) — 2026-06, 추천 1
@@ -3760,9 +3871,12 @@ completely unaltered first frame at 0.00 seconds.
 - [WAN 대상 지정 프롬프트 질문](https://arca.live/b/aiart/171106553) — 2026-05, 추천 0
 - [wan 2.2 bouncebite 쓰는데 자꾸 회음부 무시하는거 질문...](https://arca.live/b/aiart/171894936) — 2026-05, 추천 0
 - [페?)왜 갑자기 3D로 넘어가는 것일까요](https://arca.live/b/aiart/172447183) — 2026-06, 추천 0
+- [SVI는 원래 동작이 약해지나요?](https://arca.live/b/aiart/172946367) — 2026-06, 추천 0
 - [그록) 코믹마켓에 처음 코스플레이 하러 온 수수한 소녀들의 오프파코?](https://arca.live/b/aiart/173199382) — 2026-06, 추천 0
+- [입 혼자 현실 느낌 나는 거 어케 고치냐](https://arca.live/b/aiart/173238044) — 2026-06, 추천 0
 - [ltx 2.3 목 고정하는 프롬프트르 머가 좋을까요?](https://arca.live/b/aiart/173420798) — 2026-06, 추천 0
 - [aniflow)기본프롬, 세부프롬, 무프롬 비교](https://arca.live/b/aiart/175123065) — 2026-06, 추천 0
+- [bernini 실험](https://arca.live/b/aiart/175974381) — 2026-07, 추천 0
 - [minimax h3 떡씬 만드는데 도움 좀...](https://arca.live/b/aiart/179071193) — 2026-08, 추천 0
 - [Ollama 에서 어떤 모델을 써야할까요?](https://arca.live/b/aiart/179547607) — 2026-08, 추천 0
 - [[Grok] 시이나 마히루.](https://arca.live/b/aiart/179667106) — 2026-08, 추천 0
