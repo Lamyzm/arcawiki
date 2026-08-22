@@ -3,7 +3,7 @@
 > 두루뭉실한 설명 대신 **파일명·숫자·원문 인용**으로만 적는다.
 > 확인 못 한 항목은 "확인 안 됨"이라고 적었지 추측하지 않았다.
 >
-> 근거: 채널 글 8,001건 + 이 PC 실물 파일 헤더 파싱 + ComfyUI 0.33.0 공식 템플릿.
+> 근거: 채널 글 8,001건 + safetensors 헤더 실측 + ComfyUI 0.33.0 공식 템플릿.
 
 ---
 
@@ -14,9 +14,9 @@
 ```
 SDXL ─┬─ Illustrious XL (Onoma AI, 한국)
       │      └─ NoobAI-XL (Laxhar Lab)
-      │      └─ WAI-illustrious-SDXL      ← 우리가 쓰는 것
+      │      └─ WAI-illustrious-SDXL
       │
-NVIDIA Cosmos-Predict2 ── ANIMA (CircleStone Labs)   ← 우리가 쓰는 것
+NVIDIA Cosmos-Predict2 ── ANIMA (CircleStone Labs)
       │      └─ waiANIMA (병합본)
       │
 알리바바 ── Z-Image (S3-DiT)
@@ -36,7 +36,7 @@ NovelAI 자체 ── NAI V4.5 / V5
 
 # 이미지 모델
 
-## ANIMA — 우리 주력
+## ANIMA
 
 | | |
 |---|---|
@@ -102,7 +102,7 @@ newest, year2024, (masterpiece, best quality), score_7, aesthetic, general, safe
 | | |
 |---|---|
 | **base v1.0** | 원판 |
-| **aesthetic v1.1** | base + 증류/채색 로라 병합 후 파인튜닝. **우리가 쓰는 것** |
+| **aesthetic v1.1** | base + 증류/채색 로라 병합 후 파인튜닝 |
 | **2.9B** | 제3자 튜닝. 블록 28→40개로 확장, 컷오프 **2026-07** |
 
 v1.1 실측 소감:
@@ -168,7 +168,7 @@ clip skip  2
 | **v14** | 사실상 표준. 로라 배포글 30여 편이 전부 v140 고정 |
 | v15 | NSFW 특화. 대신 고속화 특성을 잃어 steps 28 필요 |
 | v16 | **손 찐빠 회귀.** 글 제목이 아예 「손가락 찐빠 타율 높이기」 |
-| **v17** | 우리가 쓰는 것. 손발 개선. 대신 **채도가 높고 3D 느낌이 강함** |
+| **v17** | 최신. 손발 개선. 대신 **채도가 높고 3D 느낌이 강함** |
 
 ### 공통 약점
 
