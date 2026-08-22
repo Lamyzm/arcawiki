@@ -2456,6 +2456,35 @@ oldt5 로 변환하지 않고 concat 하면 거의 앞의 것만 인식된다.
 | **최애의 아이** | 정지화상과 영상 프롬프트를 분리한다. 정지화상은 작품 태그 중심, 영상은 동작과 변화 금지 문장을 따로 쓴다 | 정지 프롬프트를 그대로 영상에 복붙 |
 | **블루 아카이브** | 캐릭터 태그 학습량이 강하므로 `alternate costume`, `hat` 네거티브, 필요시 `official art` 음수로 원래 스킨 끼어듦을 눌러 본다 | 스킨 캐릭터명 고정, 의상 태그 남발 |
 
+**⚠️ 주의** — 위 표는 "어떻게 시작할까"를 다룬다. **정말 작품체를 닮게 만드는 가장 강한 수단은 여전히 전용 스타일/캐릭터 LoRA** 다.
+전용 자산이 없으면 작품 태그 + 보조 태그로 **가까운 방향**까지는 갈 수 있어도, 사용자가 기대하는 수준의 "딱 그 작품체"가 안 나오는 경우가 많다.
+
+### 로컬에서 바로 통과한 애니 시작 프롬프트
+
+아래는 문서 원칙을 실제 로컬 ANIMA 스타터로 좁힌 버전이다.
+**그림체를 억지로 화려하게 만드는 대신 "애니처럼 보이게" 두는 출발점**이다.
+
+```text
+masterpiece, best quality, safe, anime screencap, tv anime still,
+black-haired schoolgirl, long straight hair, red eyes,
+elegant student council heroine, navy sailor uniform,
+upper body portrait, looking over shoulder,
+night city lights, clean lineart, cel shading, flat colors,
+soft rim light, subtle blush
+```
+
+```text
+worst quality, low quality, score_1, score_2, score_3,
+artist name, blurry, jpeg artifacts, chromatic aberration, realistic, 3d
+```
+
+여기서 중요한 것은 **태그를 더 넣는 것보다 안 넣는 것**이다.
+
+- `anime screencap` / `tv anime still` / `cel shading` / `flat colors` 가 기본 방향을 잡는다
+- 너무 광나면 작가 태그나 스타일 태그를 더 쌓지 말고 **그쪽을 빼야** 한다
+- 캐릭터 LoRA 를 쓰더라도 외형 태그(`hair`, `eyes`, `halo`, `braid`)를 같이 적는 쪽이 안정적이다
+- 작품풍을 흉내낼 때 처음부터 작가를 여러 명 섞으면 **액자·포스터·광택 오염**부터 생기기 쉽다
+
 **작품 카드 5개의 공통 체크리스트**
 
 1. 작품 태그는 **`0.5::작품명::`** 부근에서 시작한다.
