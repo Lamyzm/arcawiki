@@ -1,0 +1,2163 @@
+{
+ "id": "6a4baf07-a837-4d24-8b38-0dac137aaba3",
+ "revision": 0,
+ "last_node_id": 132,
+ "last_link_id": 185,
+ "nodes": [
+  {
+   "id": 96,
+   "type": "Reroute",
+   "pos": [
+    20,
+    -760
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 17,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "STRING",
+     "links": []
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false
+   }
+  },
+  {
+   "id": 10,
+   "type": "Masks Combine Batch",
+   "pos": [
+    1040,
+    -740
+   ],
+   "size": [
+    240,
+    40
+   ],
+   "flags": {
+    "collapsed": false,
+    "pinned": true
+   },
+   "order": 32,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "masks",
+     "type": "MASK",
+     "link": 11
+    }
+   ],
+   "outputs": [
+    {
+     "name": "MASK",
+     "type": "MASK",
+     "links": [
+      154
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "was-ns",
+    "ver": "3.0.1",
+    "Node name for S&R": "Masks Combine Batch"
+   },
+   "widgets_values": []
+  },
+  {
+   "id": 103,
+   "type": "Reroute",
+   "pos": [
+    1040,
+    -820
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 33,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 145
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      147
+     ]
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false
+   }
+  },
+  {
+   "id": 11,
+   "type": "MaskToSEGS",
+   "pos": [
+    1040,
+    -640
+   ],
+   "size": [
+    240,
+    180
+   ],
+   "flags": {
+    "collapsed": false,
+    "pinned": true
+   },
+   "order": 34,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "mask",
+     "type": "MASK",
+     "link": 154
+    }
+   ],
+   "outputs": [
+    {
+     "name": "SEGS",
+     "type": "SEGS",
+     "links": [
+      166
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfyui-impact-pack",
+    "ver": "8.28.3",
+    "Node name for S&R": "MaskToSEGS"
+   },
+   "widgets_values": [
+    true,
+    3,
+    false,
+    10,
+    false
+   ]
+  },
+  {
+   "id": 104,
+   "type": "Reroute",
+   "pos": [
+    1200,
+    -820
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 35,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 147
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      148
+     ]
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false
+   }
+  },
+  {
+   "id": 8,
+   "type": "easy sam3ImageSegmentation",
+   "pos": [
+    720,
+    -740
+   ],
+   "size": [
+    300,
+    280
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 31,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "sam3_model",
+     "type": "EASY_SAM3_MODEL",
+     "link": 9
+    },
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 160
+    },
+    {
+     "name": "positive_boxes",
+     "shape": 7,
+     "type": "SAM3_BOXES_PROMPT",
+     "link": null
+    },
+    {
+     "name": "negative_boxes",
+     "shape": 7,
+     "type": "SAM3_BOXES_PROMPT",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "masks",
+     "type": "MASK",
+     "links": [
+      11
+     ]
+    },
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "links": [
+      145
+     ]
+    },
+    {
+     "name": "obj_masks",
+     "type": "MASK",
+     "links": null
+    },
+    {
+     "name": "boxes",
+     "type": "BBOX",
+     "links": null
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfyui-sam3",
+    "ver": "01777008afdfd6c50b33ee2b5bab9e30590e1e3f",
+    "Node name for S&R": "SAM3Grounding"
+   },
+   "widgets_values": [
+    "eyes",
+    0.6,
+    false,
+    "none",
+    -1
+   ],
+   "title": "easy sam3ImageSegmentation (원본: SAM3Grounding, threshold 0.6 / \"eyes\")"
+  },
+  {
+   "id": 7,
+   "type": "easy sam3ModelLoader",
+   "pos": [
+    460,
+    -740
+   ],
+   "size": [
+    220,
+    100
+   ],
+   "flags": {
+    "collapsed": false,
+    "pinned": true
+   },
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "sam3_model",
+     "type": "EASY_SAM3_MODEL",
+     "links": [
+      9
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfyui-sam3",
+    "ver": "01777008afdfd6c50b33ee2b5bab9e30590e1e3f",
+    "Node name for S&R": "LoadSAM3Model"
+   },
+   "widgets_values": [
+    "sam3.pt",
+    "image",
+    "cuda",
+    "fp32"
+   ],
+   "title": "easy sam3ModelLoader (원본: LoadSAM3Model)"
+  },
+  {
+   "id": 25,
+   "type": "PreviewImage",
+   "pos": [
+    1300,
+    -740
+   ],
+   "size": [
+    280,
+    280
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 37,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 148
+    }
+   ],
+   "outputs": [],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.20.1",
+    "Node name for S&R": "PreviewImage"
+   },
+   "widgets_values": []
+  },
+  {
+   "id": 19,
+   "type": "Simple Text 💬ED",
+   "pos": [
+    -340,
+    480
+   ],
+   "size": [
+    220,
+    180
+   ],
+   "flags": {
+    "collapsed": false,
+    "pinned": true
+   },
+   "order": 1,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "text_a",
+     "shape": 7,
+     "type": "STRING",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "STRING",
+     "type": "STRING",
+     "links": [
+      97
+     ]
+    }
+   ],
+   "title": "부정 프롬프트 공통",
+   "properties": {
+    "cnr_id": "efficiency-nodes-ED",
+    "ver": "d9d275500e5eeb2d24733c2f5d12c3a90c402104",
+    "Node name for S&R": "Simple Text 💬ED"
+   },
+   "widgets_values": [
+    "embedding:lazyneg, embedding:lazyreal, (embedding:lazyhand:1.2), (text:1.3), (japanese text:1.15), watermark, pixiv username, (censored:1.25), (extra digits:1.5), fewer digits, pale skin, fat man, (speech bubble:1.2), (logo:1.3), pubic hair"
+   ],
+   "color": "#233",
+   "bgcolor": "#355",
+   "shape": "box"
+  },
+  {
+   "id": 99,
+   "type": "Reroute",
+   "pos": [
+    320,
+    480
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 18,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 134
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "STRING",
+     "links": [
+      132
+     ]
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false
+   }
+  },
+  {
+   "id": 109,
+   "type": "Reroute",
+   "pos": [
+    600,
+    -360
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 30,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 159
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      160
+     ]
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false
+   }
+  },
+  {
+   "id": 111,
+   "type": "Reroute",
+   "pos": [
+    1240,
+    -400
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 36,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 166
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "SEGS",
+     "links": [
+      168
+     ]
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false
+   }
+  },
+  {
+   "id": 114,
+   "type": "Reroute",
+   "pos": [
+    700,
+    180
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 41,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 171
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      172
+     ]
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false
+   }
+  },
+  {
+   "id": 113,
+   "type": "Reroute",
+   "pos": [
+    1600,
+    180
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 40,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 170
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      171
+     ]
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false
+   }
+  },
+  {
+   "id": 1,
+   "type": "KSampler (Efficient) 💬ED",
+   "pos": [
+    820,
+    -300
+   ],
+   "size": [
+    340,
+    480
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 28,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "context",
+     "type": "RGTHREE_CONTEXT",
+     "link": 5
+    },
+    {
+     "name": "positive_opt",
+     "shape": 7,
+     "type": "CONDITIONING",
+     "link": null
+    },
+    {
+     "name": "script",
+     "shape": 7,
+     "type": "SCRIPT",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "CONTEXT",
+     "type": "RGTHREE_CONTEXT",
+     "links": [
+      163
+     ]
+    },
+    {
+     "name": "OUTPUT_IMAGE",
+     "type": "IMAGE",
+     "links": [
+      158
+     ]
+    },
+    {
+     "name": "STEPS_INT",
+     "type": "INT",
+     "links": null
+    }
+   ],
+   "properties": {
+    "cnr_id": "efficiency-nodes-ED",
+    "ver": "d9d275500e5eeb2d24733c2f5d12c3a90c402104",
+    "Node name for S&R": "KSampler (Efficient) 💬ED",
+    "MaskDetailer mode": false,
+    "(MaskDetailer) drop size": 5,
+    "(MaskDetailer) cycle": 1,
+    "(MaskDetailer) inpaint model enable": false,
+    "(MaskDetailer) noise mask feather": 20,
+    "Use tiled VAE decode": false
+   },
+   "widgets_values": [
+    "from context",
+    963415894038667,
+    "randomize",
+    30,
+    4,
+    "euler_ancestral",
+    "sgm_uniform",
+    1,
+    512,
+    true,
+    1216,
+    15,
+    3,
+    "auto"
+   ],
+   "color": "#232",
+   "bgcolor": "#353",
+   "shape": "box"
+  },
+  {
+   "id": 4,
+   "type": "Efficient Loader 💬ED",
+   "pos": [
+    460,
+    -300
+   ],
+   "size": [
+    340,
+    480
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 27,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "context_opt",
+     "shape": 7,
+     "type": "RGTHREE_CONTEXT",
+     "link": null
+    },
+    {
+     "name": "lora_stack",
+     "shape": 7,
+     "type": "LORA_STACK",
+     "link": 181
+    },
+    {
+     "name": "cnet_stack",
+     "shape": 7,
+     "type": "CONTROL_NET_STACK",
+     "link": null
+    },
+    {
+     "name": "pixels",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "name": "mask",
+     "shape": 7,
+     "type": "MASK",
+     "link": null
+    },
+    {
+     "name": "positive",
+     "shape": 7,
+     "type": "STRING",
+     "link": 157
+    },
+    {
+     "name": "negative",
+     "shape": 7,
+     "type": "STRING",
+     "link": 132
+    },
+    {
+     "name": "seed",
+     "type": "INT",
+     "widget": {
+      "name": "seed"
+     },
+     "link": 183
+    }
+   ],
+   "outputs": [
+    {
+     "name": "CONTEXT",
+     "type": "RGTHREE_CONTEXT",
+     "links": [
+      5
+     ]
+    },
+    {
+     "name": "MODEL",
+     "type": "MODEL",
+     "links": null
+    },
+    {
+     "name": "POSITIVE",
+     "type": "CONDITIONING",
+     "links": null
+    },
+    {
+     "name": "NEGATIVE",
+     "type": "CONDITIONING",
+     "links": null
+    },
+    {
+     "name": "LATENT",
+     "shape": 6,
+     "type": "LATENT",
+     "links": null
+    },
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": null
+    },
+    {
+     "name": "CLIP",
+     "type": "CLIP",
+     "links": null
+    },
+    {
+     "name": "DEPENDENCIES",
+     "type": "DEPENDENCIES",
+     "links": null
+    }
+   ],
+   "properties": {
+    "cnr_id": "efficiency-nodes-ED",
+    "ver": "d9d275500e5eeb2d24733c2f5d12c3a90c402104",
+    "Node name for S&R": "Efficient Loader 💬ED",
+    "Use Latent Rebatch": true,
+    "Token normalization": "none",
+    "Weight interpretation": "comfy",
+    "Use tiled VAE encode": false
+   },
+   "widgets_values": [
+    "waiIllustriousSDXL_v170.safetensors",
+    "SDXL\\sdxl_vae.safetensors",
+    -2,
+    "✍️ Txt2Img",
+    1,
+    -1,
+    null,
+    4,
+    "euler_ancestral",
+    "sgm_uniform",
+    1024,
+    1024
+   ],
+   "color": "#223",
+   "bgcolor": "#335",
+   "shape": "box"
+  },
+  {
+   "id": 13,
+   "type": "Detailer (SEGS) 💬ED",
+   "pos": [
+    1220,
+    -300
+   ],
+   "size": [
+    360,
+    480
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 39,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "context",
+     "type": "RGTHREE_CONTEXT",
+     "link": 163
+    },
+    {
+     "name": "segs",
+     "type": "SEGS",
+     "link": 169
+    },
+    {
+     "name": "image_opt",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "name": "detailer_hook",
+     "shape": 7,
+     "type": "DETAILER_HOOK",
+     "link": null
+    },
+    {
+     "name": "scheduler_func_opt",
+     "shape": 7,
+     "type": "SCHEDULER_FUNC",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "CONTEXT",
+     "type": "RGTHREE_CONTEXT",
+     "links": []
+    },
+    {
+     "name": "SEGS",
+     "type": "SEGS",
+     "links": []
+    },
+    {
+     "name": "OUTPUT_IMAGE",
+     "type": "IMAGE",
+     "links": [
+      170
+     ]
+    },
+    {
+     "name": "CROPPED_REFINED",
+     "shape": 6,
+     "type": "IMAGE",
+     "links": null
+    },
+    {
+     "name": "CROPPED_REFINED_ALPHA",
+     "shape": 6,
+     "type": "IMAGE",
+     "links": null
+    },
+    {
+     "name": "CNET_IMAGES",
+     "shape": 6,
+     "type": "IMAGE",
+     "links": null
+    }
+   ],
+   "properties": {
+    "cnr_id": "efficiency-nodes-ED",
+    "ver": "d9d275500e5eeb2d24733c2f5d12c3a90c402104",
+    "Node name for S&R": "Detailer (SEGS) 💬ED",
+    "Use tiled VAE decode": false,
+    "cycle": 1,
+    "inpaint model": false,
+    "noise mask feather": 20
+   },
+   "widgets_values": [
+    "from context",
+    512,
+    true,
+    1024,
+    963415894038667,
+    "randomize",
+    15,
+    4,
+    "euler_ancestral",
+    "sgm_uniform",
+    0.4,
+    5,
+    true,
+    true,
+    "",
+    1,
+    false,
+    20
+   ],
+   "color": "#8c6446",
+   "bgcolor": "#785032",
+   "shape": "box"
+  },
+  {
+   "id": 90,
+   "type": "SaveImage",
+   "pos": [
+    800,
+    240
+   ],
+   "size": [
+    780,
+    420
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 42,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 172
+    }
+   ],
+   "outputs": [],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.20.1",
+    "Node name for S&R": "SaveImage"
+   },
+   "widgets_values": [
+    "ComfyUI"
+   ]
+  },
+  {
+   "id": 118,
+   "type": "Reroute",
+   "pos": [
+    260,
+    -420
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 14,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "widget": {
+      "name": "value"
+     },
+     "link": 182
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "INT",
+     "links": [
+      183
+     ]
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false
+   }
+  },
+  {
+   "id": 117,
+   "type": "Reroute",
+   "pos": [
+    340,
+    -480
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 23,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 180
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "LORA_STACK",
+     "links": [
+      181
+     ]
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false
+   }
+  },
+  {
+   "id": 95,
+   "type": "Reroute",
+   "pos": [
+    280,
+    -480
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 20,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 123
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "LORA_STACK",
+     "links": [
+      180
+     ]
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false
+   }
+  },
+  {
+   "id": 5,
+   "type": "Seed (rgthree)",
+   "pos": [
+    0,
+    -420
+   ],
+   "size": [
+    360,
+    140
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 2,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "dir": 4,
+     "name": "SEED",
+     "shape": 3,
+     "type": "INT",
+     "links": [
+      182
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "rgthree-comfy",
+    "ver": "1.0.2604070017",
+    "randomMax": 1125899906842624,
+    "randomMin": 0
+   },
+   "widgets_values": [
+    994051381043308,
+    "",
+    "",
+    "okay"
+   ]
+  },
+  {
+   "id": 94,
+   "type": "Reroute",
+   "pos": [
+    20,
+    -480
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 16,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "LORA_STACK",
+     "links": [
+      123
+     ]
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false
+   }
+  },
+  {
+   "id": 112,
+   "type": "Reroute",
+   "pos": [
+    1120,
+    -400
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 38,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 168
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "SEGS",
+     "links": [
+      169
+     ]
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false
+   }
+  },
+  {
+   "id": 108,
+   "type": "Reroute",
+   "pos": [
+    1180,
+    -360
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 29,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 158
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      159
+     ]
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false
+   }
+  },
+  {
+   "id": 91,
+   "type": "Simple Text 💬ED",
+   "pos": [
+    140,
+    -160
+   ],
+   "size": [
+    220,
+    100
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 22,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "text_a",
+     "shape": 7,
+     "type": "STRING",
+     "link": 116
+    }
+   ],
+   "outputs": [
+    {
+     "name": "STRING",
+     "type": "STRING",
+     "links": [
+      117
+     ]
+    }
+   ],
+   "title": "눈 색깔",
+   "properties": {
+    "cnr_id": "efficiency-nodes-ED",
+    "ver": "d9d275500e5eeb2d24733c2f5d12c3a90c402104",
+    "Node name for S&R": "Simple Text 💬ED"
+   },
+   "widgets_values": [
+    " "
+   ],
+   "color": "#233",
+   "bgcolor": "#355",
+   "shape": "box"
+  },
+  {
+   "id": 29,
+   "type": "Simple Text 💬ED",
+   "pos": [
+    -340,
+    260
+   ],
+   "size": [
+    460,
+    100
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 25,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "text_a",
+     "shape": 7,
+     "type": "STRING",
+     "link": 42
+    }
+   ],
+   "outputs": [
+    {
+     "name": "STRING",
+     "type": "STRING",
+     "links": [
+      104
+     ]
+    }
+   ],
+   "title": "남성 프롬프트",
+   "properties": {
+    "cnr_id": "efficiency-nodes-ED",
+    "ver": "d9d275500e5eeb2d24733c2f5d12c3a90c402104",
+    "Node name for S&R": "Simple Text 💬ED"
+   },
+   "widgets_values": [
+    ""
+   ],
+   "color": "#233",
+   "bgcolor": "#355",
+   "shape": "box"
+  },
+  {
+   "id": 24,
+   "type": "Simple Text 💬ED",
+   "pos": [
+    -100,
+    -160
+   ],
+   "size": [
+    220,
+    100
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 15,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "text_a",
+     "shape": 7,
+     "type": "STRING",
+     "link": 25
+    }
+   ],
+   "outputs": [
+    {
+     "name": "STRING",
+     "type": "STRING",
+     "links": [
+      36
+     ]
+    }
+   ],
+   "title": "긍정 프롬프트 공통",
+   "properties": {
+    "cnr_id": "efficiency-nodes-ED",
+    "ver": "d9d275500e5eeb2d24733c2f5d12c3a90c402104",
+    "Node name for S&R": "Simple Text 💬ED"
+   },
+   "widgets_values": [
+    "embedding:lazypos, 1girl, solo, halo"
+   ],
+   "color": "#233",
+   "bgcolor": "#355",
+   "shape": "box"
+  },
+  {
+   "id": 17,
+   "type": "Simple Text 💬ED",
+   "pos": [
+    -340,
+    -160
+   ],
+   "size": [
+    220,
+    100
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 3,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "text_a",
+     "shape": 7,
+     "type": "STRING",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "STRING",
+     "type": "STRING",
+     "links": [
+      25
+     ]
+    }
+   ],
+   "title": "작가",
+   "properties": {
+    "cnr_id": "efficiency-nodes-ED",
+    "ver": "d9d275500e5eeb2d24733c2f5d12c3a90c402104",
+    "Node name for S&R": "Simple Text 💬ED"
+   },
+   "widgets_values": [
+    "(mankai kaika:0.8), (tianliang duohe fangdongye:0.7), (doremi \\(doremi4704\\):0.7), (wagashi \\(dagashiya\\):0.8)"
+   ],
+   "color": "#233",
+   "bgcolor": "#355",
+   "shape": "box"
+  },
+  {
+   "id": 78,
+   "type": "Simple Text 💬ED",
+   "pos": [
+    -100,
+    480
+   ],
+   "size": [
+    460,
+    180
+   ],
+   "flags": {
+    "collapsed": false,
+    "pinned": true
+   },
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "text_a",
+     "shape": 7,
+     "type": "STRING",
+     "link": 97
+    }
+   ],
+   "outputs": [
+    {
+     "name": "STRING",
+     "type": "STRING",
+     "links": [
+      134
+     ]
+    }
+   ],
+   "title": "부정 프롬프트",
+   "properties": {
+    "cnr_id": "efficiency-nodes-ED",
+    "ver": "d9d275500e5eeb2d24733c2f5d12c3a90c402104",
+    "Node name for S&R": "Simple Text 💬ED"
+   },
+   "widgets_values": [
+    "pee stain"
+   ],
+   "color": "#233",
+   "bgcolor": "#355",
+   "shape": "box"
+  },
+  {
+   "id": 2,
+   "type": "Simple Text 💬ED",
+   "pos": [
+    -100,
+    0
+   ],
+   "size": [
+    460,
+    200
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 24,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "text_a",
+     "shape": 7,
+     "type": "STRING",
+     "link": 117
+    }
+   ],
+   "outputs": [
+    {
+     "name": "STRING",
+     "type": "STRING",
+     "links": [
+      42
+     ]
+    }
+   ],
+   "title": "긍정 프롬프트",
+   "properties": {
+    "cnr_id": "efficiency-nodes-ED",
+    "ver": "d9d275500e5eeb2d24733c2f5d12c3a90c402104",
+    "Node name for S&R": "Simple Text 💬ED"
+   },
+   "widgets_values": [
+    "on stomach, head rest, hands on own face, head tilt, looking at viewer, light smile, closed mouth, half-closed eyes, feet up"
+   ],
+   "color": "#233",
+   "bgcolor": "#355",
+   "shape": "box"
+  },
+  {
+   "id": 28,
+   "type": "Simple Text 💬ED",
+   "pos": [
+    -340,
+    0
+   ],
+   "size": [
+    220,
+    200
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 19,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "text_a",
+     "shape": 7,
+     "type": "STRING",
+     "link": 36
+    }
+   ],
+   "outputs": [
+    {
+     "name": "STRING",
+     "type": "STRING",
+     "links": [
+      116
+     ]
+    }
+   ],
+   "title": "캐릭터 프롬프트",
+   "properties": {
+    "cnr_id": "efficiency-nodes-ED",
+    "ver": "d9d275500e5eeb2d24733c2f5d12c3a90c402104",
+    "Node name for S&R": "Simple Text 💬ED"
+   },
+   "widgets_values": [
+    "seia \\(blue archive\\), (tail:0.8), flat chest,"
+   ],
+   "color": "#233",
+   "bgcolor": "#355",
+   "shape": "box"
+  },
+  {
+   "id": 82,
+   "type": "Simple Text 💬ED",
+   "pos": [
+    140,
+    260
+   ],
+   "size": [
+    220,
+    100
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 26,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "text_a",
+     "shape": 7,
+     "type": "STRING",
+     "link": 104
+    }
+   ],
+   "outputs": [
+    {
+     "name": "STRING",
+     "type": "STRING",
+     "links": [
+      157
+     ]
+    }
+   ],
+   "title": "구도",
+   "properties": {
+    "cnr_id": "efficiency-nodes-ED",
+    "ver": "d9d275500e5eeb2d24733c2f5d12c3a90c402104",
+    "Node name for S&R": "Simple Text 💬ED"
+   },
+   "widgets_values": [
+    "white background, from below, dutch angle, upper body"
+   ],
+   "color": "#233",
+   "bgcolor": "#355",
+   "shape": "box"
+  },
+  {
+   "id": 120,
+   "type": "MarkdownNote",
+   "pos": [
+    1040,
+    -1100
+   ],
+   "size": [
+    540,
+    220
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 5,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "title": "MASK to SEGS 노드 사용법",
+   "properties": {},
+   "widgets_values": [
+    "**combined**: 떨어져 있는 여러 개의 마스크를 합침.\n\n**crop_factor**: 다시 그릴때 참조할 영역의 크기. 예를 들어 `3.0`이면 마스크 크기의 3배만큼의 크기를 가진 주변 영역을 참조한다.\n\n**bbox_fill**: 마스크가 해당 영역을 포함하는 사각형으로 설정됨. 표정만 바꾸면 off, 눈썹이나 볼 등에 변형이 필요할 경우 on. 다만 on으로 설정할 시 앞머리 등 얼굴이 아닌 부분 중 마스크 영역에 해당되는 부분이 변형될 수 있음\n\n**drop_size**: 일정 크기 이하의 영역을 버림. 변경 X\n\n**contour_fill**: 마스크가 도넛 같이 되어 있으면 안쪽을 채움. 웬만하면 변경 X"
+   ],
+   "color": "#432",
+   "bgcolor": "#653"
+  },
+  {
+   "id": 119,
+   "type": "MarkdownNote",
+   "pos": [
+    -340,
+    -1100
+   ],
+   "size": [
+    700,
+    220
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 6,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "title": "LoRA & Seed 그룹 사용법",
+   "properties": {},
+   "widgets_values": [
+    "Lora Stacker (LoraManager)에 LoRA를 불러올 때에는 LoRA 매니저에서 해당 로라를 클릭하거나 마우스를 올리고 종이비행기 버튼을 눌러 추가함\n\nLoRA의 트리거 워드가 궁금하다면 `Show Text 🐍` 노드만 실행시키면 됨\n\n시드 변경을 원하면 `Seed (rgthree)` 노드에서 변경할 수 있음\n>- 🎲 Randomize Each Time: `seed`를 -1로 변경함, 매 실행 시마다 무작위 시드를 대입\n>- 🎲 New Fixed Random: 무작위 시드를 생성하여 매 실행 시마다 고정하여 사용\n>- ♻️ [직전에 사용한 시드]: 직전에 사용한 시드를 고정해 다음 실행 시에도 사용"
+   ],
+   "color": "#432",
+   "bgcolor": "#653"
+  },
+  {
+   "id": 131,
+   "type": "MarkdownNote",
+   "pos": [
+    900,
+    940
+   ],
+   "size": [
+    680,
+    100
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 7,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "title": "KSampler (Efficient) 💬ED 노드 사용법",
+   "properties": {},
+   "widgets_values": [
+    "steps: 그림 생성에 사용할 단계 수를 결정한다. 높을수록 오래 걸리고 결과물이 디테일해지며, 낮을수록 빠르고 결과물이 허접해진다. 너무 높거나 낮다고 꼭 그쪽 방면으로 좋은 것은 아니니 주의. 20~30이 적당하다."
+   ],
+   "color": "#432",
+   "bgcolor": "#653"
+  },
+  {
+   "id": 121,
+   "type": "MarkdownNote",
+   "pos": [
+    460,
+    -1100
+   ],
+   "size": [
+    560,
+    220
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 8,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "title": "SAM3 그룹 사용법",
+   "properties": {},
+   "widgets_values": [
+    "ComfyUI를 실행하고 처음 워크플로우를 실행하는 경우 `(Down)Load SAM3 Model`에서 시간이 좀 걸린다. 한 번 다운로드가 끝나면 이후 실행부터는 오래 걸리지 않음\n\nSAM3는 SAM3 모델을 이용해 마스크를 생성하길 원하는 단어를 입력하면 이미지에서 그 단어에 해당하는 부분을 알아서 찾아서 마스킹해주는 그룹이다.\n\n자세한 내용은 [여기](https://arca.live/b/aiart/161461103)참고.\n\n단어는 `SAM3 Text Segmentation` 노드의 `text_prompt`에 입력하면 된다. 프롬프트의 예시는 아래와 같다. NSFW 태그는 동작하지 않는다.\n>- eyes 또는 eye: 눈\n>- face: 얼굴 전체\n>- body: 몸 전체"
+   ],
+   "color": "#432",
+   "bgcolor": "#653"
+  },
+  {
+   "id": 132,
+   "type": "MarkdownNote",
+   "pos": [
+    900,
+    1080
+   ],
+   "size": [
+    680,
+    100
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 9,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "title": "Detailer (SEGS) 💬ED 노드 사용법",
+   "properties": {},
+   "widgets_values": [
+    "steps: 디테일러 처리에 사용할 단계 수를 결정한다. 나머지는 위와 동일. 이미지 생성에 사용한 스텝 수의 절반 정도가 적당하다.\n\ndenoise: 디테일러 처리 시 마스킹 영역에 대해 디노이징 강도를 설정한다. 낮을 수록 원본과 차이가 적어지지만 디테일이 제대로 표현되지 않을 수 있으며, 높으면 원본과의 괴리가 심해질 수 있다. 이건 결과물을 보면서 조절하는 것이 좋다."
+   ],
+   "color": "#432",
+   "bgcolor": "#653"
+  },
+  {
+   "id": 128,
+   "type": "MarkdownNote",
+   "pos": [
+    900,
+    720
+   ],
+   "size": [
+    680,
+    180
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 10,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "title": "Efficient Loader 💬ED 노드 사용법",
+   "properties": {},
+   "widgets_values": [
+    "ckpt_name: 체크포인트 모델을 불러온다. 해당 `.safetensors` 파일은 `models\\checkpoints\\` 폴더에 있어야 한다.\n\nvae_name: vae를 불러온다. 해당 `.safetensors` 파일은 `models\\vae\\` 폴더에 있어야 한다. 본 워크플로우에서는 `models\\vae\\SDXL` 폴더에 들어 있는 `sdxl_vae.safetensors` 파일을 사용하니 경로에 주의.\n\ncfg: cfg값을 설정한다.\n\nsampler_name: 사용할 샘플러를 지정한다.\n\nscheduler: 사용할 스케줄러를 지정한다.\n\nimage_width, image_height: 이미지의 가로, 세로 해상도를 결정한다. 그림 뽑기에 최적화된 해상도는 [여기](https://arca.live/b/aiart/129216581) 참고."
+   ],
+   "color": "#432",
+   "bgcolor": "#653"
+  },
+  {
+   "id": 122,
+   "type": "MarkdownNote",
+   "pos": [
+    -340,
+    720
+   ],
+   "size": [
+    700,
+    540
+   ],
+   "flags": {
+    "collapsed": false,
+    "pinned": true
+   },
+   "order": 11,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "title": "긍정 & 부정 프롬프트 사용법",
+   "properties": {},
+   "widgets_values": [
+    "긍정 프롬프트 그룹에는 `Simple Text 💬ED` 노드를 여러 개 연결한 프롬프트 작성란이 포함되어 있다.\n\n`Simple Text 💬ED`를 여러 개 연결하면 여러 개의 노드에 입력한 문자열이 쉼표와 줄바꿈 2번을 포함해 연결된다.\n\n예시:\n```\n1번 노드:\nlooking at viewer, smile\n```\n\n```\n2번 노드:\nwhite background, upper body\n```\n결과:\n```\nlooking at viewer, smile,\n\nwhite background, upper body\n```\n\n결과 텍스트를 눈으로 보고 싶다면 `comfyui-custom-scripts` 커스텀 노드의 `Show Text 🐍`를 사용할 수 있다.\n\n만약 줄바꿈 2개를 없애고 연속적인 프롬프트로 합쳐지길 원한다면 `바꾸기` 노드를 사용하여 줄바꿈 두 개를 공백으로 바꾸면 된다.\n\n```\nstring:\n문자열 출력을 해당 위치에 연결\n```\n\n```\nfind:\n\n\n```\n\n```\nreplace:\n \n```\n이렇게 설정하고 결과 문자열을 사용한다.\n\n앞서 설명한 대로, `Simple Text 💬ED` 노드를 연결하는 것은 단순히 문자열을 결합하는 것에 불과하기 때문에, `작가`라는 제목의 노드에 반드시 작가 태그를 입력할 필요가 없다. 다른 노드 또한 마찬가지. 편한 대로 개조해서 사용하자.\n\n`눈 색깔`의 경우 눈을 감고 있는 모습을 묘사할 때는 눈 색깔 태그를 빼야 하기에 Ctrl+B로 활성화/비활성화처리하는 것으로 편리하게 태그를 포함시키거나 제거하는 목적으로 사용할 수 있다."
+   ],
+   "color": "#432",
+   "bgcolor": "#653"
+  },
+  {
+   "id": 129,
+   "type": "MarkdownNote",
+   "pos": [
+    460,
+    720
+   ],
+   "size": [
+    420,
+    460
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 12,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "title": "이미지 생성 그룹 노트",
+   "properties": {},
+   "widgets_values": [
+    "`WAI-illustrious-SDXL v17.0 `체크포인트 모델: [https://civitai.red/models/827184/wai-illustrious-sdxl](https://civitai.red/models/827184/wai-illustrious-sdxl)\n\n본 워크플로우는 [이 글](https://arca.live/b/aiart/161469984), 그리고 해당 시리즈 기반으로 만들어졌으니, `Detailer (SEGS) 💬ED` 노드의 자세한 내용은 해당 글과 시리즈 참고.\n\n본 워크플로우(일러스트리어스 모델)로는 피사체 한 명 혹은 디테일이 필요한 피사체 1명 & 디테일이 적어도 되는 피사체 1명이 포함된 이미지를 생성하는 것이 타율과 퀄리티가 좋은 편이다."
+   ],
+   "color": "#432",
+   "bgcolor": "#653"
+  }
+ ],
+ "links": [
+  [
+   5,
+   4,
+   0,
+   1,
+   0,
+   "RGTHREE_CONTEXT"
+  ],
+  [
+   9,
+   7,
+   0,
+   8,
+   0,
+   "SAM3_MODEL_CONFIG"
+  ],
+  [
+   11,
+   8,
+   0,
+   10,
+   0,
+   "MASK"
+  ],
+  [
+   25,
+   17,
+   0,
+   24,
+   0,
+   "STRING"
+  ],
+  [
+   36,
+   24,
+   0,
+   28,
+   0,
+   "STRING"
+  ],
+  [
+   42,
+   2,
+   0,
+   29,
+   0,
+   "STRING"
+  ],
+  [
+   97,
+   19,
+   0,
+   78,
+   0,
+   "STRING"
+  ],
+  [
+   104,
+   29,
+   0,
+   82,
+   0,
+   "STRING"
+  ],
+  [
+   116,
+   28,
+   0,
+   91,
+   0,
+   "STRING"
+  ],
+  [
+   117,
+   91,
+   0,
+   2,
+   0,
+   "STRING"
+  ],
+  [
+   123,
+   94,
+   0,
+   95,
+   0,
+   "LORA_STACK"
+  ],
+  [
+   132,
+   99,
+   0,
+   4,
+   6,
+   "STRING"
+  ],
+  [
+   134,
+   78,
+   0,
+   99,
+   0,
+   "STRING"
+  ],
+  [
+   145,
+   8,
+   1,
+   103,
+   0,
+   "IMAGE"
+  ],
+  [
+   147,
+   103,
+   0,
+   104,
+   0,
+   "IMAGE"
+  ],
+  [
+   148,
+   104,
+   0,
+   25,
+   0,
+   "IMAGE"
+  ],
+  [
+   154,
+   10,
+   0,
+   11,
+   0,
+   "MASK"
+  ],
+  [
+   157,
+   82,
+   0,
+   4,
+   5,
+   "STRING"
+  ],
+  [
+   158,
+   1,
+   1,
+   108,
+   0,
+   "IMAGE"
+  ],
+  [
+   159,
+   108,
+   0,
+   109,
+   0,
+   "IMAGE"
+  ],
+  [
+   160,
+   109,
+   0,
+   8,
+   1,
+   "IMAGE"
+  ],
+  [
+   163,
+   1,
+   0,
+   13,
+   0,
+   "RGTHREE_CONTEXT"
+  ],
+  [
+   166,
+   11,
+   0,
+   111,
+   0,
+   "SEGS"
+  ],
+  [
+   168,
+   111,
+   0,
+   112,
+   0,
+   "SEGS"
+  ],
+  [
+   169,
+   112,
+   0,
+   13,
+   1,
+   "SEGS"
+  ],
+  [
+   170,
+   13,
+   2,
+   113,
+   0,
+   "IMAGE"
+  ],
+  [
+   171,
+   113,
+   0,
+   114,
+   0,
+   "IMAGE"
+  ],
+  [
+   172,
+   114,
+   0,
+   90,
+   0,
+   "IMAGE"
+  ],
+  [
+   180,
+   95,
+   0,
+   117,
+   0,
+   "LORA_STACK"
+  ],
+  [
+   181,
+   117,
+   0,
+   4,
+   1,
+   "LORA_STACK"
+  ],
+  [
+   182,
+   5,
+   0,
+   118,
+   0,
+   "INT"
+  ],
+  [
+   183,
+   118,
+   0,
+   4,
+   7,
+   "INT"
+  ]
+ ],
+ "groups": [
+  {
+   "id": 2,
+   "title": "SAM3",
+   "bounding": [
+    440,
+    -860,
+    1240,
+    440
+   ],
+   "color": "#3f789e",
+   "font_size": 24,
+   "flags": {
+    "pinned": true
+   }
+  },
+  {
+   "id": 3,
+   "title": "긍정 프롬프트",
+   "bounding": [
+    -360,
+    -240,
+    740,
+    620
+   ],
+   "color": "#3f789e",
+   "font_size": 24,
+   "flags": {
+    "pinned": true
+   }
+  },
+  {
+   "id": 4,
+   "title": "부정 프롬프트",
+   "bounding": [
+    -360,
+    400,
+    740,
+    280
+   ],
+   "color": "#3f789e",
+   "font_size": 24,
+   "flags": {
+    "pinned": true
+   }
+  },
+  {
+   "id": 5,
+   "title": "LoRA & Seed",
+   "bounding": [
+    -360,
+    -860,
+    740,
+    600
+   ],
+   "color": "#3f789e",
+   "font_size": 24,
+   "flags": {
+    "pinned": true
+   }
+  },
+  {
+   "id": 6,
+   "title": "이미지 생성",
+   "bounding": [
+    440,
+    -400,
+    1240,
+    1080
+   ],
+   "color": "#3f789e",
+   "font_size": 24,
+   "flags": {
+    "pinned": true
+   }
+  }
+ ],
+ "config": {},
+ "extra": {
+  "ds": {
+   "scale": 0.6934334949441514,
+   "offset": [
+    1207.1615203590336,
+    836.1361789999419
+   ]
+  },
+  "frontendVersion": "1.42.15",
+  "VHS_latentpreview": false,
+  "VHS_latentpreviewrate": 0,
+  "VHS_MetadataImage": true,
+  "VHS_KeepIntermediate": true
+ },
+ "version": 0.4,
+ "seed_widgets": {
+  "1": 1,
+  "4": 5,
+  "5": 0,
+  "13": 4
+ }
+}

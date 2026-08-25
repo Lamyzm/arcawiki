@@ -1,0 +1,544 @@
+{
+ "id": "af22ee49-21dd-4235-9b9a-b9ec71f854c4",
+ "revision": 0,
+ "last_node_id": 12,
+ "last_link_id": 16,
+ "nodes": [
+  {
+   "id": 8,
+   "type": "Seed (rgthree)",
+   "pos": [
+    1220,
+    960
+   ],
+   "size": [
+    300,
+    140
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "dir": 4,
+     "name": "SEED",
+     "shape": 3,
+     "type": "INT",
+     "links": [
+      7
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "rgthree-comfy",
+    "ver": "1.0.2604070017",
+    "randomMax": 1125899906842624,
+    "randomMin": 0
+   },
+   "widgets_values": [
+    309958730452893,
+    "",
+    "",
+    "okay"
+   ]
+  },
+  {
+   "id": 11,
+   "type": "Detailer (SEGS) 💬ED",
+   "pos": [
+    1940,
+    960
+   ],
+   "size": [
+    400,
+    600
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 5,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "context",
+     "type": "RGTHREE_CONTEXT",
+     "link": 10
+    },
+    {
+     "name": "segs",
+     "type": "SEGS",
+     "link": 11
+    },
+    {
+     "name": "image_opt",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 16
+    },
+    {
+     "name": "detailer_hook",
+     "shape": 7,
+     "type": "DETAILER_HOOK",
+     "link": null
+    },
+    {
+     "name": "scheduler_func_opt",
+     "shape": 7,
+     "type": "SCHEDULER_FUNC",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "CONTEXT",
+     "type": "RGTHREE_CONTEXT",
+     "links": null
+    },
+    {
+     "name": "SEGS",
+     "type": "SEGS",
+     "links": null
+    },
+    {
+     "name": "OUTPUT_IMAGE",
+     "type": "IMAGE",
+     "links": [
+      6
+     ]
+    },
+    {
+     "name": "CROPPED_REFINED",
+     "shape": 6,
+     "type": "IMAGE",
+     "links": null
+    },
+    {
+     "name": "CROPPED_REFINED_ALPHA",
+     "shape": 6,
+     "type": "IMAGE",
+     "links": null
+    },
+    {
+     "name": "CNET_IMAGES",
+     "shape": 6,
+     "type": "IMAGE",
+     "links": null
+    }
+   ],
+   "properties": {
+    "cnr_id": "efficiency-nodes-ED",
+    "ver": "d9d275500e5eeb2d24733c2f5d12c3a90c402104",
+    "Node name for S&R": "Detailer (SEGS) 💬ED",
+    "Use tiled VAE decode": false,
+    "cycle": 1,
+    "inpaint model": false,
+    "noise mask feather": 20
+   },
+   "widgets_values": [
+    "from context",
+    512,
+    true,
+    1024,
+    963760895068616,
+    "randomize",
+    20,
+    6,
+    "euler_ancestral",
+    "sgm_uniform",
+    0.3,
+    5,
+    true,
+    true,
+    "",
+    1,
+    false,
+    20
+   ],
+   "color": "#8c6446",
+   "bgcolor": "#785032",
+   "shape": "box"
+  },
+  {
+   "id": 9,
+   "type": "Efficient Loader 💬ED",
+   "pos": [
+    1540,
+    960
+   ],
+   "size": [
+    340,
+    600
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 2,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "context_opt",
+     "shape": 7,
+     "type": "RGTHREE_CONTEXT",
+     "link": null
+    },
+    {
+     "name": "lora_stack",
+     "shape": 7,
+     "type": "LORA_STACK",
+     "link": null
+    },
+    {
+     "name": "cnet_stack",
+     "shape": 7,
+     "type": "CONTROL_NET_STACK",
+     "link": null
+    },
+    {
+     "name": "pixels",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "name": "mask",
+     "shape": 7,
+     "type": "MASK",
+     "link": null
+    },
+    {
+     "name": "positive",
+     "shape": 7,
+     "type": "STRING",
+     "link": null
+    },
+    {
+     "name": "negative",
+     "shape": 7,
+     "type": "STRING",
+     "link": null
+    },
+    {
+     "name": "seed",
+     "type": "INT",
+     "widget": {
+      "name": "seed"
+     },
+     "link": 7
+    }
+   ],
+   "outputs": [
+    {
+     "name": "CONTEXT",
+     "type": "RGTHREE_CONTEXT",
+     "links": [
+      10
+     ]
+    },
+    {
+     "name": "MODEL",
+     "type": "MODEL",
+     "links": null
+    },
+    {
+     "name": "POSITIVE",
+     "type": "CONDITIONING",
+     "links": null
+    },
+    {
+     "name": "NEGATIVE",
+     "type": "CONDITIONING",
+     "links": null
+    },
+    {
+     "name": "LATENT",
+     "shape": 6,
+     "type": "LATENT",
+     "links": null
+    },
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": null
+    },
+    {
+     "name": "CLIP",
+     "type": "CLIP",
+     "links": null
+    },
+    {
+     "name": "DEPENDENCIES",
+     "type": "DEPENDENCIES",
+     "links": null
+    }
+   ],
+   "properties": {
+    "cnr_id": "efficiency-nodes-ED",
+    "ver": "d9d275500e5eeb2d24733c2f5d12c3a90c402104",
+    "Node name for S&R": "Efficient Loader 💬ED",
+    "Use Latent Rebatch": true,
+    "Token normalization": "none",
+    "Weight interpretation": "comfy",
+    "Use tiled VAE encode": false
+   },
+   "widgets_values": [
+    "waiIllustriousSDXL_v170.safetensors",
+    "SDXL\\sdxl_vae.safetensors",
+    0,
+    "✍️ Txt2Img",
+    1,
+    -1,
+    null,
+    6,
+    "euler_ancestral",
+    "sgm_uniform",
+    1024,
+    1024
+   ],
+   "color": "#223",
+   "bgcolor": "#335",
+   "shape": "box"
+  },
+  {
+   "id": 3,
+   "type": "MaskToSEGS",
+   "pos": [
+    1540,
+    740
+   ],
+   "size": [
+    340,
+    160
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 4,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "mask",
+     "type": "MASK",
+     "link": 14
+    }
+   ],
+   "outputs": [
+    {
+     "name": "SEGS",
+     "type": "SEGS",
+     "links": [
+      11
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfyui-impact-pack",
+    "ver": "8.28.3",
+    "Node name for S&R": "MaskToSEGS"
+   },
+   "widgets_values": [
+    false,
+    3,
+    false,
+    10,
+    false
+   ]
+  },
+  {
+   "id": 5,
+   "type": "SaveImage",
+   "pos": [
+    2360,
+    960
+   ],
+   "size": [
+    560,
+    600
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 6,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 6
+    }
+   ],
+   "outputs": [],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.20.1",
+    "Node name for S&R": "SaveImage"
+   },
+   "widgets_values": [
+    "ComfyUI"
+   ]
+  },
+  {
+   "id": 6,
+   "type": "LoadImage",
+   "pos": [
+    1220,
+    500
+   ],
+   "size": [
+    300,
+    400
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 1,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      15
+     ]
+    },
+    {
+     "name": "MASK",
+     "type": "MASK",
+     "links": [
+      14
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.20.1",
+    "Node name for S&R": "LoadImage",
+    "image": "clipspace/clipspace-painted-masked-1786502314186.png [input]"
+   },
+   "widgets_values": [
+    "clipspace/clipspace-painted-masked-1786502314186.png [input]",
+    "image"
+   ]
+  },
+  {
+   "id": 12,
+   "type": "Reroute",
+   "pos": [
+    1840,
+    500
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {
+    "pinned": true
+   },
+   "order": 3,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 15
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "IMAGE",
+     "links": [
+      16
+     ]
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false
+   }
+  }
+ ],
+ "links": [
+  [
+   6,
+   11,
+   2,
+   5,
+   0,
+   "IMAGE"
+  ],
+  [
+   7,
+   8,
+   0,
+   9,
+   7,
+   "INT"
+  ],
+  [
+   10,
+   9,
+   0,
+   11,
+   0,
+   "RGTHREE_CONTEXT"
+  ],
+  [
+   11,
+   3,
+   0,
+   11,
+   1,
+   "SEGS"
+  ],
+  [
+   14,
+   6,
+   1,
+   3,
+   0,
+   "MASK"
+  ],
+  [
+   15,
+   6,
+   0,
+   12,
+   0,
+   "IMAGE"
+  ],
+  [
+   16,
+   12,
+   0,
+   11,
+   2,
+   "IMAGE"
+  ]
+ ],
+ "groups": [],
+ "config": {},
+ "extra": {
+  "ds": {
+   "scale": 0.8390545288824097,
+   "offset": [
+    -752.7542313662268,
+    -255.5771154964552
+   ]
+  },
+  "frontendVersion": "1.42.15",
+  "VHS_latentpreview": false,
+  "VHS_latentpreviewrate": 0,
+  "VHS_MetadataImage": true,
+  "VHS_KeepIntermediate": true
+ },
+ "version": 0.4,
+ "seed_widgets": {
+  "8": 0,
+  "9": 5,
+  "11": 4
+ }
+}
